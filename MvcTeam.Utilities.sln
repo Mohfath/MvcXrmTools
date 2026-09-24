@@ -1,11 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.30523.141
+# Visual Studio Version 18
+VisualStudioVersion = 18.10.12217.157 stable
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MvcTeam.Utilities", "MvcTeam.Utilities.Workflows\MvcTeam.Utilities.csproj", "{5F3CD9AA-70BE-4476-8E7D-A798E581622E}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MvcTeam.Utilities", "MvcTeam.Utilities\MvcTeam.Utilities.csproj", "{5F3CD9AA-70BE-4476-8E7D-A798E581622E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MvcTeam.Utilities.PersianCalendar", "MvcTeam.Utilities.PersianCalendar\MvcTeam.Utilities.PersianCalendar.csproj", "{35BE670F-4EAC-46C3-8C22-1AA69C88F927}"
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "MvcTeam.Utilities.Core", "MvcTeam.Utilities.Core\MvcTeam.Utilities.Core.shproj", "{62EB3ADB-BC26-409A-9A66-226A8898766A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,15 +17,15 @@ Global
 		{5F3CD9AA-70BE-4476-8E7D-A798E581622E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5F3CD9AA-70BE-4476-8E7D-A798E581622E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5F3CD9AA-70BE-4476-8E7D-A798E581622E}.Release|Any CPU.Build.0 = Release|Any CPU
-		{35BE670F-4EAC-46C3-8C22-1AA69C88F927}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{35BE670F-4EAC-46C3-8C22-1AA69C88F927}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{35BE670F-4EAC-46C3-8C22-1AA69C88F927}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{35BE670F-4EAC-46C3-8C22-1AA69C88F927}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {2C32CB8C-A55B-4B8D-A122-826C7C654A4B}
+	EndGlobalSection
+	GlobalSection(SharedMSBuildProjectFiles) = preSolution
+		MvcTeam.Utilities.Core\MvcTeam.Utilities.Core.projitems*{5f3cd9aa-70be-4476-8e7d-a798e581622e}*SharedItemsImports = 4
+		MvcTeam.Utilities.Core\MvcTeam.Utilities.Core.projitems*{62eb3adb-bc26-409a-9a66-226a8898766a}*SharedItemsImports = 13
 	EndGlobalSection
 EndGlobal

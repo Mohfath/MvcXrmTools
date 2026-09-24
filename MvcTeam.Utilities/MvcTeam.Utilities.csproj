@@ -1,0 +1,259 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\ILMerge.3.0.29\build\ILMerge.props" Condition="Exists('..\packages\ILMerge.3.0.29\build\ILMerge.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{5F3CD9AA-70BE-4476-8E7D-A798E581622E}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MvcTeam.Utilities</RootNamespace>
+    <AssemblyName>MvcTeam.Utilities</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>..\..\..\..\Desktop\RuleSet1.ruleset</CodeAnalysisRuleSet>
+    <RunCodeAnalysis>true</RunCodeAnalysis>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>MvcTeam.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Crm.Sdk.Proxy, Version=8.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.CrmSdk.CoreAssemblies.8.2.0.2\lib\net452\Microsoft.Crm.Sdk.Proxy.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="microsoft.identitymodel, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.IdentityModel.7.0.0\lib\net35\microsoft.identitymodel.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Microsoft.Xrm.Sdk, Version=8.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.CrmSdk.CoreAssemblies.8.2.0.2\lib\net452\Microsoft.Xrm.Sdk.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Microsoft.Xrm.Sdk.Workflow, Version=8.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.CrmSdk.Workflow.8.2.0.2\lib\net452\Microsoft.Xrm.Sdk.Workflow.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.Activities" />
+    <Reference Include="System.Activities.Presentation" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.DirectoryServices.AccountManagement" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.IdentityModel" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.ServiceModel.Web" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Workflow.Activities" />
+    <Reference Include="System.Workflow.ComponentModel" />
+    <Reference Include="System.Workflow.Runtime" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Workflows\DateTime\AddBusinessDays.cs" />
+    <Compile Include="Workflows\DateTime\BusinessDaysBetween.cs" />
+    <Compile Include="Workflows\Persian\ConvertNumberToPersianString.cs" />
+    <Compile Include="Workflows\Persian\FormatPersianDateTime.cs" />
+    <Compile Include="Workflows\Utilities\CloneChildren.cs" />
+    <Compile Include="Workflows\Utilities\CloneRecord.cs" />
+    <Compile Include="Workflows\Utilities\CurrencyConvert.cs" />
+    <Compile Include="Workflows\Utilities\DeleteRecord.cs" />
+    <Compile Include="Workflows\Persian\GetDatePersianParts.cs" />
+    <Compile Include="Workflows\Security\GetInitiatingUser.cs" />
+    <Compile Include="Workflows\Security\IsUserHasRole.cs" />
+    <Compile Include="Workflows\Security\IsUserMemberOfTeam.cs" />
+    <Compile Include="Workflows\Security\IsUserTeamsHaveRole.cs" />
+    <Compile Include="Workflows\Utilities\GetRecordId.cs" />
+    <Compile Include="Workflows\Utilities\JsonParser.cs" />
+    <Compile Include="Workflows\Utilities\QueryValues.cs" />
+    <Compile Include="Workflows\Utilities\QueryGetResults.cs" />
+    <Compile Include="Workflows\Utilities\QueryRunWorkflowOnResults.cs" />
+    <Compile Include="Workflows\Utilities\RecalculateAllRollups.cs" />
+    <Compile Include="Workflows\Utilities\RunWorkflowWithForLoop.cs" />
+    <Compile Include="Workflows\Security\SetUserSettings.cs" />
+    <Compile Include="Workflows\Utilities\StringFunctions.cs" />
+    <Compile Include="Workflows\Utilities\UpdateFieldDynamically.cs" />
+    <Compile Include="Workflows\Persian\ValidateNationalCode.cs" />
+    <Compile Include="Workflows\Utilities\AddPriceListItem.cs" />
+    <Compile Include="Workflows\Utilities\ResizeAnnotationImage.cs" />
+    <Compile Include="Workflows\Numeric\AbsValue.cs" />
+    <Compile Include="Workflows\Numeric\Add.cs" />
+    <Compile Include="Workflows\Numeric\Average.cs" />
+    <Compile Include="Workflows\Numeric\Divide.cs" />
+    <Compile Include="Workflows\Numeric\IntegerToWords.cs" />
+    <Compile Include="Workflows\Numeric\IsStringNumeric.cs" />
+    <Compile Include="Workflows\Numeric\Max.cs" />
+    <Compile Include="Workflows\Numeric\Min.cs" />
+    <Compile Include="Workflows\Numeric\Multiply.cs" />
+    <Compile Include="Workflows\Numeric\NthRoot.cs" />
+    <Compile Include="Workflows\Numeric\RaiseToThePower.cs" />
+    <Compile Include="Workflows\Numeric\RandomNumber.cs" />
+    <Compile Include="Workflows\Numeric\RandomNumberBetween.cs" />
+    <Compile Include="Workflows\Numeric\Round.cs" />
+    <Compile Include="Workflows\Numeric\Subtract.cs" />
+    <Compile Include="Workflows\Numeric\ToDecimal.cs" />
+    <Compile Include="Workflows\Numeric\ToInteger.cs" />
+    <Compile Include="Workflows\Numeric\Truncate.cs" />
+    <Compile Include="Workflows\Numeric\WorkFlowActivityBase.cs" />
+    <Compile Include="Workflows\String\B64Decode.cs" />
+    <Compile Include="Workflows\String\B64Encode.cs" />
+    <Compile Include="Workflows\String\Contains.cs" />
+    <Compile Include="Workflows\String\CreateEmptySpaces.cs" />
+    <Compile Include="Workflows\String\DecodeHtml.cs" />
+    <Compile Include="Workflows\String\EncodeHtml.cs" />
+    <Compile Include="Workflows\String\EndsWith.cs" />
+    <Compile Include="Workflows\String\Join.cs" />
+    <Compile Include="Workflows\String\Length.cs" />
+    <Compile Include="Workflows\String\PadLeft.cs" />
+    <Compile Include="Workflows\String\PadLeftDynamic.cs" />
+    <Compile Include="Workflows\String\PadRight.cs" />
+    <Compile Include="Workflows\String\PadRightDynamic.cs" />
+    <Compile Include="Workflows\String\Random.cs" />
+    <Compile Include="Workflows\String\RegexExtract.cs" />
+    <Compile Include="Workflows\String\RegexMatch.cs" />
+    <Compile Include="Workflows\String\RegexReplace.cs" />
+    <Compile Include="Workflows\String\RegexReplaceWithSpace.cs" />
+    <Compile Include="Workflows\String\RemoveHtml.cs" />
+    <Compile Include="Workflows\String\Replace.cs" />
+    <Compile Include="Workflows\String\ReplaceWithSpace.cs" />
+    <Compile Include="Workflows\String\Reverse.cs" />
+    <Compile Include="Workflows\String\StartsWith.cs" />
+    <Compile Include="Workflows\String\Substring.cs" />
+    <Compile Include="Workflows\String\ToLower.cs" />
+    <Compile Include="Workflows\String\ToTitleCase.cs" />
+    <Compile Include="Workflows\String\ToUpper.cs" />
+    <Compile Include="Workflows\String\Trim.cs" />
+    <Compile Include="Workflows\String\UrlDecode.cs" />
+    <Compile Include="Workflows\String\UrlEncode.cs" />
+    <Compile Include="Workflows\String\WordCount.cs" />
+    <Compile Include="Workflows\Note\CheckAttachment.cs" />
+    <Compile Include="Workflows\Note\CopyNote.cs" />
+    <Compile Include="Workflows\Note\DeleteAttachment.cs" />
+    <Compile Include="Workflows\Note\DeleteAttachmentByName.cs" />
+    <Compile Include="Workflows\Note\DeleteNote.cs" />
+    <Compile Include="Workflows\Note\GetLatestNote.cs" />
+    <Compile Include="Workflows\Note\GetLatestNoteByFilename.cs" />
+    <Compile Include="Workflows\Note\MoveNote.cs" />
+    <Compile Include="Workflows\Note\UpdateNoteText.cs" />
+    <Compile Include="Workflows\Note\UpdateNoteTitle.cs" />
+    <Compile Include="Workflows\DateTime\AddDays.cs" />
+    <Compile Include="Workflows\DateTime\AddHours.cs" />
+    <Compile Include="Workflows\DateTime\AddMinutes.cs" />
+    <Compile Include="Workflows\DateTime\AddMonths.cs" />
+    <Compile Include="Workflows\DateTime\AddWeeks.cs" />
+    <Compile Include="Workflows\DateTime\AddYears.cs" />
+    <Compile Include="Workflows\DateTime\DateDiff.cs" />
+    <Compile Include="Workflows\DateTime\DateDiffBusinessDays.cs" />
+    <Compile Include="Workflows\DateTime\DateDiffBusinessHours.cs" />
+    <Compile Include="Workflows\DateTime\DateDiffBusinessMinutes.cs" />
+    <Compile Include="Workflows\DateTime\DateDiffDays.cs" />
+    <Compile Include="Workflows\DateTime\DateDiffHours.cs" />
+    <Compile Include="Workflows\DateTime\DateDiffMinutes.cs" />
+    <Compile Include="Workflows\DateTime\DateDiffMonths.cs" />
+    <Compile Include="Workflows\DateTime\DateDiffSeconds.cs" />
+    <Compile Include="Workflows\DateTime\DateDiffYears.cs" />
+    <Compile Include="Workflows\DateTime\GetDayNumber.cs" />
+    <Compile Include="Workflows\DateTime\GetDayNumberOfWeek.cs" />
+    <Compile Include="Workflows\DateTime\GetDayNumberOfYear.cs" />
+    <Compile Include="Workflows\DateTime\GetDayOfWeek.cs" />
+    <Compile Include="Workflows\DateTime\GetFormattedDateString.cs" />
+    <Compile Include="Workflows\DateTime\GetHourNumber.cs" />
+    <Compile Include="Workflows\DateTime\GetMinuteNumber.cs" />
+    <Compile Include="Workflows\DateTime\GetMonthName.cs" />
+    <Compile Include="Workflows\DateTime\GetMonthNumber.cs" />
+    <Compile Include="Workflows\DateTime\GetMonthStartEnd.cs" />
+    <Compile Include="Workflows\DateTime\GetNumberOfBusinessDays.cs" />
+    <Compile Include="Workflows\DateTime\GetQuarterNumberOfYear.cs" />
+    <Compile Include="Workflows\DateTime\GetQuarterStartEnd.cs" />
+    <Compile Include="Workflows\DateTime\GetSecondNumber.cs" />
+    <Compile Include="Workflows\DateTime\GetWeekNumberOfYear.cs" />
+    <Compile Include="Workflows\DateTime\GetWeekStartEnd.cs" />
+    <Compile Include="Workflows\DateTime\GetYearNumber.cs" />
+    <Compile Include="Workflows\DateTime\GetYearStartEnd.cs" />
+    <Compile Include="Workflows\DateTime\IsBetween.cs" />
+    <Compile Include="Workflows\DateTime\IsBusinessDay.cs" />
+    <Compile Include="Workflows\DateTime\IsSameDay.cs" />
+    <Compile Include="Workflows\DateTime\RelativeTime.cs" />
+    <Compile Include="Workflows\DateTime\RoundToHalfHour.cs" />
+    <Compile Include="Workflows\DateTime\RoundToHour.cs" />
+    <Compile Include="Workflows\DateTime\RoundToQuarterHour.cs" />
+    <Compile Include="Workflows\DateTime\SetDatePart.cs" />
+    <Compile Include="Workflows\DateTime\SetTime.cs" />
+    <Compile Include="Workflows\DateTime\ToDateTime.cs" />
+    <Compile Include="Workflows\DateTime\ToUTCString.cs" />
+    <Compile Include="Workflows\DateTime\Common\BusinessDayLogic.cs" />
+    <Compile Include="Workflows\DateTime\Common\BusinessMinuteLogic.cs" />
+    <Compile Include="Workflows\DateTime\Common\GetLocalTime.cs" />
+    <Compile Include="Workflows\Email\CcBusinessUnit.cs" />
+    <Compile Include="Workflows\Email\CcConnection.cs" />
+    <Compile Include="Workflows\Email\CcQueueMembers.cs" />
+    <Compile Include="Workflows\Email\CcSecurityRole.cs" />
+    <Compile Include="Workflows\Email\CcTeam.cs" />
+    <Compile Include="Workflows\Email\CheckAttachments.cs" />
+    <Compile Include="Workflows\Email\CreateTemplate.cs" />
+    <Compile Include="Workflows\Email\DeleteEmailAttachment.cs" />
+    <Compile Include="Workflows\Email\DeleteEmailAttachmentByName.cs" />
+    <Compile Include="Workflows\Email\EmailBusinessUnit.cs" />
+    <Compile Include="Workflows\Email\EmailConnection.cs" />
+    <Compile Include="Workflows\Email\EmailQueueMembers.cs" />
+    <Compile Include="Workflows\Email\EmailSecurityRole.cs" />
+    <Compile Include="Workflows\Email\EmailTeam.cs" />
+    <Compile Include="Workflows\Email\SendEmail.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ILMerge.props" />
+    <None Include="MvcTeam.snk" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Repository\" />
+  </ItemGroup>
+  <Import Project="..\MvcTeam.Utilities.Core\MvcTeam.Utilities.Core.projitems" Label="Shared" />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\ILMerge.3.0.29\build\ILMerge.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\ILMerge.3.0.29\build\ILMerge.props'))" />
+  </Target>
+  <PropertyGroup>
+    <PreBuildEvent>powershell -NoProfile -ExecutionPolicy Bypass -File "$(ProjectDir)Build\Update-AssemblyVersion.ps1" -AssemblyInfoPath "$(ProjectDir)Properties\AssemblyInfo.cs"</PreBuildEvent>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+</Project>

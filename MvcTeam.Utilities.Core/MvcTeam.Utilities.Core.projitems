@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <MSBuildAllProjects Condition="'$(MSBuildVersion)' == '' Or '$(MSBuildVersion)' &lt; '16.0'">$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+    <HasSharedItems>true</HasSharedItems>
+    <SharedGUID>62EB3ADB-BC26-409A-9A66-226A8898766A</SharedGUID>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration">
+    <Import_RootNamespace>MvcTeam.Utilities</Import_RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)Models\ApplicationConfig.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\EntityObject.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\Invoice.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\InvoiceItem.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\ItemDetail.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\PriceListItem.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\SaleOrder.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\SalesOrderItem.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)PersianCalendar\Helpers\ExtensionsHelper.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)PersianCalendar\HijriDateTime.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)PersianCalendar\PersianDateTime.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)PersianCalendar\PersianDayOfWeek.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Services\AppConvertNumberToLetters.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Services\AppInvoice_Left_Stock.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Services\BusinessDayCalculator.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Services\CrmService.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Services\DateToPersian.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Services\DynamicUrlRecordParser.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Services\IranTime.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Services\JsonPathReader.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Services\NationalCodeValidator.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Services\PersianDateFormatter.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Services\QueryResultTable.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Services\RecordCloner.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Services\StringFunctions.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <!-- Not compiled before the merge either; kept out of the build so the plugin DLL doesn't change -->
+    <None Include="$(MSBuildThisFileDirectory)Models\CrmEmail.cs" />
+    <None Include="$(MSBuildThisFileDirectory)Models\CrmEmailSignature.cs" />
+    <None Include="$(MSBuildThisFileDirectory)Services\App_Add_Signature_To_Email.cs" />
+    <None Include="$(MSBuildThisFileDirectory)Services\App_Mark_Email_As_Read.cs" />
+  </ItemGroup>
+</Project>
