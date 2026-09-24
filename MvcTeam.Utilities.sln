@@ -11,13 +11,22 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "docs", "docs", "{7D684DCF-5
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "utilities", "utilities", "{8B489EF9-88D4-43C9-A965-BA7357F4378B}"
 	ProjectSection(SolutionItems) = preProject
+		docs\utilities\add-price-list-item.md = docs\utilities\add-price-list-item.md
 		docs\utilities\clone-children.md = docs\utilities\clone-children.md
 		docs\utilities\clone-record.md = docs\utilities\clone-record.md
 		docs\utilities\currency-convert.md = docs\utilities\currency-convert.md
 		docs\utilities\delete-record.md = docs\utilities\delete-record.md
+		docs\utilities\get-record-id.md = docs\utilities\get-record-id.md
 		docs\utilities\json-parser.md = docs\utilities\json-parser.md
+		docs\utilities\query-get-results.md = docs\utilities\query-get-results.md
+		docs\utilities\query-run-workflow-on-results.md = docs\utilities\query-run-workflow-on-results.md
 		docs\utilities\query-values.md = docs\utilities\query-values.md
+		docs\utilities\recalculate-all-rollups.md = docs\utilities\recalculate-all-rollups.md
+		docs\utilities\resize-annotation-image.md = docs\utilities\resize-annotation-image.md
+		docs\utilities\run-workflow-with-for-loop.md = docs\utilities\run-workflow-with-for-loop.md
 		docs\utilities\string-functions.md = docs\utilities\string-functions.md
+		docs\utilities\update-field-dynamically.md = docs\utilities\update-field-dynamically.md
+		docs\utilities\workflow-add-signature-to-email.md = docs\utilities\workflow-add-signature-to-email.md
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "images", "images", "{868CF2C6-8E9D-4BCF-9A22-1D013CD25897}"
@@ -49,6 +58,9 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "security", "security", "{1A6E4B52-9C3D-4F7A-8E21-5D0B7C93A4F6}"
 	ProjectSection(SolutionItems) = preProject
 		docs\security\get-initiating-user.md = docs\security\get-initiating-user.md
+		docs\security\is-user-has-role.md = docs\security\is-user-has-role.md
+		docs\security\is-user-member-of-team.md = docs\security\is-user-member-of-team.md
+		docs\security\is-user-teams-have-role.md = docs\security\is-user-teams-have-role.md
 		docs\security\set-user-settings.md = docs\security\set-user-settings.md
 	EndProjectSection
 EndProject
@@ -75,6 +87,147 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "note", "note", "{5E2A7C94-6
 		docs\note\update-note-title.md = docs\note\update-note-title.md
 	EndProjectSection
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "numeric", "numeric", "{A3F71C58-2E94-4D06-B8A1-7C5E90D2F314}"
+	ProjectSection(SolutionItems) = preProject
+		docs\numeric\abs-value.md = docs\numeric\abs-value.md
+		docs\numeric\add.md = docs\numeric\add.md
+		docs\numeric\average.md = docs\numeric\average.md
+		docs\numeric\divide.md = docs\numeric\divide.md
+		docs\numeric\integer-to-words.md = docs\numeric\integer-to-words.md
+		docs\numeric\is-string-numeric.md = docs\numeric\is-string-numeric.md
+		docs\numeric\max.md = docs\numeric\max.md
+		docs\numeric\min.md = docs\numeric\min.md
+		docs\numeric\multiply.md = docs\numeric\multiply.md
+		docs\numeric\nth-root.md = docs\numeric\nth-root.md
+		docs\numeric\raise-to-the-power.md = docs\numeric\raise-to-the-power.md
+		docs\numeric\random-number.md = docs\numeric\random-number.md
+		docs\numeric\random-number-between.md = docs\numeric\random-number-between.md
+		docs\numeric\round.md = docs\numeric\round.md
+		docs\numeric\subtract.md = docs\numeric\subtract.md
+		docs\numeric\to-decimal.md = docs\numeric\to-decimal.md
+		docs\numeric\to-integer.md = docs\numeric\to-integer.md
+		docs\numeric\truncate.md = docs\numeric\truncate.md
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "string", "string", "{C8B24E71-5A39-4F82-9D06-1E7A3B5C4D28}"
+	ProjectSection(SolutionItems) = preProject
+		docs\string\b64-decode.md = docs\string\b64-decode.md
+		docs\string\b64-encode.md = docs\string\b64-encode.md
+		docs\string\contains.md = docs\string\contains.md
+		docs\string\create-empty-spaces.md = docs\string\create-empty-spaces.md
+		docs\string\decode-html.md = docs\string\decode-html.md
+		docs\string\encode-html.md = docs\string\encode-html.md
+		docs\string\ends-with.md = docs\string\ends-with.md
+		docs\string\join.md = docs\string\join.md
+		docs\string\length.md = docs\string\length.md
+		docs\string\pad-left.md = docs\string\pad-left.md
+		docs\string\pad-left-dynamic.md = docs\string\pad-left-dynamic.md
+		docs\string\pad-right.md = docs\string\pad-right.md
+		docs\string\pad-right-dynamic.md = docs\string\pad-right-dynamic.md
+		docs\string\random.md = docs\string\random.md
+		docs\string\regex-extract.md = docs\string\regex-extract.md
+		docs\string\regex-match.md = docs\string\regex-match.md
+		docs\string\regex-replace.md = docs\string\regex-replace.md
+		docs\string\regex-replace-with-space.md = docs\string\regex-replace-with-space.md
+		docs\string\remove-html.md = docs\string\remove-html.md
+		docs\string\replace.md = docs\string\replace.md
+		docs\string\replace-with-space.md = docs\string\replace-with-space.md
+		docs\string\reverse.md = docs\string\reverse.md
+		docs\string\starts-with.md = docs\string\starts-with.md
+		docs\string\substring.md = docs\string\substring.md
+		docs\string\to-lower.md = docs\string\to-lower.md
+		docs\string\to-title-case.md = docs\string\to-title-case.md
+		docs\string\to-upper.md = docs\string\to-upper.md
+		docs\string\trim.md = docs\string\trim.md
+		docs\string\url-decode.md = docs\string\url-decode.md
+		docs\string\url-encode.md = docs\string\url-encode.md
+		docs\string\word-count.md = docs\string\word-count.md
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "email", "email", "{D9051F3A-6C47-4E18-A2B9-8F3D6E1A7C50}"
+	ProjectSection(SolutionItems) = preProject
+		docs\email\cc-business-unit.md = docs\email\cc-business-unit.md
+		docs\email\cc-connection.md = docs\email\cc-connection.md
+		docs\email\cc-queue-members.md = docs\email\cc-queue-members.md
+		docs\email\cc-security-role.md = docs\email\cc-security-role.md
+		docs\email\cc-team.md = docs\email\cc-team.md
+		docs\email\check-attachments.md = docs\email\check-attachments.md
+		docs\email\create-template.md = docs\email\create-template.md
+		docs\email\delete-email-attachment.md = docs\email\delete-email-attachment.md
+		docs\email\delete-email-attachment-by-name.md = docs\email\delete-email-attachment-by-name.md
+		docs\email\email-business-unit.md = docs\email\email-business-unit.md
+		docs\email\email-connection.md = docs\email\email-connection.md
+		docs\email\email-queue-members.md = docs\email\email-queue-members.md
+		docs\email\email-security-role.md = docs\email\email-security-role.md
+		docs\email\email-team.md = docs\email\email-team.md
+		docs\email\send-email.md = docs\email\send-email.md
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "datetime", "datetime", "{E4C7A2B1-8D35-4F69-B0E2-3A9D5C1F7E84}"
+	ProjectSection(SolutionItems) = preProject
+		docs\datetime\add-business-days.md = docs\datetime\add-business-days.md
+		docs\datetime\add-days.md = docs\datetime\add-days.md
+		docs\datetime\add-hours.md = docs\datetime\add-hours.md
+		docs\datetime\add-minutes.md = docs\datetime\add-minutes.md
+		docs\datetime\add-months.md = docs\datetime\add-months.md
+		docs\datetime\add-weeks.md = docs\datetime\add-weeks.md
+		docs\datetime\add-years.md = docs\datetime\add-years.md
+		docs\datetime\business-days-between.md = docs\datetime\business-days-between.md
+		docs\datetime\date-diff.md = docs\datetime\date-diff.md
+		docs\datetime\date-diff-business-days.md = docs\datetime\date-diff-business-days.md
+		docs\datetime\date-diff-business-hours.md = docs\datetime\date-diff-business-hours.md
+		docs\datetime\date-diff-business-minutes.md = docs\datetime\date-diff-business-minutes.md
+		docs\datetime\date-diff-days.md = docs\datetime\date-diff-days.md
+		docs\datetime\date-diff-hours.md = docs\datetime\date-diff-hours.md
+		docs\datetime\date-diff-minutes.md = docs\datetime\date-diff-minutes.md
+		docs\datetime\date-diff-months.md = docs\datetime\date-diff-months.md
+		docs\datetime\date-diff-seconds.md = docs\datetime\date-diff-seconds.md
+		docs\datetime\date-diff-years.md = docs\datetime\date-diff-years.md
+		docs\datetime\get-day-number.md = docs\datetime\get-day-number.md
+		docs\datetime\get-day-number-of-week.md = docs\datetime\get-day-number-of-week.md
+		docs\datetime\get-day-number-of-year.md = docs\datetime\get-day-number-of-year.md
+		docs\datetime\get-day-of-week.md = docs\datetime\get-day-of-week.md
+		docs\datetime\get-formatted-date-string.md = docs\datetime\get-formatted-date-string.md
+		docs\datetime\get-hour-number.md = docs\datetime\get-hour-number.md
+		docs\datetime\get-minute-number.md = docs\datetime\get-minute-number.md
+		docs\datetime\get-month-name.md = docs\datetime\get-month-name.md
+		docs\datetime\get-month-number.md = docs\datetime\get-month-number.md
+		docs\datetime\get-month-start-end.md = docs\datetime\get-month-start-end.md
+		docs\datetime\get-number-of-business-days.md = docs\datetime\get-number-of-business-days.md
+		docs\datetime\get-quarter-number-of-year.md = docs\datetime\get-quarter-number-of-year.md
+		docs\datetime\get-quarter-start-end.md = docs\datetime\get-quarter-start-end.md
+		docs\datetime\get-second-number.md = docs\datetime\get-second-number.md
+		docs\datetime\get-week-number-of-year.md = docs\datetime\get-week-number-of-year.md
+		docs\datetime\get-week-start-end.md = docs\datetime\get-week-start-end.md
+		docs\datetime\get-year-number.md = docs\datetime\get-year-number.md
+		docs\datetime\get-year-start-end.md = docs\datetime\get-year-start-end.md
+		docs\datetime\is-between.md = docs\datetime\is-between.md
+		docs\datetime\is-business-day.md = docs\datetime\is-business-day.md
+		docs\datetime\is-same-day.md = docs\datetime\is-same-day.md
+		docs\datetime\relative-time.md = docs\datetime\relative-time.md
+		docs\datetime\round-to-half-hour.md = docs\datetime\round-to-half-hour.md
+		docs\datetime\round-to-hour.md = docs\datetime\round-to-hour.md
+		docs\datetime\round-to-quarter-hour.md = docs\datetime\round-to-quarter-hour.md
+		docs\datetime\set-date-part.md = docs\datetime\set-date-part.md
+		docs\datetime\set-time.md = docs\datetime\set-time.md
+		docs\datetime\to-date-time.md = docs\datetime\to-date-time.md
+		docs\datetime\to-utc-string.md = docs\datetime\to-utc-string.md
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "persian", "persian", "{F2B83D6C-1A47-4E95-9C08-6D3E7A1B5F29}"
+	ProjectSection(SolutionItems) = preProject
+		docs\persian\convert-number-to-persian-string.md = docs\persian\convert-number-to-persian-string.md
+		docs\persian\format-persian-date-time.md = docs\persian\format-persian-date-time.md
+		docs\persian\get-date-persian-parts.md = docs\persian\get-date-persian-parts.md
+		docs\persian\validate-national-code.md = docs\persian\validate-national-code.md
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{B7D19E43-5C82-4A06-8F31-2E6A4C9D0B75}"
+	ProjectSection(SolutionItems) = preProject
+		README.md = README.md
+		THIRD-PARTY-NOTICES.md = THIRD-PARTY-NOTICES.md
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -95,6 +248,11 @@ Global
 		{1A6E4B52-9C3D-4F7A-8E21-5D0B7C93A4F6} = {7D684DCF-5527-473C-BA2A-033578E0D76B}
 		{3C9F8D17-2B64-4E5A-A0D8-6F1E2B7C5A90} = {1A6E4B52-9C3D-4F7A-8E21-5D0B7C93A4F6}
 		{5E2A7C94-6D18-4B3F-9A57-0C8E1D4F2B63} = {7D684DCF-5527-473C-BA2A-033578E0D76B}
+		{A3F71C58-2E94-4D06-B8A1-7C5E90D2F314} = {7D684DCF-5527-473C-BA2A-033578E0D76B}
+		{C8B24E71-5A39-4F82-9D06-1E7A3B5C4D28} = {7D684DCF-5527-473C-BA2A-033578E0D76B}
+		{D9051F3A-6C47-4E18-A2B9-8F3D6E1A7C50} = {7D684DCF-5527-473C-BA2A-033578E0D76B}
+		{E4C7A2B1-8D35-4F69-B0E2-3A9D5C1F7E84} = {7D684DCF-5527-473C-BA2A-033578E0D76B}
+		{F2B83D6C-1A47-4E95-9C08-6D3E7A1B5F29} = {7D684DCF-5527-473C-BA2A-033578E0D76B}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {2C32CB8C-A55B-4B8D-A122-826C7C654A4B}

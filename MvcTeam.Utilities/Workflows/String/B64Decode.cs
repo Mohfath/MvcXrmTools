@@ -24,9 +24,9 @@ namespace MvcTeam.Utilities.Workflows
             if (localContext == null)
                 throw new ArgumentNullException(nameof(localContext));
 
-            string stringToDencode = StringToDecode.Get(context);
+            string stringToDecode = StringToDecode.Get(context);
 
-            var base64EncodedBytes = Convert.FromBase64String(stringToDencode);
+            var base64EncodedBytes = Convert.FromBase64String(stringToDecode);
 
             string b64DecodedString = System.Text.Encoding.UTF8.GetString(base64EncodedBytes);
 

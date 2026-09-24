@@ -1,6 +1,9 @@
 <div dir="rtl">
 
-# Check Attachment (بررسی وجود پیوست)
+<!-- nav-top -->
+[« صفحه‌ی اصلی](../../README.md) › [یادداشت و پیوست](../../README.md#note)
+
+# بررسی وجود فایل پیوست در یادداشت در Dynamics CRM (استپ Check Attachment)
 
 این استپ بررسی می‌کند که یک یادداشت (Note) فایل پیوست دارد یا نه، و نتیجه را به‌صورت `True` یا `False` برمی‌گرداند.
 
@@ -23,5 +26,10 @@
 ## مثال کاربرد
 
 قبل از اجرای استپ‌هایی مثل [Delete Attachment](delete-attachment.md) یا [Copy Note](copy-note.md)، با یک شرط (Check Condition) روی **Has Attachment** مشخص کنید که فقط یادداشت‌های دارای پیوست ادامه پیدا کنند.
+
+---
+
+<!-- nav-bottom -->
+[⬆ بازگشت به فهرست اصلی و همه‌ی استپ‌ها](../../README.md#steps)
 
 </div>

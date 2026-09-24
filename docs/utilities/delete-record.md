@@ -1,6 +1,9 @@
 <div dir="rtl">
 
-# Delete Record (حذف رکورد)
+<!-- nav-top -->
+[« صفحه‌ی اصلی](../../README.md) › [ابزارهای عمومی](../../README.md#utilities)
+
+# حذف رکورد در Dynamics CRM (استپ Delete Record)
 
 این استپ یک رکورد را حذف می‌کند. رکورد را می‌توان یا با آدرس (Record URL) یا با نوع موجودیت و GUID مشخص کرد.
 
@@ -37,5 +40,10 @@
 ---
 
 منبع: این مستند ترجمه و بازنویسی مستند استپ Delete Record از پروژه‌ی متن‌باز [Dynamics-365-Workflow-Tools](https://github.com/demianrasko/Dynamics-365-Workflow-Tools) (نوشته‌ی Demian Rasko، مجوز Ms-PL) است.
+
+---
+
+<!-- nav-bottom -->
+[⬆ بازگشت به فهرست اصلی و همه‌ی استپ‌ها](../../README.md#steps)
 
 </div>

@@ -3,7 +3,7 @@ using System.Globalization;
 using System.Text;
 using System.Text.RegularExpressions;
 
-namespace Utilities.Services
+namespace MvcTeam.Utilities.Services
 {
     //Every text operation offered by the StringFunctions workflow step, as a stateless helper.
     //Based on StringFunctions from Dynamics-365-Workflow-Tools (Ms-PL, Demian Rasko).

@@ -1,6 +1,9 @@
 <div dir="rtl">
 
-# Currency Convert (تبدیل ارز)
+<!-- nav-top -->
+[« صفحه‌ی اصلی](../../README.md) › [ابزارهای عمومی](../../README.md#utilities)
+
+# تبدیل ارز در Dynamics CRM (استپ Currency Convert)
 
 این استپ یک مبلغ را از یک ارز به ارز دیگر تبدیل می‌کند. نرخ‌های تبدیل از ارزهایی گرفته می‌شود که خود CRM نگهداری می‌کند (**Settings > Business Management > Currencies**)، بنابراین به اینترنت نیازی ندارد.
 
@@ -45,5 +48,10 @@
 ---
 
 منبع: این مستند ترجمه و بازنویسی مستند استپ CurrencyConvert از پروژه‌ی متن‌باز [Dynamics-365-Workflow-Tools](https://github.com/demianrasko/Dynamics-365-Workflow-Tools) (نوشته‌ی Demian Rasko، مجوز Ms-PL) است.
+
+---
+
+<!-- nav-bottom -->
+[⬆ بازگشت به فهرست اصلی و همه‌ی استپ‌ها](../../README.md#steps)
 
 </div>

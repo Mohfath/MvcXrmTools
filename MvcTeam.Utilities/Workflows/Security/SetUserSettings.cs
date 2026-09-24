@@ -3,7 +3,7 @@ using Microsoft.Xrm.Sdk.Workflow;
 using MvcTeam.Utilities.Services;
 using System.Activities;
 
-namespace Utility.Workflows
+namespace MvcTeam.Utilities.Workflows
 {
     //Sets a user's personal settings: paging limit, advanced find mode, time zone, help/UI language,
     //default calendar view and send-as. A value of 0 means "leave it unchanged", except for default calendar view and send-as, which are always written.

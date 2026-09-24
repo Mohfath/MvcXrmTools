@@ -1,6 +1,9 @@
 <div dir="rtl">
 
-# Get Initiating User (دریافت کاربر شروع‌کننده)
+<!-- nav-top -->
+[« صفحه‌ی اصلی](../../README.md) › [امنیت و دسترسی](../../README.md#security)
+
+# دریافت کاربر شروع‌کننده‌ی Workflow در Dynamics CRM (استپ Get Initiating User)
 
 این استپ کاربری را برمی‌گرداند که اجرای Workflow را در ابتدا شروع کرده است.
 
@@ -23,5 +26,10 @@
 ---
 
 منبع: این مستند ترجمه و بازنویسی مستند استپ Get Initiating User از پروژه‌ی متن‌باز [Dynamics-365-Workflow-Tools](https://github.com/demianrasko/Dynamics-365-Workflow-Tools) (نوشته‌ی Demian Rasko، مجوز Ms-PL) است.
+
+---
+
+<!-- nav-bottom -->
+[⬆ بازگشت به فهرست اصلی و همه‌ی استپ‌ها](../../README.md#steps)
 
 </div>

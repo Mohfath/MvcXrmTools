@@ -1,6 +1,9 @@
 <div dir="rtl">
 
-# Clone Record (کلون کردن رکورد)
+<!-- nav-top -->
+[« صفحه‌ی اصلی](../../README.md) › [ابزارهای عمومی](../../README.md#utilities)
+
+# کلون کردن رکورد در Dynamics CRM (استپ Clone Record)
 
 این استپ برای ساخت یک کپی از یک رکورد بسیار کاربردی است. آدرس (URL) یک رکورد را به آن می‌دهید و یک رکورد جدید با همان مقادیر ایجاد می‌کند.
 
@@ -28,5 +31,10 @@
 ---
 
 منبع: این مستند ترجمه و بازنویسی مستند استپ Clone Record از پروژه‌ی متن‌باز [Dynamics-365-Workflow-Tools](https://github.com/demianrasko/Dynamics-365-Workflow-Tools) (نوشته‌ی Demian Rasko، مجوز Ms-PL) است.
+
+---
+
+<!-- nav-bottom -->
+[⬆ بازگشت به فهرست اصلی و همه‌ی استپ‌ها](../../README.md#steps)
 
 </div>

@@ -1,6 +1,9 @@
 <div dir="rtl">
 
-# Delete Attachment By Name (حذف پیوست بر اساس نام فایل)
+<!-- nav-top -->
+[« صفحه‌ی اصلی](../../README.md) › [یادداشت و پیوست](../../README.md#note)
+
+# حذف پیوست یادداشت بر اساس نام فایل در Dynamics CRM (استپ Delete Attachment By Name)
 
 این استپ فایل پیوست یک یادداشت (Note) را در صورتی که نام فایل آن با نام داده‌شده یکی باشد حذف می‌کند. **خود یادداشت (متن و عنوان) حذف نمی‌شود**؛ فقط فایل پیوست از آن برداشته می‌شود.
 
@@ -33,5 +36,10 @@
 ## مثال کاربرد
 
 با [Get Latest Note By Filename](get-latest-note-by-filename.md) یادداشتی را که فایل `draft.docx` دارد پیدا کنید و بعد با Delete Attachment By Name همان فایل را از آن بردارید.
+
+---
+
+<!-- nav-bottom -->
+[⬆ بازگشت به فهرست اصلی و همه‌ی استپ‌ها](../../README.md#steps)
 
 </div>

@@ -42,6 +42,7 @@ namespace MvcTeam.Utilities.Workflows
             {
                 localContext.TracingService.Trace("Specified start position [" + startPosition + "] is after end is string [" + stringToParse + "]");
                 PartialString.Set(context, null);
+                return;
             }
 
             if (length > stringToParse.Length)

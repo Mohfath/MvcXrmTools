@@ -13,7 +13,7 @@ namespace MvcTeam.Utilities.Workflows
     public class IntegerToWords : WorkFlowActivityBase
     {
 
-        public IntegerToWords() : base(typeof(Max)) { }
+        public IntegerToWords() : base(typeof(IntegerToWords)) { }
 
         [RequiredArgument]
         [Input("Number")]

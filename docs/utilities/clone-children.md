@@ -1,6 +1,9 @@
 <div dir="rtl">
 
-# Clone Children (کلون کردن رکوردهای فرزند)
+<!-- nav-top -->
+[« صفحه‌ی اصلی](../../README.md) › [ابزارهای عمومی](../../README.md#utilities)
+
+# کلون کردن رکوردهای فرزند در Dynamics CRM (استپ Clone Children)
 
 این استپ برای کلون کردن رکوردهای فرزند (Child) یک رکورد بسیار کاربردی است. آدرس (URL) رکورد مبدأ، آدرس رکورد مقصد و نام رابطه (Relationship) را به آن می‌دهید؛ استپ همه‌ی رکوردهای فرزند رکورد مبدأ را کپی می‌کند و کپی‌ها را به رکورد والد (Parent) جدید متصل می‌کند.
 
@@ -34,5 +37,10 @@
 ---
 
 منبع: این مستند ترجمه و بازنویسی مستند استپ Clone Children از پروژه‌ی متن‌باز [Dynamics-365-Workflow-Tools](https://github.com/demianrasko/Dynamics-365-Workflow-Tools) (نوشته‌ی Demian Rasko، مجوز Ms-PL) است.
+
+---
+
+<!-- nav-bottom -->
+[⬆ بازگشت به فهرست اصلی و همه‌ی استپ‌ها](../../README.md#steps)
 
 </div>

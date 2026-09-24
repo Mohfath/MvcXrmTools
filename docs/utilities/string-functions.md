@@ -1,6 +1,9 @@
 <div dir="rtl">
 
-# String Functions (توابع متنی)
+<!-- nav-top -->
+[« صفحه‌ی اصلی](../../README.md) › [ابزارهای عمومی](../../README.md#utilities)
+
+# توابع متنی در Dynamics CRM (استپ String Functions)
 
 این استپ چند عملیات رایج روی متن را یک‌جا انجام می‌دهد: بزرگ‌کردن حرف اول کلمه‌ها، پُر کردن (Padding)، جایگزینی، جدا کردن بخشی از متن (Substring)، Regular Expression، حروف بزرگ و کوچک، حذف فاصله‌های اطراف و حذف همه‌ی فاصله‌ها.
 
@@ -71,5 +74,10 @@
 ---
 
 منبع: این مستند ترجمه و بازنویسی مستند استپ String Functions از پروژه‌ی متن‌باز [Dynamics-365-Workflow-Tools](https://github.com/demianrasko/Dynamics-365-Workflow-Tools) (نوشته‌ی Demian Rasko، مجوز Ms-PL) است.
+
+---
+
+<!-- nav-bottom -->
+[⬆ بازگشت به فهرست اصلی و همه‌ی استپ‌ها](../../README.md#steps)
 
 </div>

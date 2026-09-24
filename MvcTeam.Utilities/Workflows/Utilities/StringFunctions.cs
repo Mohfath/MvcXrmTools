@@ -2,7 +2,7 @@ using Microsoft.Xrm.Sdk;
 using Microsoft.Xrm.Sdk.Workflow;
 using System.Activities;
 
-namespace Utilities.Workflows
+namespace MvcTeam.Utilities.Workflows
 {
     //Text operations: capitalize, pad, replace, substring, regex, upper/lower case, trim, strip spaces.
     //Based on StringFunctions from Dynamics-365-Workflow-Tools (Ms-PL, Demian Rasko).

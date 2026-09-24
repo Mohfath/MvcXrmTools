@@ -1,6 +1,9 @@
 <div dir="rtl">
 
-# JSON Parser (خواندن مقدار از JSON)
+<!-- nav-top -->
+[« صفحه‌ی اصلی](../../README.md) › [ابزارهای عمومی](../../README.md#utilities)
+
+# خواندن مقدار از متن JSON در Dynamics CRM (استپ JSON Parser)
 
 این استپ به شما اجازه می‌دهد یک مقدار را از داخل یک متن JSON بخوانید. متن JSON و مسیر (Path) مقدار موردنظر را می‌دهید و مقدار به‌صورت رشته (متن) برگردانده می‌شود.
 
@@ -61,5 +64,10 @@
 ---
 
 منبع: این مستند ترجمه و بازنویسی مستند استپ JSONParser از پروژه‌ی متن‌باز [Dynamics-365-Workflow-Tools](https://github.com/demianrasko/Dynamics-365-Workflow-Tools) (نوشته‌ی Demian Rasko، مجوز Ms-PL) است.
+
+---
+
+<!-- nav-bottom -->
+[⬆ بازگشت به فهرست اصلی و همه‌ی استپ‌ها](../../README.md#steps)
 
 </div>

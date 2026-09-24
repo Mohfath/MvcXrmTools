@@ -1,6 +1,9 @@
 <div dir="rtl">
 
-# Set User Settings (تغییر تنظیمات کاربر)
+<!-- nav-top -->
+[« صفحه‌ی اصلی](../../README.md) › [امنیت و دسترسی](../../README.md#security)
+
+# تغییر تنظیمات کاربر در Dynamics CRM (استپ Set User Settings)
 
 این استپ به شما اجازه می‌دهد تنظیمات شخصی یک کاربر را تغییر دهید: تعداد رکورد در هر صفحه، حالت Advanced Find، منطقه‌ی زمانی، زبان راهنما و رابط کاربری، نمای پیش‌فرض تقویم و اجازه‌ی Send As.
 
@@ -37,5 +40,10 @@
 ---
 
 منبع: این مستند ترجمه و بازنویسی مستند استپ Set User Settings از پروژه‌ی متن‌باز [Dynamics-365-Workflow-Tools](https://github.com/demianrasko/Dynamics-365-Workflow-Tools) (نوشته‌ی Demian Rasko، مجوز Ms-PL) است.
+
+---
+
+<!-- nav-bottom -->
+[⬆ بازگشت به فهرست اصلی و همه‌ی استپ‌ها](../../README.md#steps)
 
 </div>
