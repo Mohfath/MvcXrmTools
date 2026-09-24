@@ -37,7 +37,7 @@ namespace Utilities.Services
             //Replace
             if (string.IsNullOrEmpty(inputText) || string.IsNullOrEmpty(replaceOldValue))
                 replacedText = inputText;
-            else if (!caseSensitive)
+            else if (caseSensitive)
                 replacedText = inputText.Replace(replaceOldValue, replaceNewValue);
             else
                 replacedText = CompareAndReplace(inputText, replaceOldValue, replaceNewValue, StringComparison.OrdinalIgnoreCase);
@@ -79,8 +79,8 @@ namespace Utilities.Services
             withoutSpaces = inputText.Replace(" ", "");
         }
 
-        //Case-sensitive replace that works when the match is at the start of the string
-        //string.Replace handles that, but a manual scan must use >= 0, not > 0
+        //Replace with the given comparison (used for the case-insensitive replace); a manual scan must use >= 0, not > 0
+        //so that a match at the start of the string is found
         private static string CompareAndReplace(string text, string old, string replacement, StringComparison comparison)
         {
             if (string.IsNullOrEmpty(text) || string.IsNullOrEmpty(old)) return text;

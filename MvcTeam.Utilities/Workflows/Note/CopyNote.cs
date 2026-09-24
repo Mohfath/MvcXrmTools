@@ -67,6 +67,7 @@ namespace MvcTeam.Utilities.Workflows
                 newNote["filename"] = note.GetAttributeValue<string>("filename");
                 newNote["filesize"] = note.GetAttributeValue<int>("filesize");
                 newNote["documentbody"] = note.GetAttributeValue<string>("documentbody");
+                newNote["mimetype"] = note.GetAttributeValue<string>("mimetype");
             }
             else
                 newNote["isdocument"] = false;
@@ -78,7 +79,7 @@ namespace MvcTeam.Utilities.Workflows
 
         private static Entity GetNote(IOrganizationService service, Guid noteId)
         {
-            return service.Retrieve("annotation", noteId, new ColumnSet("objectid", "documentbody", "filename", "filesize", "isdocument", "notetext", "subject"));
+            return service.Retrieve("annotation", noteId, new ColumnSet("objectid", "documentbody", "filename", "filesize", "isdocument", "mimetype", "notetext", "subject"));
         }
     }
 }

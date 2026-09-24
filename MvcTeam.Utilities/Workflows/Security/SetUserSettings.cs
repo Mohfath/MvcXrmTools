@@ -6,7 +6,7 @@ using System.Activities;
 namespace Utility.Workflows
 {
     //Sets a user's personal settings: paging limit, advanced find mode, time zone, help/UI language,
-    //default calendar view and send-as. A value of 0 means "leave it unchanged".
+    //default calendar view and send-as. A value of 0 means "leave it unchanged", except for default calendar view and send-as, which are always written.
     //Based on SetUserSettings from Dynamics-365-Workflow-Tools (Ms-PL, Demian Rasko).
     public class SetUserSettings : CodeActivity
     {
@@ -49,7 +49,7 @@ namespace Utility.Workflows
         [Input("Default Calendar View")]
         [Default("0")]
         public InArgument<int> DefaultCalendarView { get; set; }
-        //0 = day, 1 = week, 2 = month. 0 means leave unchanged.
+        //0 = day, 1 = week, 2 = month. Always written, so 0 sets the day view.
 
         [RequiredArgument]
         [Input("Is Send As Allowed")]

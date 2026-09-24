@@ -345,17 +345,20 @@ namespace MvcTeam.Utilities.Services
         }
 
         //Updates the user's personal settings (paging limit, advanced find, time zone, help/UI language,
-        //default calendar view, send-as). A value of 0 means "leave it unchanged"; only non-zero values
-        //are written. The usersettings record is created on first use, so a missing record is created.
+        //default calendar view, send-as). A value of 0 means "leave it unchanged" for paging limit, time zone and
+        //help/UI language; advanced find mode is written only when it is 1 or 2. Default calendar view (0 = day)
+        //and send-as are always written. The usersettings record is created on first use, so a missing record is created.
         //Based on SetUserSettings from Dynamics-365-Workflow-Tools (Ms-PL, Demian Rasko).
         public void SetUserSettings(EntityReference user, int pagingLimit, int advancedFindStartupMode, int timeZoneCode,
             int helpLanguageId, int uiLanguageId, int defaultCalendarView, bool isSendAsAllowed)
         {
-            var settings = _orgService.RetrieveMultiple(new QueryExpression("usersettings")
+            var query = new QueryExpression("usersettings")
             {
                 ColumnSet = new ColumnSet(true),
                 TopCount = 1
-            }).Entities.FirstOrDefault();
+            };
+            query.Criteria.AddCondition("systemuserid", ConditionOperator.Equal, user.Id);
+            var settings = _orgService.RetrieveMultiple(query).Entities.FirstOrDefault();
             if (settings == null)
             {
                 settings = new Entity("usersettings");

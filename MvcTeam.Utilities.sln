@@ -7,6 +7,74 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MvcTeam.Utilities", "MvcTea
 EndProject
 Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "MvcTeam.Utilities.Core", "MvcTeam.Utilities.Core\MvcTeam.Utilities.Core.shproj", "{62EB3ADB-BC26-409A-9A66-226A8898766A}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "docs", "docs", "{7D684DCF-5527-473C-BA2A-033578E0D76B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "utilities", "utilities", "{8B489EF9-88D4-43C9-A965-BA7357F4378B}"
+	ProjectSection(SolutionItems) = preProject
+		docs\utilities\clone-children.md = docs\utilities\clone-children.md
+		docs\utilities\clone-record.md = docs\utilities\clone-record.md
+		docs\utilities\currency-convert.md = docs\utilities\currency-convert.md
+		docs\utilities\delete-record.md = docs\utilities\delete-record.md
+		docs\utilities\json-parser.md = docs\utilities\json-parser.md
+		docs\utilities\query-values.md = docs\utilities\query-values.md
+		docs\utilities\string-functions.md = docs\utilities\string-functions.md
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "images", "images", "{868CF2C6-8E9D-4BCF-9A22-1D013CD25897}"
+	ProjectSection(SolutionItems) = preProject
+		docs\utilities\images\clone-children-extra.gif = docs\utilities\images\clone-children-extra.gif
+		docs\utilities\images\clone-children-select-step.gif = docs\utilities\images\clone-children-select-step.gif
+		docs\utilities\images\clone-record-extra.gif = docs\utilities\images\clone-record-extra.gif
+		docs\utilities\images\clone-record-input.png = docs\utilities\images\clone-record-input.png
+		docs\utilities\images\clone-record-output.png = docs\utilities\images\clone-record-output.png
+		docs\utilities\images\clone-record-select-step.gif = docs\utilities\images\clone-record-select-step.gif
+		docs\utilities\images\currency-convert-params.gif = docs\utilities\images\currency-convert-params.gif
+		docs\utilities\images\currency-convert-result.gif = docs\utilities\images\currency-convert-result.gif
+		docs\utilities\images\currency-convert-select-step.gif = docs\utilities\images\currency-convert-select-step.gif
+		docs\utilities\images\delete-record-by-guid.gif = docs\utilities\images\delete-record-by-guid.gif
+		docs\utilities\images\delete-record-by-url.gif = docs\utilities\images\delete-record-by-url.gif
+		docs\utilities\images\delete-record-select-step.gif = docs\utilities\images\delete-record-select-step.gif
+		docs\utilities\images\json-parser-example.png = docs\utilities\images\json-parser-example.png
+		docs\utilities\images\json-parser-params.png = docs\utilities\images\json-parser-params.png
+		docs\utilities\images\json-parser-result.png = docs\utilities\images\json-parser-result.png
+		docs\utilities\images\json-parser-select-step.png = docs\utilities\images\json-parser-select-step.png
+		docs\utilities\images\query-values-params.gif = docs\utilities\images\query-values-params.gif
+		docs\utilities\images\query-values-result.gif = docs\utilities\images\query-values-result.gif
+		docs\utilities\images\query-values-select-step.gif = docs\utilities\images\query-values-select-step.gif
+		docs\utilities\images\string-functions-params.gif = docs\utilities\images\string-functions-params.gif
+		docs\utilities\images\string-functions-result.png = docs\utilities\images\string-functions-result.png
+		docs\utilities\images\string-functions-select-step.gif = docs\utilities\images\string-functions-select-step.gif
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "security", "security", "{1A6E4B52-9C3D-4F7A-8E21-5D0B7C93A4F6}"
+	ProjectSection(SolutionItems) = preProject
+		docs\security\get-initiating-user.md = docs\security\get-initiating-user.md
+		docs\security\set-user-settings.md = docs\security\set-user-settings.md
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "images", "images", "{3C9F8D17-2B64-4E5A-A0D8-6F1E2B7C5A90}"
+	ProjectSection(SolutionItems) = preProject
+		docs\security\images\get-initiating-user-result.gif = docs\security\images\get-initiating-user-result.gif
+		docs\security\images\get-initiating-user-select-step.gif = docs\security\images\get-initiating-user-select-step.gif
+		docs\security\images\set-user-settings-extra.gif = docs\security\images\set-user-settings-extra.gif
+		docs\security\images\set-user-settings-params.png = docs\security\images\set-user-settings-params.png
+		docs\security\images\set-user-settings-select-step.gif = docs\security\images\set-user-settings-select-step.gif
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "note", "note", "{5E2A7C94-6D18-4B3F-9A57-0C8E1D4F2B63}"
+	ProjectSection(SolutionItems) = preProject
+		docs\note\check-attachment.md = docs\note\check-attachment.md
+		docs\note\copy-note.md = docs\note\copy-note.md
+		docs\note\delete-attachment.md = docs\note\delete-attachment.md
+		docs\note\delete-attachment-by-name.md = docs\note\delete-attachment-by-name.md
+		docs\note\delete-note.md = docs\note\delete-note.md
+		docs\note\get-latest-note.md = docs\note\get-latest-note.md
+		docs\note\get-latest-note-by-filename.md = docs\note\get-latest-note-by-filename.md
+		docs\note\move-note.md = docs\note\move-note.md
+		docs\note\update-note-text.md = docs\note\update-note-text.md
+		docs\note\update-note-title.md = docs\note\update-note-title.md
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -20,6 +88,13 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{8B489EF9-88D4-43C9-A965-BA7357F4378B} = {7D684DCF-5527-473C-BA2A-033578E0D76B}
+		{868CF2C6-8E9D-4BCF-9A22-1D013CD25897} = {8B489EF9-88D4-43C9-A965-BA7357F4378B}
+		{1A6E4B52-9C3D-4F7A-8E21-5D0B7C93A4F6} = {7D684DCF-5527-473C-BA2A-033578E0D76B}
+		{3C9F8D17-2B64-4E5A-A0D8-6F1E2B7C5A90} = {1A6E4B52-9C3D-4F7A-8E21-5D0B7C93A4F6}
+		{5E2A7C94-6D18-4B3F-9A57-0C8E1D4F2B63} = {7D684DCF-5527-473C-BA2A-033578E0D76B}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {2C32CB8C-A55B-4B8D-A122-826C7C654A4B}

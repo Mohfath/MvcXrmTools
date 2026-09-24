@@ -75,6 +75,8 @@ namespace MvcTeam.Utilities.Services
         private static string ToJson(XElement node)
         {
             var root = new XElement("root", node.Attribute("type"), node.Nodes());
+            //A JSON null is read as <x type="null"></x>, which isn't "empty", so writing it adds a text node that the JSON writer rejects
+            foreach (var jsonNull in root.Descendants().Where(e => (string)e.Attribute("type") == "null")) jsonNull.RemoveNodes();
             using (var stream = new MemoryStream())
             {
                 using (var writer = JsonReaderWriterFactory.CreateJsonWriter(stream, Encoding.UTF8, false))

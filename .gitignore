@@ -351,3 +351,4 @@ MigrationBackup/
 
 # Local secrets (CRM connection string)
 .env
+/.claude/skills/csharp-pro

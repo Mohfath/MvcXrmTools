@@ -48,7 +48,7 @@ namespace MvcTeam.Utilities.Workflows
                                                       <entity name='annotation' >
                                                         <attribute name='annotationid' />
                                                         <filter type='and' >
-                                                          <condition attribute='filename' operator='eq' value='{filename}' />
+                                                          <condition attribute='filename' operator='eq' value='{System.Security.SecurityElement.Escape(filename)}' />
                                                           <condition attribute='objectid' operator='eq' value='{objectId}' />
                                                         </filter>
                                                         <order attribute='createdon' descending='true' />
