@@ -6,6 +6,7 @@ using System;
 using System.Activities;
 using System.Collections.Generic;
 using System.Linq;
+using MvcTeam.Utilities.Services;
 using MvcTeam.Utilities.Workflows;
 // ReSharper disable UnusedAutoPropertyAccessor.Global
 // ReSharper disable MemberCanBePrivate.Global
@@ -56,11 +57,8 @@ public class Email_EmailSecurityRole : WorkFlowActivityBase
             return;
         }
 
-        //Add any pre-defined recipients specified to the array               
-        foreach (Entity activityParty in email.GetAttributeValue<EntityCollection>("to").Entities)
-        {
-            toList.Add(activityParty);
-        }
+        //Add any recipients already on the email
+        toList.AddRange(EmailRecipients.Existing(email, "to"));
 
         EntityCollection users = GetRoleUsers(localContext.OrganizationService, roleId);
 
@@ -96,7 +94,7 @@ public class Email_EmailSecurityRole : WorkFlowActivityBase
                     ["partyid"] = new EntityReference("systemuser", e.Id)
                 };
 
-            if (toList.Any(t => t.GetAttributeValue<EntityReference>("partyid").Id == e.Id)) continue;
+            if (EmailRecipients.Contains(toList, e.Id)) continue;
 
             toList.Add(activityParty);
         }

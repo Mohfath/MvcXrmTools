@@ -1,12 +1,15 @@
 ﻿using Microsoft.Crm.Sdk.Messages;
 using Microsoft.Xrm.Sdk;
 using Microsoft.Xrm.Sdk.Query;
+using MvcTeam.Utilities.Services;
 using System;
+using System.Linq;
 
 namespace MvcTeam.Utilities.Workflows.Common
 {
     public class GetLocalTime
     {
+        //The time zone code of the user running the workflow; null when that user has no settings record or no time zone set
         public static int? RetrieveTimeZoneCode(IOrganizationService service)
         {
             var currentUserSettings = service.RetrieveMultiple(
@@ -21,15 +24,14 @@ namespace MvcTeam.Utilities.Workflows.Common
                     }
                 });
 
-            var e = currentUserSettings.Entities[0].ToEntity<Entity>();
-
-            return (int?)e.Attributes["timezonecode"];
+            return currentUserSettings.Entities.FirstOrDefault()?.GetAttributeValue<int?>("timezonecode");
         }
 
+        //Without a time zone code the time is given in Iran time, the zone the other date steps use
         public static DateTime RetrieveLocalTimeFromUtcTime(DateTime utcTime, int? timeZoneCode, IOrganizationService service)
         {
             if (!timeZoneCode.HasValue)
-                return DateTime.Now;
+                return IranTime.FromUtc(utcTime);
 
             var request = new LocalTimeFromUtcTimeRequest
             {

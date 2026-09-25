@@ -19,6 +19,7 @@
     <Compile Include="$(MSBuildThisFileDirectory)Services\BusinessDayCalculator.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Services\CrmService.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Services\DateToPersian.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Services\EmailRecipients.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Services\DynamicUrlRecordParser.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Services\IranTime.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Services\JsonPathReader.cs" />

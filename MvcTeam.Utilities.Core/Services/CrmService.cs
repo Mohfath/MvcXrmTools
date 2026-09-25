@@ -233,7 +233,8 @@ namespace MvcTeam.Utilities.Services
             return rollupFields;
         }
 
-        //Starts the workflow on every record, one after the other, and stops at the first failure.
+        //Starts the workflow on every record, in the order given, and stops at the first failure.
+        //The starts are sent 100 at a time, so thousands of records don't need thousands of round trips.
         //Returns how many were started. The workflow must be for the same entity as the records.
         public int RunWorkflowOnRecords(Guid workflowId, QueryRecords records)
         {
@@ -242,18 +243,36 @@ namespace MvcTeam.Utilities.Services
             if (!string.Equals(workflowEntity, records.EntityName, StringComparison.OrdinalIgnoreCase))
                 throw new InvalidPluginExecutionException($"The workflow's entity ({workflowEntity}) does not match the query's entity ({records.EntityName}).");
 
+            const int batchSize = 100;
             var started = 0;
-            foreach (var id in records.Ids)
+            for (var offset = 0; offset < records.Ids.Count; offset += batchSize)
             {
+                var batch = records.Ids.Skip(offset).Take(batchSize).ToList();
+                var request = new ExecuteMultipleRequest
+                {
+                    //Stop at the first failure, so the records after it are left alone
+                    Settings = new ExecuteMultipleSettings { ContinueOnError = false, ReturnResponses = true },
+                    Requests = new OrganizationRequestCollection()
+                };
+                foreach (var id in batch)
+                    request.Requests.Add(new ExecuteWorkflowRequest { EntityId = id, WorkflowId = workflowId });
+
+                ExecuteMultipleResponse response;
                 try
                 {
-                    _orgService.Execute(new ExecuteWorkflowRequest { EntityId = id, WorkflowId = workflowId });
+                    response = (ExecuteMultipleResponse)_orgService.Execute(request);
                 }
                 catch (Exception ex)
                 {
-                    throw new InvalidPluginExecutionException($"Could not start the workflow on record {id} ({started} started before it): {ex.Message}", ex);
+                    throw new InvalidPluginExecutionException($"Could not start the workflow on the records from {batch[0]} ({started} started before it): {ex.Message}", ex);
                 }
-                started++;
+
+                if (response.IsFaulted)
+                {
+                    var failed = response.Responses.First(item => item.Fault != null);
+                    throw new InvalidPluginExecutionException($"Could not start the workflow on record {batch[failed.RequestIndex]} ({started + failed.RequestIndex} started before it): {failed.Fault.Message}");
+                }
+                started += batch.Count;
             }
             return started;
         }

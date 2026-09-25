@@ -50,32 +50,9 @@ public class DateTime_DateDiffBusinessHours : WorkFlowActivityBase
         if (holidayClosureCalendar != null)
             calendar = localContext.OrganizationService.Retrieve("calendar", holidayClosureCalendar.Id, new ColumnSet(true));
 
-        var businessMinutes = 0;
-
-        if (endDate > startDate)
-        {
-            while (startDate < endDate)
-            {
-                if (startDate.IsBusinessMinute(calendar))
-                {
-                    businessMinutes++;
-                }
-
-                startDate = startDate.AddMinutes(1);
-            }
-        }
-        else
-        {
-            while (startDate > endDate)
-            {
-                if (startDate.IsBusinessMinute(calendar))
-                {
-                    businessMinutes--;
-                }
-
-                startDate = startDate.AddMinutes(-1);
-            }
-        }
+        var businessMinutes = endDate > startDate
+            ? BusinessMinuteLogic.CountBusinessMinutes(startDate, endDate.AddMinutes(-1), calendar)
+            : -BusinessMinuteLogic.CountBusinessMinutes(endDate.AddMinutes(1), startDate, calendar);
 
         TimeSpan ts = TimeSpan.FromMinutes(businessMinutes);
 

@@ -25,12 +25,21 @@ namespace MvcTeam.Utilities.Services
         //overrides: values set on the copy instead of the source values (null clears a field).
         public Guid Clone(EntityReference source, string fieldsToIgnore, string prefix, IDictionary<string, object> overrides = null)
         {
-            var metadata = ((RetrieveEntityResponse)_service.Execute(new RetrieveEntityRequest
+            return Clone(source, GetMetadata(source.LogicalName), fieldsToIgnore, prefix, overrides);
+        }
+
+        private EntityMetadata GetMetadata(string logicalName)
+        {
+            return ((RetrieveEntityResponse)_service.Execute(new RetrieveEntityRequest
             {
                 EntityFilters = EntityFilters.Attributes,
-                LogicalName = source.LogicalName
+                LogicalName = logicalName
             })).EntityMetadata;
+        }
 
+        //metadata is the entity's attribute metadata, passed in so that cloning many records of one type fetches it only once
+        private Guid Clone(EntityReference source, EntityMetadata metadata, string fieldsToIgnore, string prefix, IDictionary<string, object> overrides)
+        {
             var ignored = ParseFieldList(fieldsToIgnore);
             var original = _service.Retrieve(source.LogicalName, source.Id, new ColumnSet(true));
             var copy = new Entity(source.LogicalName);
@@ -135,9 +144,20 @@ namespace MvcTeam.Utilities.Services
                 overrides[oldParentField] = null;
 
             var children = GetChildren(relationship.ReferencingEntity, relationship.ReferencingAttribute, parent.Id);
+            var metadata = children.Count == 0 ? null : GetMetadata(relationship.ReferencingEntity);
+            var cloned = 0;
             foreach (var child in children)
             {
-                Clone(child, fieldsToIgnore, prefix, overrides);
+                try
+                {
+                    Clone(child, metadata, fieldsToIgnore, prefix, overrides);
+                }
+                catch (Exception ex)
+                {
+                    //The copies already made stay; say how far it got so they can be cleaned up or the rest cloned
+                    throw new InvalidPluginExecutionException($"Cloned {cloned} of {children.Count} children, then failed on child {child.Id}: {ex.Message}", ex);
+                }
+                cloned++;
             }
             return children.Count;
         }

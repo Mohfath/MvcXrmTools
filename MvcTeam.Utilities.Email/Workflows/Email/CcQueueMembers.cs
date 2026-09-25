@@ -6,6 +6,7 @@ using System;
 using System.Activities;
 using System.Collections.Generic;
 using System.Linq;
+using MvcTeam.Utilities.Services;
 using MvcTeam.Utilities.Workflows;
 // ReSharper disable UnusedAutoPropertyAccessor.Global
 // ReSharper disable MemberCanBePrivate.Global
@@ -59,11 +60,8 @@ public class Email_CcQueueMembers : WorkFlowActivityBase
             return;
         }
 
-        //Add any pre-defined recipients specified to the array               
-        foreach (Entity activityParty in email.GetAttributeValue<EntityCollection>("cc").Entities)
-        {
-            ccList.Add(activityParty);
-        }
+        //Add any recipients already on the email
+        ccList.AddRange(EmailRecipients.Existing(email, "cc"));
 
         bool is2011 = Is2011(localContext.OrganizationService);
         EntityCollection users = is2011
@@ -113,7 +111,7 @@ public class Email_CcQueueMembers : WorkFlowActivityBase
                     ["partyid"] = new EntityReference("systemuser", e.Id)
                 };
 
-            if (ccList.Any(t => t.GetAttributeValue<EntityReference>("partyid").Id == e.Id)) continue;
+            if (EmailRecipients.Contains(ccList, e.Id)) continue;
 
             ccList.Add(activityParty);
         }

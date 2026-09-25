@@ -1,6 +1,7 @@
 ﻿using MD.PersianDateTime;
 using Microsoft.Xrm.Sdk;
 using Microsoft.Xrm.Sdk.Workflow;
+using MvcTeam.Utilities.Services;
 using System;
 using System.Activities;
 using System.Collections.Generic;
@@ -54,8 +55,7 @@ public class Persian_GetDatePersianParts : CodeActivity
         if (inputDate == DateTime.MinValue) inputDate = DateTime.UtcNow;
 
         //تبدیل به وقت ایران تا روز شمسی درست محاسبه شود
-        var utcDate = inputDate.Kind == DateTimeKind.Local ? inputDate.ToUniversalTime() : DateTime.SpecifyKind(inputDate, DateTimeKind.Utc);
-        inputDate = TimeZoneInfo.ConvertTimeFromUtc(utcDate, TimeZoneInfo.FindSystemTimeZoneById("Iran Standard Time"));
+        inputDate = IranTime.FromUtc(inputDate);
 
 
         IWorkflowContext workflowContext = context.GetExtension<IWorkflowContext>();

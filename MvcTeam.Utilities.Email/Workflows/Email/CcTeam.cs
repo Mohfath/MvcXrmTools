@@ -6,6 +6,7 @@ using System;
 using System.Activities;
 using System.Collections.Generic;
 using System.Linq;
+using MvcTeam.Utilities.Services;
 using MvcTeam.Utilities.Workflows;
 // ReSharper disable UnusedAutoPropertyAccessor.Global
 // ReSharper disable MemberCanBePrivate.Global
@@ -53,11 +54,8 @@ public class Email_CcTeam : WorkFlowActivityBase
             return;
         }
 
-        //Add any pre-defined recipients specified to the array               
-        foreach (Entity activityParty in email.GetAttributeValue<EntityCollection>("cc").Entities)
-        {
-            ccList.Add(activityParty);
-        }
+        //Add any recipients already on the email
+        ccList.AddRange(EmailRecipients.Existing(email, "cc"));
 
         EntityCollection teamMembers = GetTeamMembers(localContext.OrganizationService, recipientTeam.Id);
 
@@ -104,7 +102,7 @@ public class Email_CcTeam : WorkFlowActivityBase
                 ["partyid"] = new EntityReference("systemuser", e.GetAttributeValue<Guid>("systemuserid"))
             };
 
-            if (ccList.Any(t => t.GetAttributeValue<EntityReference>("partyid").Id == e.GetAttributeValue<Guid>("systemuserid"))) continue;
+            if (EmailRecipients.Contains(ccList, e.GetAttributeValue<Guid>("systemuserid"))) continue;
 
             ccList.Add(activityParty);
         }
