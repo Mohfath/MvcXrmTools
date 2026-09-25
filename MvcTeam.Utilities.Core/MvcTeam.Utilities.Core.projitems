@@ -29,7 +29,6 @@
     <Compile Include="$(MSBuildThisFileDirectory)Services\RecordCloner.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Services\SafeRegex.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Services\SecureRandom.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Services\StringFunctions.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Workflows\WorkFlowActivityBase.cs" />
   </ItemGroup>
   <ItemGroup>

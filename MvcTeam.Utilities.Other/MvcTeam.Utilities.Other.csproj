@@ -94,7 +94,6 @@
     <Compile Include="Workflows\Utilities\QueryRunWorkflowOnResults.cs" />
     <Compile Include="Workflows\Utilities\RecalculateAllRollups.cs" />
     <Compile Include="Workflows\Utilities\RunWorkflowWithForLoop.cs" />
-    <Compile Include="Workflows\Utilities\StringFunctions.cs" />
     <Compile Include="Workflows\Utilities\UpdateFieldDynamically.cs" />
     <Compile Include="Workflows\Utilities\AddPriceListItem.cs" />
     <Compile Include="Workflows\Utilities\ResizeAnnotationImage.cs" />

@@ -31,7 +31,6 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "utilities", "utilities", "{
 		docs\utilities\delete-record.md = docs\utilities\delete-record.md
 		docs\utilities\json-parser.md = docs\utilities\json-parser.md
 		docs\utilities\query-values.md = docs\utilities\query-values.md
-		docs\utilities\string-functions.md = docs\utilities\string-functions.md
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "images", "images", "{868CF2C6-8E9D-4BCF-9A22-1D013CD25897}"
@@ -55,9 +54,6 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "images", "images", "{868CF2
 		docs\utilities\images\query-values-params.gif = docs\utilities\images\query-values-params.gif
 		docs\utilities\images\query-values-result.gif = docs\utilities\images\query-values-result.gif
 		docs\utilities\images\query-values-select-step.gif = docs\utilities\images\query-values-select-step.gif
-		docs\utilities\images\string-functions-params.gif = docs\utilities\images\string-functions-params.gif
-		docs\utilities\images\string-functions-result.png = docs\utilities\images\string-functions-result.png
-		docs\utilities\images\string-functions-select-step.gif = docs\utilities\images\string-functions-select-step.gif
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "security", "security", "{1A6E4B52-9C3D-4F7A-8E21-5D0B7C93A4F6}"

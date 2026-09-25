@@ -81,6 +81,7 @@
   <ItemGroup>
     <Compile Include="Workflows\String\B64Decode.cs" />
     <Compile Include="Workflows\String\B64Encode.cs" />
+    <Compile Include="Workflows\String\CapitalizeFirst.cs" />
     <Compile Include="Workflows\String\Contains.cs" />
     <Compile Include="Workflows\String\CreateEmptySpaces.cs" />
     <Compile Include="Workflows\String\DecodeHtml.cs" />
