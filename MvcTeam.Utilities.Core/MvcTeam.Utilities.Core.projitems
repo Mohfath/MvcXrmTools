@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <MSBuildAllProjects Condition="'$(MSBuildVersion)' == '' Or '$(MSBuildVersion)' &lt; '16.0'">$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
@@ -34,6 +34,7 @@
     <Compile Include="$(MSBuildThisFileDirectory)Services\QueryResultTable.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Services\RecordCloner.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Services\StringFunctions.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Workflows\WorkFlowActivityBase.cs" />
   </ItemGroup>
   <ItemGroup>
     <!-- Not compiled before the merge either; kept out of the build so the plugin DLL doesn't change -->
