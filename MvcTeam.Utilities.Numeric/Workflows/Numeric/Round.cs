@@ -34,7 +34,7 @@ public class Numeric_Round : WorkFlowActivityBase
         if (decimalPlaces < 0)
             decimalPlaces = 0;
 
-        decimal roundedNumber = Math.Round(numberToRound, decimalPlaces);
+        decimal roundedNumber = Math.Round(numberToRound, decimalPlaces, MidpointRounding.AwayFromZero);
 
         RoundedNumber.Set(context, roundedNumber);
     }

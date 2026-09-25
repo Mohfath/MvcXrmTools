@@ -1,6 +1,7 @@
 ﻿using Microsoft.Xrm.Sdk.Workflow;
 using System;
 using System.Activities;
+using MvcTeam.Utilities.Services;
 using MvcTeam.Utilities.Workflows;
 // ReSharper disable UnusedAutoPropertyAccessor.Global
 // ReSharper disable MemberCanBePrivate.Global
@@ -34,7 +35,7 @@ public class Numeric_ToDecimal : WorkFlowActivityBase
             return;
         }
 
-        bool isNumber = decimal.TryParse(textToConvert, out var convertedNumber);
+        bool isNumber = NumberText.TryParseDecimal(textToConvert, out var convertedNumber);
 
         if (isNumber)
         {

@@ -2,6 +2,7 @@
 using System;
 using System.Activities;
 using System.Text.RegularExpressions;
+using MvcTeam.Utilities.Services;
 using MvcTeam.Utilities.Workflows;
 // ReSharper disable UnusedAutoPropertyAccessor.Global
 // ReSharper disable MemberCanBePrivate.Global
@@ -31,8 +32,8 @@ public class String_RegexExtract : WorkFlowActivityBase
         string stringToSearch = StringToSearch.Get(context);
         string pattern = Pattern.Get(context);
 
-        Regex regex = new Regex(pattern, RegexOptions.IgnoreCase);
-        Match match = regex.Match(stringToSearch);
+        Regex regex = SafeRegex.Create(pattern);
+        Match match = SafeRegex.Run(() => regex.Match(stringToSearch ?? ""));
 
         if (match.Success)
         {

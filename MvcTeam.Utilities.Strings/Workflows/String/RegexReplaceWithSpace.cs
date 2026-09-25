@@ -2,6 +2,7 @@
 using System;
 using System.Activities;
 using System.Text.RegularExpressions;
+using MvcTeam.Utilities.Services;
 using MvcTeam.Utilities.Workflows;
 // ReSharper disable UnusedAutoPropertyAccessor.Global
 // ReSharper disable MemberCanBePrivate.Global
@@ -36,12 +37,12 @@ public sealed class String_RegexReplaceWithSpace : WorkFlowActivityBase
         int numberOfSpaces = NumberOfSpaces.Get(context);
         string pattern = Pattern.Get(context);
 
-        Regex regex = new Regex(pattern, RegexOptions.IgnoreCase);
+        Regex regex = SafeRegex.Create(pattern);
 
         string spaces = "";
         spaces = spaces.PadRight(numberOfSpaces, ' ');
 
-        string replacedString = regex.Replace(stringToSearch, spaces);
+        string replacedString = SafeRegex.Run(() => regex.Replace(stringToSearch ?? "", spaces));
 
         ReplacedString.Set(context, replacedString);
     }

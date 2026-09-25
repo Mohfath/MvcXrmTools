@@ -1,4 +1,5 @@
-﻿using Microsoft.Xrm.Sdk.Workflow;
+﻿using Microsoft.Xrm.Sdk;
+using Microsoft.Xrm.Sdk.Workflow;
 using System;
 using System.Activities;
 using MvcTeam.Utilities.Workflows;
@@ -41,12 +42,14 @@ public sealed class String_Substring : WorkFlowActivityBase
         {
             localContext.TracingService.Trace("Specified start position [" + startPosition + "] is after end is string [" + stringToParse + "]");
             PartialString.Set(context, null);
+            return;
         }
 
-        if (length > stringToParse.Length)
-            length = stringToParse.Length - startPosition;
+        if (length < 0)
+            throw new InvalidPluginExecutionException("Length can't be negative.");
 
-        string partialString = (length == 0)
+        //No length means "to the end"; a length that runs past the end is cut at the end
+        string partialString = (length == 0 || startPosition + length > stringToParse.Length)
             ? stringToParse.Substring(startPosition)
             : stringToParse.Substring(startPosition, length);
 

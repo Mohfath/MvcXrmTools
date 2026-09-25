@@ -1,6 +1,7 @@
 ﻿using Microsoft.Xrm.Sdk.Workflow;
 using System;
 using System.Activities;
+using MvcTeam.Utilities.Services;
 using MvcTeam.Utilities.Workflows;
 // ReSharper disable UnusedAutoPropertyAccessor.Global
 // ReSharper disable MemberCanBePrivate.Global
@@ -28,8 +29,7 @@ public class Numeric_RandomNumber : WorkFlowActivityBase
         if (maxValue < 1)
             maxValue = 1;
 
-        System.Random random = new System.Random();
-        int generatedNumber = random.Next(maxValue);
+        int generatedNumber = SecureRandom.Next(0, maxValue);
 
         GeneratedNumber.Set(context, generatedNumber);
     }

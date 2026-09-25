@@ -39,7 +39,7 @@ public class Numeric_RaiseToThePower : WorkFlowActivityBase
         var result = Math.Pow(number, powerNumber);
 
         if (roundDecimalPlaces != -1)
-            result = Math.Round(result, roundDecimalPlaces);
+            result = Math.Round(result, roundDecimalPlaces, MidpointRounding.AwayFromZero);
 
         Result.Set(context, result);
     }

@@ -3,6 +3,7 @@ using Microsoft.Xrm.Sdk.Workflow;
 using System;
 using System.Activities;
 using System.Text;
+using MvcTeam.Utilities.Services;
 using MvcTeam.Utilities.Workflows;
 // ReSharper disable UnusedAutoPropertyAccessor.Global
 // ReSharper disable MemberCanBePrivate.Global
@@ -99,11 +100,10 @@ public class String_Random : WorkFlowActivityBase
 
     private static StringBuilder GenerateRandom(int length, string allowedValues)
     {
-        StringBuilder result = new StringBuilder();
-        System.Random rnd = new System.Random();
-        while (0 < length--)
+        StringBuilder result = new StringBuilder(length);
+        while (result.Length < length)
         {
-            result.Append(allowedValues[rnd.Next(allowedValues.Length)]);
+            result.Append(allowedValues[SecureRandom.Next(0, allowedValues.Length)]);
         }
 
         return result;

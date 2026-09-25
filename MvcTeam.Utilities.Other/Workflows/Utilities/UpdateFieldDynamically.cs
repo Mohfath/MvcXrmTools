@@ -28,6 +28,9 @@ public class Utilities_UpdateFieldDynamically : CodeActivity
         tracingService.Trace($"DynamicFieldValue = {FieldValue.Get(context)}");
 
 
+        if (string.IsNullOrWhiteSpace(DynamicFieldName.Get(context)) || string.IsNullOrWhiteSpace(DynamicFieldType.Get(context)))
+            throw new InvalidPluginExecutionException("Field To Update and the field type are required.");
+
         if (this.DynamicFieldName.Get(context) != null && this.DynamicFieldType.Get(context) != null)
         {
             //اگر برای ما آدرس داینامیک رکورد را فرستاده اند

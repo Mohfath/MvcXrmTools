@@ -9,20 +9,13 @@
     <Import_RootNamespace>MvcTeam.Utilities</Import_RootNamespace>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="$(MSBuildThisFileDirectory)Models\ApplicationConfig.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\EntityObject.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Models\Invoice.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Models\InvoiceItem.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Models\ItemDetail.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\PriceListItem.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Models\SaleOrder.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Models\SalesOrderItem.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)PersianCalendar\Helpers\ExtensionsHelper.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)PersianCalendar\HijriDateTime.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)PersianCalendar\PersianDateTime.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)PersianCalendar\PersianDayOfWeek.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Services\AppConvertNumberToLetters.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Services\AppInvoice_Left_Stock.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Services\BusinessDayCalculator.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Services\CrmService.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Services\DateToPersian.cs" />
@@ -30,9 +23,12 @@
     <Compile Include="$(MSBuildThisFileDirectory)Services\IranTime.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Services\JsonPathReader.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Services\NationalCodeValidator.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Services\NumberText.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Services\PersianDateFormatter.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Services\QueryResultTable.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Services\RecordCloner.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Services\SafeRegex.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Services\SecureRandom.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Services\StringFunctions.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Workflows\WorkFlowActivityBase.cs" />
   </ItemGroup>

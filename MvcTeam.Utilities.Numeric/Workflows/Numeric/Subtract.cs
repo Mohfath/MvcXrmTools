@@ -39,7 +39,7 @@ public class Numeric_Subtract : WorkFlowActivityBase
         decimal difference = number1 - number2;
 
         if (roundDecimalPlaces != -1)
-            difference = Math.Round(difference, roundDecimalPlaces);
+            difference = Math.Round(difference, roundDecimalPlaces, MidpointRounding.AwayFromZero);
 
         Difference.Set(context, difference);
     }

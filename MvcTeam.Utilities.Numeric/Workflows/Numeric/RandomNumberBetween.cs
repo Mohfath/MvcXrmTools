@@ -2,6 +2,7 @@
 using Microsoft.Xrm.Sdk.Workflow;
 using System;
 using System.Activities;
+using MvcTeam.Utilities.Services;
 using MvcTeam.Utilities.Workflows;
 // ReSharper disable UnusedAutoPropertyAccessor.Global
 // ReSharper disable MemberCanBePrivate.Global
@@ -46,8 +47,7 @@ public class Numeric_RandomNumberBetween : WorkFlowActivityBase
             return;
         }
 
-        System.Random random = new System.Random();
-        int generatedNumber = random.Next(minValue, maxValue);
+        int generatedNumber = SecureRandom.Next(minValue, maxValue);
 
         GeneratedNumber.Set(context, generatedNumber);
     }

@@ -1,4 +1,5 @@
-﻿using Microsoft.Xrm.Sdk.Workflow;
+﻿using Microsoft.Xrm.Sdk;
+using Microsoft.Xrm.Sdk.Workflow;
 using System;
 using System.Activities;
 using MvcTeam.Utilities.Workflows;
@@ -35,7 +36,11 @@ public sealed class String_PadLeftDynamic : WorkFlowActivityBase
         string padCharacter = PadCharacter.Get(context);
         int length = Length.Get(context);
 
-        string paddedString = stringToPad;
+        //An empty pad character would never make the text longer, so the loop below would never end
+        if (string.IsNullOrEmpty(padCharacter))
+            throw new InvalidPluginExecutionException("Pad Character is required.");
+
+        string paddedString = stringToPad ?? "";
 
         while (paddedString.Length < length)
         {

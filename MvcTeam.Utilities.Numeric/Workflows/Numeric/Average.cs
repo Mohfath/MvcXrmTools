@@ -39,7 +39,7 @@ public class Numeric_Average : WorkFlowActivityBase
         decimal averageValue = (number1 + number2) / 2;
 
         if (roundDecimalPlaces != -1)
-            averageValue = Math.Round(averageValue, roundDecimalPlaces);
+            averageValue = Math.Round(averageValue, roundDecimalPlaces, MidpointRounding.AwayFromZero);
 
         AverageValue.Set(context, averageValue);
     }

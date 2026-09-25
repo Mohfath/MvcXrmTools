@@ -1,6 +1,7 @@
 ﻿using Microsoft.Xrm.Sdk.Workflow;
 using System;
 using System.Activities;
+using MvcTeam.Utilities.Services;
 using MvcTeam.Utilities.Workflows;
 // ReSharper disable UnusedAutoPropertyAccessor.Global
 // ReSharper disable MemberCanBePrivate.Global
@@ -25,7 +26,7 @@ public class Numeric_IsStringNumeric : WorkFlowActivityBase
 
         string number = Number.Get(context);
 
-        bool isNumeric = double.TryParse(number, out double theNumber);
+        bool isNumeric = NumberText.TryParseDouble(number, out double theNumber);
 
         IsNumeric.Set(context, isNumeric);
     }

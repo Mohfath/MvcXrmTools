@@ -32,7 +32,7 @@ public sealed class DateTime_DateDiffHours : WorkFlowActivityBase
 
         TimeSpan difference = startingDate - endingDate;
 
-        int hoursDifference = Math.Abs(Convert.ToInt32(difference.TotalHours));
+        int hoursDifference = (int)Math.Abs(Math.Truncate(difference.TotalHours));
 
         HoursDifference.Set(context, hoursDifference);
     }

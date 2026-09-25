@@ -30,6 +30,12 @@ public class Utilities_ResizeAnnotationImage : CodeActivity
 			IOrganizationService _service = serviceFactory.CreateOrganizationService(workflowContext.InitiatingUserId);
 			ITracingService tracingService = context.GetExtension<ITracingService>();
 			EntityReference entityReference = Annotation.Get<EntityReference>(context);
+
+				//An empty input arrives as 0, which would save every image at the worst quality and overwrite the original
+				int quality = QuualityPercent.Get(context);
+				if (quality == 0) quality = 90;
+				if (quality < 1 || quality > 100)
+					throw new InvalidPluginExecutionException("QualityPercent must be between 1 and 100.");
 			
 			QueryExpression queryExpression = new QueryExpression("annotation");
 			ConditionExpression item = new ConditionExpression("annotationid", ConditionOperator.Equal, entityReference.Id);
@@ -71,7 +77,7 @@ public class Utilities_ResizeAnnotationImage : CodeActivity
 						newHeight = num * bitmap.Height / bitmap.Width;
 					}
 					byte[] imageByte = GenerateThumbnails(num, newHeight, array2, format);
-					byte[] inArray = CompressImageWithQuality(imageByte, format, QuualityPercent.Get(context));
+					byte[] inArray = CompressImageWithQuality(imageByte, format, quality);
 					entity["documentbody"] = Convert.ToBase64String(inArray);
 					string str = string.Join(".", array, 0, array.Length - 1);
 					str += "-optimise";

@@ -39,7 +39,7 @@ public class Numeric_Multiply : WorkFlowActivityBase
         decimal product = number1 * number2;
 
         if (roundDecimalPlaces != -1)
-            product = Math.Round(product, roundDecimalPlaces);
+            product = Math.Round(product, roundDecimalPlaces, MidpointRounding.AwayFromZero);
 
         Product.Set(context, product);
     }

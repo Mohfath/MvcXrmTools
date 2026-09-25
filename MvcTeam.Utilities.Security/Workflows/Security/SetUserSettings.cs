@@ -4,7 +4,7 @@ using MvcTeam.Utilities.Services;
 using System.Activities;
 
 //Sets a user's personal settings: paging limit, advanced find mode, time zone, help/UI language,
-//default calendar view and send-as. A value of 0 means "leave it unchanged", except for default calendar view and send-as, which are always written.
+//default calendar view and send-as. A value of 0 means "leave it unchanged" (calendar view: -1; send-as: Update Send As = False).
 //Based on SetUserSettings from Dynamics-365-Workflow-Tools (Ms-PL, Demian Rasko).
 public class Security_SetUserSettings : CodeActivity
 {
@@ -45,14 +45,20 @@ public class Security_SetUserSettings : CodeActivity
 
     [RequiredArgument]
     [Input("Default Calendar View")]
-    [Default("0")]
+    [Default("-1")]
     public InArgument<int> DefaultCalendarView { get; set; }
-    //0 = day, 1 = week, 2 = month. Always written, so 0 sets the day view.
+    //0 = day, 1 = week, 2 = month, -1 = leave unchanged.
 
     [RequiredArgument]
     [Input("Is Send As Allowed")]
     [Default("False")]
     public InArgument<bool> IsSendAsAllowed { get; set; }
+
+    //Is Send As Allowed is only written when this is True, so the default never changes a user's Send As
+    [RequiredArgument]
+    [Input("Update Send As")]
+    [Default("False")]
+    public InArgument<bool> UpdateSendAs { get; set; }
 
     protected override void Execute(CodeActivityContext context)
     {
@@ -66,15 +72,17 @@ public class Security_SetUserSettings : CodeActivity
         var helpLanguageId = HelpLanguageId.Get(context);
         var uiLanguageId = UILanguageId.Get(context);
         var defaultCalendarView = DefaultCalendarView.Get(context);
-        var isSendAsAllowed = IsSendAsAllowed.Get(context);
+        bool? isSendAsAllowed = UpdateSendAs.Get(context) ? IsSendAsAllowed.Get(context) : (bool?)null;
 
         ITracingService tracingService = context.GetExtension<ITracingService>();
+        IWorkflowContext workflowContext = context.GetExtension<IWorkflowContext>();
         IOrganizationServiceFactory serviceFactory = context.GetExtension<IOrganizationServiceFactory>();
 
-        //System service, so it works even when the running user can't read or update user settings
-        IOrganizationService systemService = serviceFactory.CreateOrganizationService(null);
+        //Runs as the workflow's user, so CRM's own permissions decide who may change whose settings
+        //(a system service would let anyone who can build a workflow, for example, grant Send As to any user)
+        IOrganizationService service = serviceFactory.CreateOrganizationService(workflowContext.UserId);
 
-        new CrmService(systemService, tracingService).SetUserSettings(user, pagingLimit, advancedFindStartupMode,
+        new CrmService(service, tracingService).SetUserSettings(user, pagingLimit, advancedFindStartupMode,
             timeZoneCode, helpLanguageId, uiLanguageId, defaultCalendarView, isSendAsAllowed);
 
         tracingService.Trace("Set user settings for user {0}: pagingLimit={1} advancedFind={2} timeZone={3} " +

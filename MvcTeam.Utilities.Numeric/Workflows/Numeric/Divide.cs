@@ -1,4 +1,5 @@
-﻿using Microsoft.Xrm.Sdk.Workflow;
+﻿using Microsoft.Xrm.Sdk;
+using Microsoft.Xrm.Sdk.Workflow;
 using System;
 using System.Activities;
 using MvcTeam.Utilities.Workflows;
@@ -37,15 +38,12 @@ public class Numeric_Divide : WorkFlowActivityBase
         int roundDecimalPlaces = RoundDecimalPlaces.Get(context);
 
         if (number2 == 0)
-        {
-            Quotient.Set(context, 0);
-            return;
-        }
+            throw new InvalidPluginExecutionException("Number 2 is zero: can't divide by zero.");
 
         decimal quotient = number1 / number2;
 
         if (roundDecimalPlaces != -1)
-            quotient = Math.Round(quotient, roundDecimalPlaces);
+            quotient = Math.Round(quotient, roundDecimalPlaces, MidpointRounding.AwayFromZero);
 
         Quotient.Set(context, quotient);
     }

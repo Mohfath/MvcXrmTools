@@ -257,7 +257,7 @@ public class Email_EmailConnection : WorkFlowActivityBase
     private static string GetEntityLogicalName(IOrganizationService service, int typeCode)
     {
         var entityFilter = new MetadataFilterExpression(LogicalOperator.And);
-        entityFilter.Conditions.Add(new MetadataConditionExpression("ObjectTypeCode ", MetadataConditionOperator.Equals, typeCode));
+        entityFilter.Conditions.Add(new MetadataConditionExpression("ObjectTypeCode",MetadataConditionOperator.Equals, typeCode));
         var propertyExpression = new MetadataPropertiesExpression { AllProperties = false };
         propertyExpression.PropertyNames.Add("LogicalName");
         var entityQueryExpression = new EntityQueryExpression

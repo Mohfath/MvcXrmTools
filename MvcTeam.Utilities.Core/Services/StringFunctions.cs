@@ -1,3 +1,4 @@
+using MvcTeam.Utilities.Services;
 using System;
 using System.Globalization;
 using System.Text;
@@ -65,8 +66,8 @@ namespace Utilities.Services
             regexSuccess = false;
             if (!string.IsNullOrEmpty(regularExpression))
             {
-                var regex = new Regex(regularExpression);
-                var match = regex.Match(inputText);
+                var regex = SafeRegex.Create(regularExpression, RegexOptions.None);
+                var match = SafeRegex.Run(() => regex.Match(inputText));
                 if (match.Success)
                 {
                     regexSuccess = true;

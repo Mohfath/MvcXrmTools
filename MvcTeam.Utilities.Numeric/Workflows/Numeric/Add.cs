@@ -39,7 +39,7 @@ public class Numeric_Add : WorkFlowActivityBase
         decimal sum = number1 + number2;
 
         if (roundDecimalPlaces != -1)
-            sum = Math.Round(sum, roundDecimalPlaces);
+            sum = Math.Round(sum, roundDecimalPlaces, MidpointRounding.AwayFromZero);
 
         Sum.Set(context, sum);
     }

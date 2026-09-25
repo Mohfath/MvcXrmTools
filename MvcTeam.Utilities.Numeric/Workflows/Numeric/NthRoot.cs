@@ -44,7 +44,7 @@ public class Numeric_NthRoot : WorkFlowActivityBase
             throw new InvalidPluginExecutionException("Number under the radical must be positive.");
 
         if (roundDecimalPlaces != -1)
-            result = Math.Round(result, roundDecimalPlaces);
+            result = Math.Round(result, roundDecimalPlaces, MidpointRounding.AwayFromZero);
 
         Result.Set(context, result);
     }

@@ -2,6 +2,7 @@
 using System;
 using System.Activities;
 using System.Text.RegularExpressions;
+using MvcTeam.Utilities.Services;
 using MvcTeam.Utilities.Workflows;
 // ReSharper disable UnusedAutoPropertyAccessor.Global
 // ReSharper disable MemberCanBePrivate.Global
@@ -38,9 +39,9 @@ public sealed class String_RegexReplace : WorkFlowActivityBase
         if (string.IsNullOrEmpty(replacementValue))
             replacementValue = "";
 
-        Regex regex = new Regex(pattern, RegexOptions.IgnoreCase);
+        Regex regex = SafeRegex.Create(pattern);
 
-        string replacedString = regex.Replace(stringToSearch, replacementValue);
+        string replacedString = SafeRegex.Run(() => regex.Replace(stringToSearch ?? "", replacementValue));
 
         ReplacedString.Set(context, replacedString);
     }

@@ -32,7 +32,7 @@ public sealed class DateTime_DateDiffDays : WorkFlowActivityBase
 
         TimeSpan difference = startingDate - endingDate;
 
-        int daysDifference = Math.Abs(Convert.ToInt32(difference.TotalDays));
+        int daysDifference = (int)Math.Abs(Math.Truncate(difference.TotalDays));
 
         DaysDifference.Set(context, daysDifference);
     }

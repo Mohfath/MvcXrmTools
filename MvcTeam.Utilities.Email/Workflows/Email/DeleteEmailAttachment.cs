@@ -89,7 +89,7 @@ public class Email_DeleteEmailAttachment : WorkFlowActivityBase
                                   DateTime.Now.ToShortDateString() + "\r\n");
         }
 
-        if (delete && appendNotice && notice.Length > 0)
+        if (appendNotice && notice.Length > 0)
             UpdateEmail(localContext.OrganizationService, emailWithAttachments.Id, notice.ToString());
 
         NumberOfAttachmentsDeleted.Set(context, numberOfAttachmentsDeleted);
