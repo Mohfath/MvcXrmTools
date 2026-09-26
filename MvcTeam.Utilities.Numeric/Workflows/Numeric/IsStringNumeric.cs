@@ -1,0 +1,33 @@
+﻿using Microsoft.Xrm.Sdk.Workflow;
+using System;
+using System.Activities;
+using MvcTeam.Utilities.Services;
+using MvcTeam.Utilities.Workflows;
+// ReSharper disable UnusedAutoPropertyAccessor.Global
+// ReSharper disable MemberCanBePrivate.Global
+
+public class Numeric_IsStringNumeric : WorkFlowActivityBase
+{
+    public Numeric_IsStringNumeric() : base(typeof(Numeric_IsStringNumeric)) { }
+
+    [RequiredArgument]
+    [Input("Number")]
+    public InArgument<string> Number { get; set; }
+
+    [Output("Is String Numeric")]
+    public OutArgument<bool> IsNumeric { get; set; }
+
+    protected override void ExecuteCrmWorkFlowActivity(CodeActivityContext context, LocalWorkflowContext localContext)
+    {
+        if (context == null)
+            throw new ArgumentNullException(nameof(context));
+        if (localContext == null)
+            throw new ArgumentNullException(nameof(localContext));
+
+        string number = Number.Get(context);
+
+        bool isNumeric = NumberText.TryParseDouble(number, out double theNumber);
+
+        IsNumeric.Set(context, isNumeric);
+    }
+}

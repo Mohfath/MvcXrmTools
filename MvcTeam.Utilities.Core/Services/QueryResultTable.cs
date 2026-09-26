@@ -330,10 +330,11 @@ namespace MvcTeam.Utilities.Services
             }
         }
 
-        //A view can match more than one page of records; the first page is asked as written
-        private static List<Entity> RunAllPages(IOrganizationService service, XDocument fetch)
+        //A view can match more than one page of records; the first page is asked as written.
+        //The pages are read one at a time as the caller goes through the rows, so a caller that only keeps
+        //what it needs (like the record ids) never holds every full record in memory. Go through it once.
+        private static IEnumerable<Entity> RunAllPages(IOrganizationService service, XDocument fetch)
         {
-            var entities = new List<Entity>();
             var page = 1;
 
             while (true)
@@ -348,14 +349,14 @@ namespace MvcTeam.Utilities.Services
                     throw new InvalidPluginExecutionException($"The query failed: {ex.Message}", ex);
                 }
 
-                entities.AddRange(result.Entities);
-                if (!result.MoreRecords) break;
+                foreach (var entity in result.Entities)
+                    yield return entity;
+                if (!result.MoreRecords) yield break;
 
                 page++;
                 fetch.Root.SetAttributeValue("page", page);
                 fetch.Root.SetAttributeValue("paging-cookie", result.PagingCookie);
             }
-            return entities;
         }
 
         private void AddRow(Entity entity, List<Column> columns)

@@ -1,6 +1,5 @@
 ﻿using Microsoft.Crm.Sdk.Messages;
 using Microsoft.Xrm.Sdk;
-using Microsoft.Xrm.Sdk.Client;
 using Microsoft.Xrm.Sdk.Messages;
 using Microsoft.Xrm.Sdk.Metadata;
 using Microsoft.Xrm.Sdk.Query;
@@ -8,7 +7,6 @@ using MvcTeam.Utilities.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.ServiceModel.Description;
 using System.Xml.Linq;
 
 namespace MvcTeam.Utilities.Services
@@ -29,20 +27,6 @@ namespace MvcTeam.Utilities.Services
         {
             _orgService = service;
             _tracingService = tracingService;
-        }
-        public CrmService(ApplicationConfig config)
-        {
-            ClientCredentials credentials = new ClientCredentials();
-            if (config.UseCurrent)
-            {
-                credentials.Windows.ClientCredential = new System.Net.NetworkCredential();
-            }
-            else
-            {
-                credentials.Windows.ClientCredential = new System.Net.NetworkCredential(config.CrmUsername, config.CrmPassword, config.CrmDomain);
-            }
-
-            _orgService = new OrganizationServiceProxy(new Uri(config.CrmServiceUrl), null, credentials, null);
         }
 
         public bool IsUserMemberOfTeam(Guid userId, Guid teamId)
@@ -249,7 +233,8 @@ namespace MvcTeam.Utilities.Services
             return rollupFields;
         }
 
-        //Starts the workflow on every record, one after the other, and stops at the first failure.
+        //Starts the workflow on every record, in the order given, and stops at the first failure.
+        //The starts are sent 100 at a time, so thousands of records don't need thousands of round trips.
         //Returns how many were started. The workflow must be for the same entity as the records.
         public int RunWorkflowOnRecords(Guid workflowId, QueryRecords records)
         {
@@ -258,85 +243,43 @@ namespace MvcTeam.Utilities.Services
             if (!string.Equals(workflowEntity, records.EntityName, StringComparison.OrdinalIgnoreCase))
                 throw new InvalidPluginExecutionException($"The workflow's entity ({workflowEntity}) does not match the query's entity ({records.EntityName}).");
 
+            const int batchSize = 100;
             var started = 0;
-            foreach (var id in records.Ids)
+            for (var offset = 0; offset < records.Ids.Count; offset += batchSize)
             {
+                var batch = records.Ids.Skip(offset).Take(batchSize).ToList();
+                var request = new ExecuteMultipleRequest
+                {
+                    //Stop at the first failure, so the records after it are left alone
+                    Settings = new ExecuteMultipleSettings { ContinueOnError = false, ReturnResponses = true },
+                    Requests = new OrganizationRequestCollection()
+                };
+                foreach (var id in batch)
+                    request.Requests.Add(new ExecuteWorkflowRequest { EntityId = id, WorkflowId = workflowId });
+
+                ExecuteMultipleResponse response;
                 try
                 {
-                    _orgService.Execute(new ExecuteWorkflowRequest { EntityId = id, WorkflowId = workflowId });
+                    response = (ExecuteMultipleResponse)_orgService.Execute(request);
                 }
                 catch (Exception ex)
                 {
-                    throw new InvalidPluginExecutionException($"Could not start the workflow on record {id} ({started} started before it): {ex.Message}", ex);
+                    throw new InvalidPluginExecutionException($"Could not start the workflow on the records from {batch[0]} ({started} started before it): {ex.Message}", ex);
                 }
-                started++;
+
+                if (response.IsFaulted)
+                {
+                    var failed = response.Responses.First(item => item.Fault != null);
+                    throw new InvalidPluginExecutionException($"Could not start the workflow on record {batch[failed.RequestIndex]} ({started + failed.RequestIndex} started before it): {failed.Fault.Message}");
+                }
+                started += batch.Count;
             }
             return started;
-        }
-
-        public SaleOrder GetSaleOrderById(Guid saleOrderId)
-        {
-            var order = new SaleOrder(_orgService.Retrieve("salesorder", saleOrderId, new ColumnSet(true)));
-            order.SaleOrderItems = GetSaleOrderItemsForSaleOrder(saleOrderId);
-            return order;
-        }
-
-        private List<SalesOrderItem> GetSaleOrderItemsForSaleOrder(Guid saleOrderId)
-        {
-            var output = new List<SalesOrderItem>();
-            QueryExpression query = new QueryExpression
-            {
-                EntityName = "salesorderdetail",
-                ColumnSet = new ColumnSet(true),
-                Criteria = new FilterExpression { Conditions = { new ConditionExpression { AttributeName = "salesorderid", Operator = ConditionOperator.Equal, Values = { saleOrderId } } } }
-            };
-            var result = _orgService.RetrieveMultiple(query);
-            foreach (var item in result.Entities)
-            {
-                output.Add(new SalesOrderItem(item));
-            }
-            return output;
-        }
-
-        internal Invoice GetInvoiceById(Guid id)
-        {
-            var invoice = new Invoice(_orgService.Retrieve("invoice", id, new ColumnSet(true)));
-            invoice.InvoiceItems = GetInvoiceItemsForInvoice(id).ToList();
-            return invoice;
-        }
-
-        private IEnumerable<InvoiceItem> GetInvoiceItemsForInvoice(Guid invoiceId)
-        {
-            QueryExpression query = new QueryExpression
-            {
-                EntityName = "invoicedetail",
-                ColumnSet = new ColumnSet(true),
-                Criteria = new FilterExpression { Conditions = { new ConditionExpression { AttributeName = "invoiceid", Operator = ConditionOperator.Equal, Values = { invoiceId } } } }
-            };
-            var result = _orgService.RetrieveMultiple(query);
-            foreach (var item in result.Entities)
-            {
-                yield return new InvoiceItem(item);
-            }
         }
 
         public void DeleteItem(EntityObject item)
         {
             _orgService.Delete(item.Entity.LogicalName, item.Id);
-        }
-
-        internal IEnumerable<Invoice> GetInvoicesForSaleOrder(Guid id)
-        {
-            var query = new QueryExpression("invoice");
-            query.Criteria.AddCondition("salesorderid", ConditionOperator.Equal, id);
-            query.ColumnSet = new ColumnSet(true);
-
-            foreach (var item in _orgService.RetrieveMultiple(query).Entities)
-            {
-                var tempInvoice = new Invoice(item);
-                tempInvoice.InvoiceItems = GetInvoiceItemsForInvoice(tempInvoice.Id).ToList();
-                yield return tempInvoice;
-            }
         }
 
         public void UpdateEntity(EntityObject item)
@@ -345,60 +288,42 @@ namespace MvcTeam.Utilities.Services
         }
 
         //Updates the user's personal settings (paging limit, advanced find, time zone, help/UI language,
-        //default calendar view, send-as). A value of 0 means "leave it unchanged" for paging limit, time zone and
-        //help/UI language; advanced find mode is written only when it is 1 or 2. Default calendar view (0 = day)
-        //and send-as are always written. The usersettings record is created on first use, so a missing record is created.
+        //default calendar view, send-as). Only what is asked for is written:
+        //  0 = leave unchanged for paging limit, time zone and help/UI language;
+        //  advanced find mode is written only when it is 1 or 2;
+        //  default calendar view only when it is 0 (day), 1 (week) or 2 (month), so -1 leaves it unchanged;
+        //  send-as only when a value is given (null leaves it unchanged).
+        //The usersettings record is created on first use, so a missing record is created.
         //Based on SetUserSettings from Dynamics-365-Workflow-Tools (Ms-PL, Demian Rasko).
         public void SetUserSettings(EntityReference user, int pagingLimit, int advancedFindStartupMode, int timeZoneCode,
-            int helpLanguageId, int uiLanguageId, int defaultCalendarView, bool isSendAsAllowed)
+            int helpLanguageId, int uiLanguageId, int defaultCalendarView, bool? isSendAsAllowed)
         {
             var query = new QueryExpression("usersettings")
             {
-                ColumnSet = new ColumnSet(true),
+                ColumnSet = new ColumnSet(false),
                 TopCount = 1
             };
             query.Criteria.AddCondition("systemuserid", ConditionOperator.Equal, user.Id);
-            var settings = _orgService.RetrieveMultiple(query).Entities.FirstOrDefault();
-            if (settings == null)
-            {
-                settings = new Entity("usersettings");
-                settings["systemuserid"] = user;
-            }
+            var existing = _orgService.RetrieveMultiple(query).Entities.FirstOrDefault();
 
-            if (pagingLimit != 0) settings["paginglimit"] = pagingLimit;
+            //Only the changed fields are sent, so nothing else on the record is touched
+            var change = existing == null ? new Entity("usersettings") : new Entity("usersettings", existing.Id);
+            if (existing == null) change["systemuserid"] = user;
+
+            if (pagingLimit != 0) change["paginglimit"] = pagingLimit;
             if (advancedFindStartupMode == 1 || advancedFindStartupMode == 2)
-                settings["advancedfindstartupmode"] = advancedFindStartupMode;
-            if (timeZoneCode != 0) settings["timezonecode"] = timeZoneCode;
-            if (helpLanguageId != 0) settings["helplanguageid"] = helpLanguageId;
-            if (uiLanguageId != 0) settings["uilanguageid"] = uiLanguageId;
+                change["advancedfindstartupmode"] = advancedFindStartupMode;
+            if (timeZoneCode != 0) change["timezonecode"] = timeZoneCode;
+            if (helpLanguageId != 0) change["helplanguageid"] = helpLanguageId;
+            if (uiLanguageId != 0) change["uilanguageid"] = uiLanguageId;
             if (defaultCalendarView == 0 || defaultCalendarView == 1 || defaultCalendarView == 2)
-                settings["defaultcalendarview"] = defaultCalendarView;
-            settings["issendasallowed"] = isSendAsAllowed;
+                change["defaultcalendarview"] = defaultCalendarView;
+            if (isSendAsAllowed.HasValue) change["issendasallowed"] = isSendAsAllowed.Value;
 
-            if (settings.Id == Guid.Empty)
-                _orgService.Create(settings);
-            else
-                _orgService.Update(settings);
-        }
-
-        internal void ClearInvoiceItems(Guid id)
-        {
-            var items = GetInvoiceItemsForInvoice(id);
-
-            foreach (var item in items)
-            {
-                _orgService.Delete("invoicedetail", item.Id);
-            }
-        }
-
-        internal void AddInvoiceItemsToInvoice(Guid id, IEnumerable<InvoiceItem> computedInvoiceItems)
-        {
-            foreach (var item in computedInvoiceItems.ToList())
-            {
-                item.InvoiceId = id;
-                _orgService.Create(item.Entity);
-            }
-        }
-    }
+            if (existing == null)
+                _orgService.Create(change);
+            else if (change.Attributes.Count > 0)
+                _orgService.Update(change);
+        }    }
 }
 
