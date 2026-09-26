@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Packaging project: builds nothing itself. After the eight step assemblies are built it packs them into the
+     Dataverse solution zip (see Pack-Solution.ps1). -->
+<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{7A3E5C12-94B8-4D6F-A1E0-2B8C7D5F3A64}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>MvcTeam.Utilities.Solution</RootNamespace>
+    <AssemblyName>MvcTeam.Utilities.Solution</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
+    <!-- Nothing is produced, so keep bookkeeping files out of the shared Build\bin folder -->
+    <OutputPath>obj\output\$(Configuration)\</OutputPath>
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+  </PropertyGroup>
+  <ItemGroup>
+    <None Include="Pack-Solution.ps1" />
+    <None Include="Solution\customizations.xml" />
+    <None Include="Solution\solution.xml" />
+    <None Include="Solution\[Content_Types].xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\MvcTeam.Utilities.DateAndTime\MvcTeam.Utilities.DateAndTime.csproj">
+      <Project>{3AD46468-8A74-49E0-AAEE-D2C9BAAC7133}</Project>
+      <Name>MvcTeam.Utilities.DateAndTime</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\MvcTeam.Utilities.Email\MvcTeam.Utilities.Email.csproj">
+      <Project>{ABA81953-DC7D-4973-9143-689F07AC7E0A}</Project>
+      <Name>MvcTeam.Utilities.Email</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\MvcTeam.Utilities.Note\MvcTeam.Utilities.Note.csproj">
+      <Project>{938D97A8-FDEC-4CD1-8D88-0101E7B23F53}</Project>
+      <Name>MvcTeam.Utilities.Note</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\MvcTeam.Utilities.Numeric\MvcTeam.Utilities.Numeric.csproj">
+      <Project>{49EA89C2-E259-4164-AE78-D3184F96034E}</Project>
+      <Name>MvcTeam.Utilities.Numeric</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\MvcTeam.Utilities.Other\MvcTeam.Utilities.Other.csproj">
+      <Project>{5F3CD9AA-70BE-4476-8E7D-A798E581622E}</Project>
+      <Name>MvcTeam.Utilities.Other</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\MvcTeam.Utilities.Persian\MvcTeam.Utilities.Persian.csproj">
+      <Project>{1D72C299-F4FC-479C-A83E-C901EA08105B}</Project>
+      <Name>MvcTeam.Utilities.Persian</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\MvcTeam.Utilities.Security\MvcTeam.Utilities.Security.csproj">
+      <Project>{84F6C45E-0728-413A-9753-622187ABFFAF}</Project>
+      <Name>MvcTeam.Utilities.Security</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\MvcTeam.Utilities.Strings\MvcTeam.Utilities.Strings.csproj">
+      <Project>{372B3DD4-DDCE-4C65-A434-9555F9BD876D}</Project>
+      <Name>MvcTeam.Utilities.Strings</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- No source and no assembly: switch off compiling and copying the (non-existent) output -->
+  <Target Name="CoreCompile" />
+  <Target Name="CopyFilesToOutputDirectory" />
+  <Target Name="PackDataverseSolution" AfterTargets="Build">
+    <PropertyGroup>
+      <StepBinDir>$(MSBuildProjectDirectory)\..\Build\bin\$(Configuration)</StepBinDir>
+    </PropertyGroup>
+    <Exec Command="powershell -NoProfile -ExecutionPolicy Bypass -File &quot;$(MSBuildProjectDirectory)\Pack-Solution.ps1&quot; -BinDir &quot;$(StepBinDir)&quot; -PackagesDir &quot;$(MSBuildProjectDirectory)\..\packages&quot; -OutputDir &quot;$(MSBuildProjectDirectory)\..\Build&quot; -StagingDir &quot;$(MSBuildProjectDirectory)\obj\package\$(Configuration)&quot; -Configuration $(Configuration)" />
+  </Target>
+</Project>

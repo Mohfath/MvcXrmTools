@@ -1,0 +1,98 @@
+<ImportExportXml version="9.1.25.21" SolutionPackageVersion="9.1" languagecode="1033" generatedBy="OnPremise" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <SolutionManifest>
+    <UniqueName>MVCUtilities</UniqueName>
+    <LocalizedNames>
+      <LocalizedName description="MVC Utilities" languagecode="1033" />
+    </LocalizedNames>
+    <Descriptions>
+      <Description description="MvcTeam Utilities - common tools for everyday workflow tasks in Microsoft Dynamics CRM, built with the needs of Iranian developers in mind: Persian (Jalali) dates and calendar, Iran time and business days, Persian number-to-words and national code validation, alongside the date, text, number, email, note, security and record steps every workflow needs. These tools were made with love for our country and to help everyone build a better foundation for Iran. Please share them with your colleagues and other organizations. If you find a problem or have a request, let us know at https://mvcteam.ir and help us make them better together." languagecode="1033" />
+      <Description description="MvcTeam Utilities - ابزارهای رایج برای کارهای روزمره‌ی Workflow در Microsoft Dynamics CRM، ساخته‌شده با در نظر گرفتن نیازهای توسعه‌دهندگان ایرانی: تاریخ و تقویم شمسی، ساعت و روزهای کاری ایران، تبدیل عدد به حروف فارسی و اعتبارسنجی کد ملی، در کنار استپ‌های تاریخ، متن، عدد، ایمیل، یادداشت، دسترسی و رکورد که هر Workflow به آن‌ها نیاز دارد. این ابزارها با عشق به میهن و برای کمک به همه ساخته شده‌اند تا پایه‌ای بهتر برای ایران بسازیم. لطفاً آن‌ها را با همکاران و سازمان‌های دیگر به اشتراک بگذارید. اگر مشکلی دیدید یا درخواستی داشتید، از طریق https://mvcteam.ir به ما اطلاع دهید تا با هم آن را بهتر کنیم." languagecode="1065" />
+    </Descriptions>
+    <Version>1.0</Version>
+    <Managed>1</Managed>
+    <Publisher>
+      <UniqueName>MVCTeam</UniqueName>
+      <LocalizedNames>
+        <LocalizedName description="MVC Team" languagecode="1033" />
+        <LocalizedName description="گروه نرم‌افزاری ام وی سی" languagecode="1065" />
+      </LocalizedNames>
+      <Descriptions>
+        <Description description="MVC Team software group" languagecode="1033" />
+        <Description description="گروه نرم‌افزاری ام وی سی" languagecode="1065" />
+      </Descriptions>
+      <EMailAddress>fath_moh@outlook.com</EMailAddress>
+      <SupportingWebsiteUrl>https://mvcteam.ir</SupportingWebsiteUrl>
+      <CustomizationPrefix>mvc</CustomizationPrefix>
+      <CustomizationOptionValuePrefix>91658</CustomizationOptionValuePrefix>
+      <Addresses>
+        <Address>
+          <AddressNumber>1</AddressNumber>
+          <AddressTypeCode xsi:nil="true"></AddressTypeCode>
+          <City>Tehran</City>
+          <County xsi:nil="true"></County>
+          <Country>Iran</Country>
+          <Fax xsi:nil="true"></Fax>
+          <FreightTermsCode xsi:nil="true"></FreightTermsCode>
+          <ImportSequenceNumber xsi:nil="true"></ImportSequenceNumber>
+          <Latitude xsi:nil="true"></Latitude>
+          <Line1 xsi:nil="true"></Line1>
+          <Line2 xsi:nil="true"></Line2>
+          <Line3 xsi:nil="true"></Line3>
+          <Longitude xsi:nil="true"></Longitude>
+          <Name xsi:nil="true"></Name>
+          <PostalCode xsi:nil="true"></PostalCode>
+          <PostOfficeBox xsi:nil="true"></PostOfficeBox>
+          <PrimaryContactName xsi:nil="true"></PrimaryContactName>
+          <ShippingMethodCode xsi:nil="true"></ShippingMethodCode>
+          <StateOrProvince xsi:nil="true"></StateOrProvince>
+          <Telephone1>+989125226509</Telephone1>
+          <Telephone2 xsi:nil="true"></Telephone2>
+          <Telephone3 xsi:nil="true"></Telephone3>
+          <TimeZoneRuleVersionNumber xsi:nil="true"></TimeZoneRuleVersionNumber>
+          <UPSZone xsi:nil="true"></UPSZone>
+          <UTCOffset xsi:nil="true"></UTCOffset>
+          <UTCConversionTimeZoneCode xsi:nil="true"></UTCConversionTimeZoneCode>
+        </Address>
+        <Address>
+          <AddressNumber>2</AddressNumber>
+          <AddressTypeCode xsi:nil="true"></AddressTypeCode>
+          <City xsi:nil="true"></City>
+          <County xsi:nil="true"></County>
+          <Country xsi:nil="true"></Country>
+          <Fax xsi:nil="true"></Fax>
+          <FreightTermsCode xsi:nil="true"></FreightTermsCode>
+          <ImportSequenceNumber xsi:nil="true"></ImportSequenceNumber>
+          <Latitude xsi:nil="true"></Latitude>
+          <Line1 xsi:nil="true"></Line1>
+          <Line2 xsi:nil="true"></Line2>
+          <Line3 xsi:nil="true"></Line3>
+          <Longitude xsi:nil="true"></Longitude>
+          <Name xsi:nil="true"></Name>
+          <PostalCode xsi:nil="true"></PostalCode>
+          <PostOfficeBox xsi:nil="true"></PostOfficeBox>
+          <PrimaryContactName xsi:nil="true"></PrimaryContactName>
+          <ShippingMethodCode xsi:nil="true"></ShippingMethodCode>
+          <StateOrProvince xsi:nil="true"></StateOrProvince>
+          <Telephone1 xsi:nil="true"></Telephone1>
+          <Telephone2 xsi:nil="true"></Telephone2>
+          <Telephone3 xsi:nil="true"></Telephone3>
+          <TimeZoneRuleVersionNumber xsi:nil="true"></TimeZoneRuleVersionNumber>
+          <UPSZone xsi:nil="true"></UPSZone>
+          <UTCOffset xsi:nil="true"></UTCOffset>
+          <UTCConversionTimeZoneCode xsi:nil="true"></UTCConversionTimeZoneCode>
+        </Address>
+      </Addresses>
+    </Publisher>
+    <RootComponents>
+      <RootComponent type="91" id="{55cdca89-979e-4c42-b67d-8ab3433de6ef}" schemaName="MvcTeam.Utilities.DateAndTime, Version=2.0.0.0, Culture=neutral, PublicKeyToken=2c7a81b919ff924c" behavior="0" />
+      <RootComponent type="91" id="{abd3dcbd-5dc9-4994-8a3d-483b983adc75}" schemaName="MvcTeam.Utilities.Email, Version=2.0.0.0, Culture=neutral, PublicKeyToken=2c7a81b919ff924c" behavior="0" />
+      <RootComponent type="91" id="{a23c4836-067c-4c6d-a08a-7fde3306077a}" schemaName="MvcTeam.Utilities.Note, Version=2.0.0.0, Culture=neutral, PublicKeyToken=2c7a81b919ff924c" behavior="0" />
+      <RootComponent type="91" id="{ee794949-e130-4e69-b7cd-9bb48842056c}" schemaName="MvcTeam.Utilities.Numeric, Version=2.0.0.0, Culture=neutral, PublicKeyToken=2c7a81b919ff924c" behavior="0" />
+      <RootComponent type="91" id="{1a9cb7c9-25b6-4f70-b435-b11f41eefc95}" schemaName="MvcTeam.Utilities.Other, Version=2.0.0.0, Culture=neutral, PublicKeyToken=2c7a81b919ff924c" behavior="0" />
+      <RootComponent type="91" id="{8c77370b-03b1-4f0e-a7af-9ecf3b121e8f}" schemaName="MvcTeam.Utilities.Persian, Version=2.0.0.0, Culture=neutral, PublicKeyToken=2c7a81b919ff924c" behavior="0" />
+      <RootComponent type="91" id="{f63d2100-a492-4f57-827f-978f2727e5fd}" schemaName="MvcTeam.Utilities.Security, Version=2.0.0.0, Culture=neutral, PublicKeyToken=2c7a81b919ff924c" behavior="0" />
+      <RootComponent type="91" id="{2d012dac-d2d2-430e-9041-68236a7f38fe}" schemaName="MvcTeam.Utilities.Strings, Version=2.0.0.0, Culture=neutral, PublicKeyToken=2c7a81b919ff924c" behavior="0" />
+    </RootComponents>
+    <MissingDependencies />
+  </SolutionManifest>
+</ImportExportXml>

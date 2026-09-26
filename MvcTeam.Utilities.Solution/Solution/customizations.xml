@@ -1,0 +1,663 @@
+<ImportExportXml xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Entities></Entities>
+  <Roles></Roles>
+  <Workflows></Workflows>
+  <FieldSecurityProfiles></FieldSecurityProfiles>
+  <Templates />
+  <EntityMaps />
+  <EntityRelationships />
+  <OrganizationSettings />
+  <optionsets />
+  <CustomControls />
+  <SolutionPluginAssemblies>
+    <PluginAssembly FullName="MvcTeam.Utilities.DateAndTime, Version=2.0.0.0, Culture=neutral, PublicKeyToken=2c7a81b919ff924c" PluginAssemblyId="55cdca89-979e-4c42-b67d-8ab3433de6ef" CustomizationLevel="1">
+      <IsolationMode>2</IsolationMode>
+      <SourceType>0</SourceType>
+      <IntroducedVersion>1.0</IntroducedVersion>
+      <FileName>/PluginAssemblies/MvcTeamUtilitiesDateAndTime-55CDCA89-979E-4C42-B67D-8AB3433DE6EF/MvcTeamUtilitiesDateAndTime.dll</FileName>
+      <PluginTypes>
+        <PluginType AssemblyQualifiedName="DateTime_AddBusinessDays, MvcTeam.Utilities.DateAndTime, Version=2.0.0.0, Culture=neutral, PublicKeyToken=2c7a81b919ff924c" PluginTypeId="5d97b041-dead-46f3-b4d0-e3dfed681d5f" Name="DateTime_AddBusinessDays">
+          <FriendlyName>d5ba219d-e941-40c2-99fb-3812b7cbe4ee</FriendlyName>
+          <WorkflowActivityGroupName>MvcTeam.Utilities.DateAndTime (2.0.0.0)</WorkflowActivityGroupName>
+        </PluginType>
+        <PluginType AssemblyQualifiedName="DateTime_AddDays, MvcTeam.Utilities.DateAndTime, Version=2.0.0.0, Culture=neutral, PublicKeyToken=2c7a81b919ff924c" PluginTypeId="e5589e26-05c9-4162-bf5a-033e33668794" Name="DateTime_AddDays">
+          <FriendlyName>38ae7369-da23-4172-9fca-74f921690593</FriendlyName>
+          <WorkflowActivityGroupName>MvcTeam.Utilities.DateAndTime (2.0.0.0)</WorkflowActivityGroupName>
+        </PluginType>
+        <PluginType AssemblyQualifiedName="DateTime_AddHours, MvcTeam.Utilities.DateAndTime, Version=2.0.0.0, Culture=neutral, PublicKeyToken=2c7a81b919ff924c" PluginTypeId="99bfaf1b-3c20-4336-8c4d-486e88299e1b" Name="DateTime_AddHours">
+          <FriendlyName>158d9326-266b-4bfa-a67f-22c287fc53a5</FriendlyName>
+          <WorkflowActivityGroupName>MvcTeam.Utilities.DateAndTime (2.0.0.0)</WorkflowActivityGroupName>
+        </PluginType>
+        <PluginType AssemblyQualifiedName="DateTime_AddMinutes, MvcTeam.Utilities.DateAndTime, Version=2.0.0.0, Culture=neutral, PublicKeyToken=2c7a81b919ff924c" PluginTypeId="7ae96d77-6b52-4cbc-ba13-1f4b1d182054" Name="DateTime_AddMinutes">
+          <FriendlyName>849c97cd-e0f4-4dc8-9828-7694092c79ba</FriendlyName>
+          <WorkflowActivityGroupName>MvcTeam.Utilities.DateAndTime (2.0.0.0)</WorkflowActivityGroupName>
+        </PluginType>
+        <PluginType AssemblyQualifiedName="DateTime_AddMonths, MvcTeam.Utilities.DateAndTime, Version=2.0.0.0, Culture=neutral, PublicKeyToken=2c7a81b919ff924c" PluginTypeId="3187b0c9-11d0-406a-b7a0-b8971d9b0784" Name="DateTime_AddMonths">
+          <FriendlyName>bcb1a41a-187a-4c54-ab59-8e7bd18250e2</FriendlyName>
+          <WorkflowActivityGroupName>MvcTeam.Utilities.DateAndTime (2.0.0.0)</WorkflowActivityGroupName>
+        </PluginType>
+        <PluginType AssemblyQualifiedName="DateTime_AddWeeks, MvcTeam.Utilities.DateAndTime, Version=2.0.0.0, Culture=neutral, PublicKeyToken=2c7a81b919ff924c" PluginTypeId="ab38d508-58b6-495b-9263-2008e5188e88" Name="DateTime_AddWeeks">
+          <FriendlyName>8038e10c-e878-4a74-974e-1b96a7c227c3</FriendlyName>
+          <WorkflowActivityGroupName>MvcTeam.Utilities.DateAndTime (2.0.0.0)</WorkflowActivityGroupName>
+        </PluginType>
+        <PluginType AssemblyQualifiedName="DateTime_AddYears, MvcTeam.Utilities.DateAndTime, Version=2.0.0.0, Culture=neutral, PublicKeyToken=2c7a81b919ff924c" PluginTypeId="c58ffc36-841c-45d4-9883-b56a732dc607" Name="DateTime_AddYears">
+          <FriendlyName>42ff6161-3653-427a-a5f2-6d5e904e459b</FriendlyName>
+          <WorkflowActivityGroupName>MvcTeam.Utilities.DateAndTime (2.0.0.0)</WorkflowActivityGroupName>
+        </PluginType>
+        <PluginType AssemblyQualifiedName="DateTime_BusinessDaysBetween, MvcTeam.Utilities.DateAndTime, Version=2.0.0.0, Culture=neutral, PublicKeyToken=2c7a81b919ff924c" PluginTypeId="90034fc9-f970-4ffc-a322-f11002a7276f" Name="DateTime_BusinessDaysBetween">
+          <FriendlyName>f5608069-ec69-4b1b-807d-9b17cc345bb7</FriendlyName>
+          <WorkflowActivityGroupName>MvcTeam.Utilities.DateAndTime (2.0.0.0)</WorkflowActivityGroupName>
+        </PluginType>
+        <PluginType AssemblyQualifiedName="DateTime_DateDiff, MvcTeam.Utilities.DateAndTime, Version=2.0.0.0, Culture=neutral, PublicKeyToken=2c7a81b919ff924c" PluginTypeId="6f2b9f97-8a7f-4587-a981-3afc5cc24b00" Name="DateTime_DateDiff">
+          <FriendlyName>affe6422-0c09-4fb2-a564-4506f9402359</FriendlyName>
+          <WorkflowActivityGroupName>MvcTeam.Utilities.DateAndTime (2.0.0.0)</WorkflowActivityGroupName>
+        </PluginType>
+        <PluginType AssemblyQualifiedName="DateTime_DateDiffBusinessDays, MvcTeam.Utilities.DateAndTime, Version=2.0.0.0, Culture=neutral, PublicKeyToken=2c7a81b919ff924c" PluginTypeId="38bf9e14-b5ae-4e4a-829d-b6cc62c2e48d" Name="DateTime_DateDiffBusinessDays">
+          <FriendlyName>ba9fd608-cbb5-46b8-a68e-7fd53b6d32fc</FriendlyName>
+          <WorkflowActivityGroupName>MvcTeam.Utilities.DateAndTime (2.0.0.0)</WorkflowActivityGroupName>
+        </PluginType>
+        <PluginType AssemblyQualifiedName="DateTime_DateDiffBusinessHours, MvcTeam.Utilities.DateAndTime, Version=2.0.0.0, Culture=neutral, PublicKeyToken=2c7a81b919ff924c" PluginTypeId="7f98815e-9e6f-41db-b1e8-4f9bd9ebb933" Name="DateTime_DateDiffBusinessHours">
+          <FriendlyName>22c5dfee-a57d-48e7-b913-b4e112e90f30</FriendlyName>
+          <WorkflowActivityGroupName>MvcTeam.Utilities.DateAndTime (2.0.0.0)</WorkflowActivityGroupName>
+        </PluginType>
+        <PluginType AssemblyQualifiedName="DateTime_DateDiffBusinessMinutes, MvcTeam.Utilities.DateAndTime, Version=2.0.0.0, Culture=neutral, PublicKeyToken=2c7a81b919ff924c" PluginTypeId="992b442b-a8a3-40b0-94b9-144bed660769" Name="DateTime_DateDiffBusinessMinutes">
+          <FriendlyName>36bedefc-b8d4-4217-a6ab-8f017f5319f6</FriendlyName>
+          <WorkflowActivityGroupName>MvcTeam.Utilities.DateAndTime (2.0.0.0)</WorkflowActivityGroupName>
+        </PluginType>
+        <PluginType AssemblyQualifiedName="DateTime_DateDiffDays, MvcTeam.Utilities.DateAndTime, Version=2.0.0.0, Culture=neutral, PublicKeyToken=2c7a81b919ff924c" PluginTypeId="796d474e-c123-4ea5-a938-f78707ef1125" Name="DateTime_DateDiffDays">
+          <FriendlyName>26839ff8-381b-48c2-8eea-facd5e1d8b36</FriendlyName>
+          <WorkflowActivityGroupName>MvcTeam.Utilities.DateAndTime (2.0.0.0)</WorkflowActivityGroupName>
+        </PluginType>
+        <PluginType AssemblyQualifiedName="DateTime_DateDiffHours, MvcTeam.Utilities.DateAndTime, Version=2.0.0.0, Culture=neutral, PublicKeyToken=2c7a81b919ff924c" PluginTypeId="ecfeceb9-8e99-4a94-8c2c-d949f01be4bd" Name="DateTime_DateDiffHours">
+          <FriendlyName>3adadb28-fb63-4736-9880-6b4b196c8008</FriendlyName>
+          <WorkflowActivityGroupName>MvcTeam.Utilities.DateAndTime (2.0.0.0)</WorkflowActivityGroupName>
+        </PluginType>
+        <PluginType AssemblyQualifiedName="DateTime_DateDiffMinutes, MvcTeam.Utilities.DateAndTime, Version=2.0.0.0, Culture=neutral, PublicKeyToken=2c7a81b919ff924c" PluginTypeId="1be296ff-a529-401a-9675-8989c8182b26" Name="DateTime_DateDiffMinutes">
+          <FriendlyName>ba22ab8a-2f0b-42a9-b86b-8c545e7eb006</FriendlyName>
+          <WorkflowActivityGroupName>MvcTeam.Utilities.DateAndTime (2.0.0.0)</WorkflowActivityGroupName>
+        </PluginType>
+        <PluginType AssemblyQualifiedName="DateTime_DateDiffMonths, MvcTeam.Utilities.DateAndTime, Version=2.0.0.0, Culture=neutral, PublicKeyToken=2c7a81b919ff924c" PluginTypeId="a066a234-757f-4f0e-8e4c-bafe866ddf5c" Name="DateTime_DateDiffMonths">
+          <FriendlyName>44465764-cabc-4a1e-b4ae-ebe3b4fecf34</FriendlyName>
+          <WorkflowActivityGroupName>MvcTeam.Utilities.DateAndTime (2.0.0.0)</WorkflowActivityGroupName>
+        </PluginType>
+        <PluginType AssemblyQualifiedName="DateTime_DateDiffSeconds, MvcTeam.Utilities.DateAndTime, Version=2.0.0.0, Culture=neutral, PublicKeyToken=2c7a81b919ff924c" PluginTypeId="4f8f1f70-beb9-4582-b8a6-1323d7dfff27" Name="DateTime_DateDiffSeconds">
+          <FriendlyName>d1ef1aa0-760b-4f24-8481-71a247b70717</FriendlyName>
+          <WorkflowActivityGroupName>MvcTeam.Utilities.DateAndTime (2.0.0.0)</WorkflowActivityGroupName>
+        </PluginType>
+        <PluginType AssemblyQualifiedName="DateTime_DateDiffYears, MvcTeam.Utilities.DateAndTime, Version=2.0.0.0, Culture=neutral, PublicKeyToken=2c7a81b919ff924c" PluginTypeId="40784e23-840c-4f41-8eb8-912d754137a4" Name="DateTime_DateDiffYears">
+          <FriendlyName>0e35afb1-385b-4e52-adb5-cc36c9011866</FriendlyName>
+          <WorkflowActivityGroupName>MvcTeam.Utilities.DateAndTime (2.0.0.0)</WorkflowActivityGroupName>
+        </PluginType>
+        <PluginType AssemblyQualifiedName="DateTime_GetDayNumber, MvcTeam.Utilities.DateAndTime, Version=2.0.0.0, Culture=neutral, PublicKeyToken=2c7a81b919ff924c" PluginTypeId="bf237ac2-80fc-4d42-8875-db35ad136f6b" Name="DateTime_GetDayNumber">
+          <FriendlyName>cbd2f4f9-b0f5-491f-945c-1558cae5c994</FriendlyName>
+          <WorkflowActivityGroupName>MvcTeam.Utilities.DateAndTime (2.0.0.0)</WorkflowActivityGroupName>
+        </PluginType>
+        <PluginType AssemblyQualifiedName="DateTime_GetDayNumberOfWeek, MvcTeam.Utilities.DateAndTime, Version=2.0.0.0, Culture=neutral, PublicKeyToken=2c7a81b919ff924c" PluginTypeId="e6d30a64-822b-40a9-bb4e-6a558faac2b9" Name="DateTime_GetDayNumberOfWeek">
+          <FriendlyName>5e736000-6701-4318-8d0f-8d94e3430830</FriendlyName>
+          <WorkflowActivityGroupName>MvcTeam.Utilities.DateAndTime (2.0.0.0)</WorkflowActivityGroupName>
+        </PluginType>
+        <PluginType AssemblyQualifiedName="DateTime_GetDayNumberOfYear, MvcTeam.Utilities.DateAndTime, Version=2.0.0.0, Culture=neutral, PublicKeyToken=2c7a81b919ff924c" PluginTypeId="ce53e17f-91b3-499e-bc1a-826be9ab2bda" Name="DateTime_GetDayNumberOfYear">
+          <FriendlyName>b9d2ab68-100b-4ba0-a302-f0df59b35a66</FriendlyName>
+          <WorkflowActivityGroupName>MvcTeam.Utilities.DateAndTime (2.0.0.0)</WorkflowActivityGroupName>
+        </PluginType>
+        <PluginType AssemblyQualifiedName="DateTime_GetDayOfWeek, MvcTeam.Utilities.DateAndTime, Version=2.0.0.0, Culture=neutral, PublicKeyToken=2c7a81b919ff924c" PluginTypeId="1ad180f8-4bcd-4f59-8f9d-296cd6923db1" Name="DateTime_GetDayOfWeek">
+          <FriendlyName>15feae6c-dae3-4a50-9643-6d145d211443</FriendlyName>
+          <WorkflowActivityGroupName>MvcTeam.Utilities.DateAndTime (2.0.0.0)</WorkflowActivityGroupName>
+        </PluginType>
+        <PluginType AssemblyQualifiedName="DateTime_GetFormattedDateString, MvcTeam.Utilities.DateAndTime, Version=2.0.0.0, Culture=neutral, PublicKeyToken=2c7a81b919ff924c" PluginTypeId="7f10620a-a195-4372-ac38-4f1fa42b34cf" Name="DateTime_GetFormattedDateString">
+          <FriendlyName>424b9bc4-81c5-4069-9a45-287c0afb6bee</FriendlyName>
+          <WorkflowActivityGroupName>MvcTeam.Utilities.DateAndTime (2.0.0.0)</WorkflowActivityGroupName>
+        </PluginType>
+        <PluginType AssemblyQualifiedName="DateTime_GetHourNumber, MvcTeam.Utilities.DateAndTime, Version=2.0.0.0, Culture=neutral, PublicKeyToken=2c7a81b919ff924c" PluginTypeId="40c5b76c-bd6d-4d8b-ab74-38aef43eb25e" Name="DateTime_GetHourNumber">
+          <FriendlyName>3c560831-75f5-4eff-aa9d-9f156c15ceeb</FriendlyName>
+          <WorkflowActivityGroupName>MvcTeam.Utilities.DateAndTime (2.0.0.0)</WorkflowActivityGroupName>
+        </PluginType>
+        <PluginType AssemblyQualifiedName="DateTime_GetMinuteNumber, MvcTeam.Utilities.DateAndTime, Version=2.0.0.0, Culture=neutral, PublicKeyToken=2c7a81b919ff924c" PluginTypeId="965e9fd2-ea99-447d-b36a-eec1dc63b50c" Name="DateTime_GetMinuteNumber">
+          <FriendlyName>2835db01-fb96-4a6d-94fc-cb07d5908884</FriendlyName>
+          <WorkflowActivityGroupName>MvcTeam.Utilities.DateAndTime (2.0.0.0)</WorkflowActivityGroupName>
+        </PluginType>
+        <PluginType AssemblyQualifiedName="DateTime_GetMonthName, MvcTeam.Utilities.DateAndTime, Version=2.0.0.0, Culture=neutral, PublicKeyToken=2c7a81b919ff924c" PluginTypeId="1dd92559-487a-4ac6-8375-a2e2fd9f2d35" Name="DateTime_GetMonthName">
+          <FriendlyName>dffc458b-a608-46cf-8e2e-398b3d24f116</FriendlyName>
+          <WorkflowActivityGroupName>MvcTeam.Utilities.DateAndTime (2.0.0.0)</WorkflowActivityGroupName>
+        </PluginType>
+        <PluginType AssemblyQualifiedName="DateTime_GetMonthNumber, MvcTeam.Utilities.DateAndTime, Version=2.0.0.0, Culture=neutral, PublicKeyToken=2c7a81b919ff924c" PluginTypeId="21825e0b-339b-4894-995c-d397398c8f90" Name="DateTime_GetMonthNumber">
+          <FriendlyName>e9b8fce8-1c1e-410a-a372-0479dc283291</FriendlyName>
+          <WorkflowActivityGroupName>MvcTeam.Utilities.DateAndTime (2.0.0.0)</WorkflowActivityGroupName>
+        </PluginType>
+        <PluginType AssemblyQualifiedName="DateTime_GetMonthStartEnd, MvcTeam.Utilities.DateAndTime, Version=2.0.0.0, Culture=neutral, PublicKeyToken=2c7a81b919ff924c" PluginTypeId="6a0f10db-f921-41c9-a318-828c400800d2" Name="DateTime_GetMonthStartEnd">
+          <FriendlyName>3a82a446-cdb7-4e3b-be14-b032b492824f</FriendlyName>
+          <WorkflowActivityGroupName>MvcTeam.Utilities.DateAndTime (2.0.0.0)</WorkflowActivityGroupName>
+        </PluginType>
+        <PluginType AssemblyQualifiedName="DateTime_GetNumberOfBusinessDays, MvcTeam.Utilities.DateAndTime, Version=2.0.0.0, Culture=neutral, PublicKeyToken=2c7a81b919ff924c" PluginTypeId="04a8af12-5a42-4937-a92a-c044659681a7" Name="DateTime_GetNumberOfBusinessDays">
+          <FriendlyName>17790097-22ea-41ce-b62f-d826e37bda65</FriendlyName>
+          <WorkflowActivityGroupName>MvcTeam.Utilities.DateAndTime (2.0.0.0)</WorkflowActivityGroupName>
+        </PluginType>
+        <PluginType AssemblyQualifiedName="DateTime_GetQuarterNumberOfYear, MvcTeam.Utilities.DateAndTime, Version=2.0.0.0, Culture=neutral, PublicKeyToken=2c7a81b919ff924c" PluginTypeId="e1a2d490-9454-4452-ba22-54975df684b8" Name="DateTime_GetQuarterNumberOfYear">
+          <FriendlyName>014f72f3-65bf-46f1-b1b2-a20ec4795270</FriendlyName>
+          <WorkflowActivityGroupName>MvcTeam.Utilities.DateAndTime (2.0.0.0)</WorkflowActivityGroupName>
+        </PluginType>
+        <PluginType AssemblyQualifiedName="DateTime_GetQuarterStartEnd, MvcTeam.Utilities.DateAndTime, Version=2.0.0.0, Culture=neutral, PublicKeyToken=2c7a81b919ff924c" PluginTypeId="b4b7de3c-7099-410c-9b4d-672076ae9d6f" Name="DateTime_GetQuarterStartEnd">
+          <FriendlyName>d0ba449d-9dd4-41e2-b908-e30672a37448</FriendlyName>
+          <WorkflowActivityGroupName>MvcTeam.Utilities.DateAndTime (2.0.0.0)</WorkflowActivityGroupName>
+        </PluginType>
+        <PluginType AssemblyQualifiedName="DateTime_GetSecondNumber, MvcTeam.Utilities.DateAndTime, Version=2.0.0.0, Culture=neutral, PublicKeyToken=2c7a81b919ff924c" PluginTypeId="b96ba8de-89b9-4f89-934b-f8c7b27d121d" Name="DateTime_GetSecondNumber">
+          <FriendlyName>caa13b36-7545-435a-aee3-7a1d82e8681a</FriendlyName>
+          <WorkflowActivityGroupName>MvcTeam.Utilities.DateAndTime (2.0.0.0)</WorkflowActivityGroupName>
+        </PluginType>
+        <PluginType AssemblyQualifiedName="DateTime_GetWeekNumberOfYear, MvcTeam.Utilities.DateAndTime, Version=2.0.0.0, Culture=neutral, PublicKeyToken=2c7a81b919ff924c" PluginTypeId="9740aeed-cf6b-4832-8c11-d0786ec713d9" Name="DateTime_GetWeekNumberOfYear">
+          <FriendlyName>a6258a59-5370-4b42-b5f8-679dbd58d16a</FriendlyName>
+          <WorkflowActivityGroupName>MvcTeam.Utilities.DateAndTime (2.0.0.0)</WorkflowActivityGroupName>
+        </PluginType>
+        <PluginType AssemblyQualifiedName="DateTime_GetWeekStartEnd, MvcTeam.Utilities.DateAndTime, Version=2.0.0.0, Culture=neutral, PublicKeyToken=2c7a81b919ff924c" PluginTypeId="bf8effc5-9865-4df5-8e8b-ccf7fcac9cc4" Name="DateTime_GetWeekStartEnd">
+          <FriendlyName>27d9bef6-e53e-4f52-8981-67b2667dcc0d</FriendlyName>
+          <WorkflowActivityGroupName>MvcTeam.Utilities.DateAndTime (2.0.0.0)</WorkflowActivityGroupName>
+        </PluginType>
+        <PluginType AssemblyQualifiedName="DateTime_GetYearNumber, MvcTeam.Utilities.DateAndTime, Version=2.0.0.0, Culture=neutral, PublicKeyToken=2c7a81b919ff924c" PluginTypeId="fdc51b64-6af3-4ac9-8b7f-cd6a306741cc" Name="DateTime_GetYearNumber">
+          <FriendlyName>4800e4ce-9280-48be-bbcc-bc2dbd81a5c2</FriendlyName>
+          <WorkflowActivityGroupName>MvcTeam.Utilities.DateAndTime (2.0.0.0)</WorkflowActivityGroupName>
+        </PluginType>
+        <PluginType AssemblyQualifiedName="DateTime_GetYearStartEnd, MvcTeam.Utilities.DateAndTime, Version=2.0.0.0, Culture=neutral, PublicKeyToken=2c7a81b919ff924c" PluginTypeId="f17ad5ed-76c8-46c8-945e-b24e2e1dbf6d" Name="DateTime_GetYearStartEnd">
+          <FriendlyName>872e6689-925e-4f01-b134-d762d2ca7050</FriendlyName>
+          <WorkflowActivityGroupName>MvcTeam.Utilities.DateAndTime (2.0.0.0)</WorkflowActivityGroupName>
+        </PluginType>
+        <PluginType AssemblyQualifiedName="DateTime_IsBetween, MvcTeam.Utilities.DateAndTime, Version=2.0.0.0, Culture=neutral, PublicKeyToken=2c7a81b919ff924c" PluginTypeId="773346e1-ce5a-4037-a75d-734bdf41ca9f" Name="DateTime_IsBetween">
+          <FriendlyName>158b4779-880b-4576-92ff-e120e38a75b9</FriendlyName>
+          <WorkflowActivityGroupName>MvcTeam.Utilities.DateAndTime (2.0.0.0)</WorkflowActivityGroupName>
+        </PluginType>
+        <PluginType AssemblyQualifiedName="DateTime_IsBusinessDay, MvcTeam.Utilities.DateAndTime, Version=2.0.0.0, Culture=neutral, PublicKeyToken=2c7a81b919ff924c" PluginTypeId="9744b2a2-aab7-4cba-b7be-660ed0acbc9e" Name="DateTime_IsBusinessDay">
+          <FriendlyName>7f5d9998-b9d8-49d5-a125-355a039afead</FriendlyName>
+          <WorkflowActivityGroupName>MvcTeam.Utilities.DateAndTime (2.0.0.0)</WorkflowActivityGroupName>
+        </PluginType>
+        <PluginType AssemblyQualifiedName="DateTime_IsSameDay, MvcTeam.Utilities.DateAndTime, Version=2.0.0.0, Culture=neutral, PublicKeyToken=2c7a81b919ff924c" PluginTypeId="7309ab08-0883-4360-8ebb-a1f1d1b4a8ce" Name="DateTime_IsSameDay">
+          <FriendlyName>8be15f07-a0d2-4e61-8c38-6560c83cf592</FriendlyName>
+          <WorkflowActivityGroupName>MvcTeam.Utilities.DateAndTime (2.0.0.0)</WorkflowActivityGroupName>
+        </PluginType>
+        <PluginType AssemblyQualifiedName="DateTime_RelativeTime, MvcTeam.Utilities.DateAndTime, Version=2.0.0.0, Culture=neutral, PublicKeyToken=2c7a81b919ff924c" PluginTypeId="bc1a10a4-d8ab-44d6-88dd-38417df12f82" Name="DateTime_RelativeTime">
+          <FriendlyName>0bdabdb9-d7ec-4adf-ac97-e4c7420b6683</FriendlyName>
+          <WorkflowActivityGroupName>MvcTeam.Utilities.DateAndTime (2.0.0.0)</WorkflowActivityGroupName>
+        </PluginType>
+        <PluginType AssemblyQualifiedName="DateTime_RoundToHalfHour, MvcTeam.Utilities.DateAndTime, Version=2.0.0.0, Culture=neutral, PublicKeyToken=2c7a81b919ff924c" PluginTypeId="6dcf6729-332b-40fc-b0f1-d2d473edb69f" Name="DateTime_RoundToHalfHour">
+          <FriendlyName>a7ef595d-14dc-49ac-84de-cb141ed7c386</FriendlyName>
+          <WorkflowActivityGroupName>MvcTeam.Utilities.DateAndTime (2.0.0.0)</WorkflowActivityGroupName>
+        </PluginType>
+        <PluginType AssemblyQualifiedName="DateTime_RoundToHour, MvcTeam.Utilities.DateAndTime, Version=2.0.0.0, Culture=neutral, PublicKeyToken=2c7a81b919ff924c" PluginTypeId="c55f1cb4-2207-4d63-b927-2949ef37fbe7" Name="DateTime_RoundToHour">
+          <FriendlyName>5e5a7d46-6bce-40d3-99c1-a32f5372df63</FriendlyName>
+          <WorkflowActivityGroupName>MvcTeam.Utilities.DateAndTime (2.0.0.0)</WorkflowActivityGroupName>
+        </PluginType>
+        <PluginType AssemblyQualifiedName="DateTime_RoundToQuarterHour, MvcTeam.Utilities.DateAndTime, Version=2.0.0.0, Culture=neutral, PublicKeyToken=2c7a81b919ff924c" PluginTypeId="f90c78a8-b6fc-470e-8454-e3706a89b27c" Name="DateTime_RoundToQuarterHour">
+          <FriendlyName>243905c7-e71c-45d2-95b2-2b361899db33</FriendlyName>
+          <WorkflowActivityGroupName>MvcTeam.Utilities.DateAndTime (2.0.0.0)</WorkflowActivityGroupName>
+        </PluginType>
+        <PluginType AssemblyQualifiedName="DateTime_SetDatePart, MvcTeam.Utilities.DateAndTime, Version=2.0.0.0, Culture=neutral, PublicKeyToken=2c7a81b919ff924c" PluginTypeId="ff5ecec1-6132-4e30-bbe3-9b4af89ec74a" Name="DateTime_SetDatePart">
+          <FriendlyName>efe4c4b9-028c-4a85-9326-f838e391092e</FriendlyName>
+          <WorkflowActivityGroupName>MvcTeam.Utilities.DateAndTime (2.0.0.0)</WorkflowActivityGroupName>
+        </PluginType>
+        <PluginType AssemblyQualifiedName="DateTime_SetTime, MvcTeam.Utilities.DateAndTime, Version=2.0.0.0, Culture=neutral, PublicKeyToken=2c7a81b919ff924c" PluginTypeId="21b4d2d3-d573-4517-9524-b78d0ae0b66b" Name="DateTime_SetTime">
+          <FriendlyName>8d907728-3345-4e74-bbef-254746929445</FriendlyName>
+          <WorkflowActivityGroupName>MvcTeam.Utilities.DateAndTime (2.0.0.0)</WorkflowActivityGroupName>
+        </PluginType>
+        <PluginType AssemblyQualifiedName="DateTime_ToDateTime, MvcTeam.Utilities.DateAndTime, Version=2.0.0.0, Culture=neutral, PublicKeyToken=2c7a81b919ff924c" PluginTypeId="472dad82-fd21-4b90-aa37-7658a3f7a511" Name="DateTime_ToDateTime">
+          <FriendlyName>b29b8202-3b47-43ab-a3ce-1208d34c1763</FriendlyName>
+          <WorkflowActivityGroupName>MvcTeam.Utilities.DateAndTime (2.0.0.0)</WorkflowActivityGroupName>
+        </PluginType>
+        <PluginType AssemblyQualifiedName="DateTime_ToUTCString, MvcTeam.Utilities.DateAndTime, Version=2.0.0.0, Culture=neutral, PublicKeyToken=2c7a81b919ff924c" PluginTypeId="697b9976-7ffc-4fe8-819d-377fcc2042f5" Name="DateTime_ToUTCString">
+          <FriendlyName>dc3b29ed-eafc-4e06-824a-228050c4754c</FriendlyName>
+          <WorkflowActivityGroupName>MvcTeam.Utilities.DateAndTime (2.0.0.0)</WorkflowActivityGroupName>
+        </PluginType>
+      </PluginTypes>
+    </PluginAssembly>
+    <PluginAssembly FullName="MvcTeam.Utilities.Email, Version=2.0.0.0, Culture=neutral, PublicKeyToken=2c7a81b919ff924c" PluginAssemblyId="abd3dcbd-5dc9-4994-8a3d-483b983adc75" CustomizationLevel="1">
+      <IsolationMode>2</IsolationMode>
+      <SourceType>0</SourceType>
+      <IntroducedVersion>1.0</IntroducedVersion>
+      <FileName>/PluginAssemblies/MvcTeamUtilitiesEmail-ABD3DCBD-5DC9-4994-8A3D-483B983ADC75/MvcTeamUtilitiesEmail.dll</FileName>
+      <PluginTypes>
+        <PluginType AssemblyQualifiedName="Email_CcBusinessUnit, MvcTeam.Utilities.Email, Version=2.0.0.0, Culture=neutral, PublicKeyToken=2c7a81b919ff924c" PluginTypeId="e71f7c6f-6213-4305-8a2d-1442c2f3a104" Name="Email_CcBusinessUnit">
+          <FriendlyName>76d1fa26-2da9-4f35-bee5-e4b70caaf02c</FriendlyName>
+          <WorkflowActivityGroupName>MvcTeam.Utilities.Email (2.0.0.0)</WorkflowActivityGroupName>
+        </PluginType>
+        <PluginType AssemblyQualifiedName="Email_CcConnection, MvcTeam.Utilities.Email, Version=2.0.0.0, Culture=neutral, PublicKeyToken=2c7a81b919ff924c" PluginTypeId="fee4daa5-9f06-4a66-98cd-32af87a4175d" Name="Email_CcConnection">
+          <FriendlyName>a4b807c8-60c3-463f-bbc9-bd81826ab1a1</FriendlyName>
+          <WorkflowActivityGroupName>MvcTeam.Utilities.Email (2.0.0.0)</WorkflowActivityGroupName>
+        </PluginType>
+        <PluginType AssemblyQualifiedName="Email_CcQueueMembers, MvcTeam.Utilities.Email, Version=2.0.0.0, Culture=neutral, PublicKeyToken=2c7a81b919ff924c" PluginTypeId="737e14dd-8b48-44f3-b1c3-70a212792a6f" Name="Email_CcQueueMembers">
+          <FriendlyName>c1d8cec6-0148-4056-be25-9aa22c1ba1fc</FriendlyName>
+          <WorkflowActivityGroupName>MvcTeam.Utilities.Email (2.0.0.0)</WorkflowActivityGroupName>
+        </PluginType>
+        <PluginType AssemblyQualifiedName="Email_CcSecurityRole, MvcTeam.Utilities.Email, Version=2.0.0.0, Culture=neutral, PublicKeyToken=2c7a81b919ff924c" PluginTypeId="78c115db-d77c-4e7e-a90c-975a3060b905" Name="Email_CcSecurityRole">
+          <FriendlyName>4a0e9dde-bdb1-4f41-846e-3f3ee9504658</FriendlyName>
+          <WorkflowActivityGroupName>MvcTeam.Utilities.Email (2.0.0.0)</WorkflowActivityGroupName>
+        </PluginType>
+        <PluginType AssemblyQualifiedName="Email_CcTeam, MvcTeam.Utilities.Email, Version=2.0.0.0, Culture=neutral, PublicKeyToken=2c7a81b919ff924c" PluginTypeId="3304b0e4-fc31-491a-8efe-7f4e530be588" Name="Email_CcTeam">
+          <FriendlyName>439738ba-cb45-4b7a-bcee-3b0891ae2fcb</FriendlyName>
+          <WorkflowActivityGroupName>MvcTeam.Utilities.Email (2.0.0.0)</WorkflowActivityGroupName>
+        </PluginType>
+        <PluginType AssemblyQualifiedName="Email_CheckAttachments, MvcTeam.Utilities.Email, Version=2.0.0.0, Culture=neutral, PublicKeyToken=2c7a81b919ff924c" PluginTypeId="476b94b5-694c-4129-95ec-13c19570cc20" Name="Email_CheckAttachments">
+          <FriendlyName>1d6ed746-8651-4155-b518-b5384db2d4fe</FriendlyName>
+          <WorkflowActivityGroupName>MvcTeam.Utilities.Email (2.0.0.0)</WorkflowActivityGroupName>
+        </PluginType>
+        <PluginType AssemblyQualifiedName="Email_CreateTemplate, MvcTeam.Utilities.Email, Version=2.0.0.0, Culture=neutral, PublicKeyToken=2c7a81b919ff924c" PluginTypeId="1e622acc-dfc3-49f0-81a4-dee80ceeec0d" Name="Email_CreateTemplate">
+          <FriendlyName>6eb9b371-5900-41f5-b901-f7fe0bd9797e</FriendlyName>
+          <WorkflowActivityGroupName>MvcTeam.Utilities.Email (2.0.0.0)</WorkflowActivityGroupName>
+        </PluginType>
+        <PluginType AssemblyQualifiedName="Email_DeleteEmailAttachment, MvcTeam.Utilities.Email, Version=2.0.0.0, Culture=neutral, PublicKeyToken=2c7a81b919ff924c" PluginTypeId="65eee72d-ea32-44f2-b898-5887b89a6234" Name="Email_DeleteEmailAttachment">
+          <FriendlyName>ec691545-17a7-4788-8958-05b2740897be</FriendlyName>
+          <WorkflowActivityGroupName>MvcTeam.Utilities.Email (2.0.0.0)</WorkflowActivityGroupName>
+        </PluginType>
+        <PluginType AssemblyQualifiedName="Email_DeleteEmailAttachmentByName, MvcTeam.Utilities.Email, Version=2.0.0.0, Culture=neutral, PublicKeyToken=2c7a81b919ff924c" PluginTypeId="4c133400-5a9c-4e7f-8fb2-a437ebd62476" Name="Email_DeleteEmailAttachmentByName">
+          <FriendlyName>a6d83a4e-cf4f-4f6e-b941-d04316ae572d</FriendlyName>
+          <WorkflowActivityGroupName>MvcTeam.Utilities.Email (2.0.0.0)</WorkflowActivityGroupName>
+        </PluginType>
+        <PluginType AssemblyQualifiedName="Email_EmailBusinessUnit, MvcTeam.Utilities.Email, Version=2.0.0.0, Culture=neutral, PublicKeyToken=2c7a81b919ff924c" PluginTypeId="a2b91479-9ea8-49be-b9a0-c9f70a70cc89" Name="Email_EmailBusinessUnit">
+          <FriendlyName>779aeaa4-4197-4b24-b28b-8908853ae6e7</FriendlyName>
+          <WorkflowActivityGroupName>MvcTeam.Utilities.Email (2.0.0.0)</WorkflowActivityGroupName>
+        </PluginType>
+        <PluginType AssemblyQualifiedName="Email_EmailConnection, MvcTeam.Utilities.Email, Version=2.0.0.0, Culture=neutral, PublicKeyToken=2c7a81b919ff924c" PluginTypeId="d331a2a2-d030-4159-ad07-c82f1b484d89" Name="Email_EmailConnection">
+          <FriendlyName>14b8b10d-8bf6-4730-b728-95872cecf3d4</FriendlyName>
+          <WorkflowActivityGroupName>MvcTeam.Utilities.Email (2.0.0.0)</WorkflowActivityGroupName>
+        </PluginType>
+        <PluginType AssemblyQualifiedName="Email_EmailQueueMembers, MvcTeam.Utilities.Email, Version=2.0.0.0, Culture=neutral, PublicKeyToken=2c7a81b919ff924c" PluginTypeId="703dcedb-f4e7-48d3-8eb8-420f1dada98c" Name="Email_EmailQueueMembers">
+          <FriendlyName>9c31cac5-3280-4022-ad66-e494c3662583</FriendlyName>
+          <WorkflowActivityGroupName>MvcTeam.Utilities.Email (2.0.0.0)</WorkflowActivityGroupName>
+        </PluginType>
+        <PluginType AssemblyQualifiedName="Email_EmailSecurityRole, MvcTeam.Utilities.Email, Version=2.0.0.0, Culture=neutral, PublicKeyToken=2c7a81b919ff924c" PluginTypeId="bf22a73c-692b-4941-a225-dcc487d0a4dd" Name="Email_EmailSecurityRole">
+          <FriendlyName>37dcc1f2-5d01-4b91-91e3-4e2e564c2d66</FriendlyName>
+          <WorkflowActivityGroupName>MvcTeam.Utilities.Email (2.0.0.0)</WorkflowActivityGroupName>
+        </PluginType>
+        <PluginType AssemblyQualifiedName="Email_EmailTeam, MvcTeam.Utilities.Email, Version=2.0.0.0, Culture=neutral, PublicKeyToken=2c7a81b919ff924c" PluginTypeId="e99d33bf-cf40-42ca-87fe-34b51b8cd910" Name="Email_EmailTeam">
+          <FriendlyName>d4bf08e9-1793-4612-9e6b-c3c567028c6b</FriendlyName>
+          <WorkflowActivityGroupName>MvcTeam.Utilities.Email (2.0.0.0)</WorkflowActivityGroupName>
+        </PluginType>
+        <PluginType AssemblyQualifiedName="Email_SendEmail, MvcTeam.Utilities.Email, Version=2.0.0.0, Culture=neutral, PublicKeyToken=2c7a81b919ff924c" PluginTypeId="5cb7c4c7-5adf-4350-8a41-a57ebe3e61ac" Name="Email_SendEmail">
+          <FriendlyName>ca1a9dc2-42ac-46d8-9a5d-602237f11c85</FriendlyName>
+          <WorkflowActivityGroupName>MvcTeam.Utilities.Email (2.0.0.0)</WorkflowActivityGroupName>
+        </PluginType>
+      </PluginTypes>
+    </PluginAssembly>
+    <PluginAssembly FullName="MvcTeam.Utilities.Note, Version=2.0.0.0, Culture=neutral, PublicKeyToken=2c7a81b919ff924c" PluginAssemblyId="a23c4836-067c-4c6d-a08a-7fde3306077a" CustomizationLevel="1">
+      <IsolationMode>2</IsolationMode>
+      <SourceType>0</SourceType>
+      <IntroducedVersion>1.0</IntroducedVersion>
+      <FileName>/PluginAssemblies/MvcTeamUtilitiesNote-A23C4836-067C-4C6D-A08A-7FDE3306077A/MvcTeamUtilitiesNote.dll</FileName>
+      <PluginTypes>
+        <PluginType AssemblyQualifiedName="Note_CheckAttachment, MvcTeam.Utilities.Note, Version=2.0.0.0, Culture=neutral, PublicKeyToken=2c7a81b919ff924c" PluginTypeId="47f08372-fa41-4f67-96c1-ab04cfa9383f" Name="Note_CheckAttachment">
+          <FriendlyName>8674594a-516c-41fa-910e-888dea9d79d1</FriendlyName>
+          <WorkflowActivityGroupName>MvcTeam.Utilities.Note (2.0.0.0)</WorkflowActivityGroupName>
+        </PluginType>
+        <PluginType AssemblyQualifiedName="Note_CopyNote, MvcTeam.Utilities.Note, Version=2.0.0.0, Culture=neutral, PublicKeyToken=2c7a81b919ff924c" PluginTypeId="722183ba-772b-4554-8cf0-cf2fea01f134" Name="Note_CopyNote">
+          <FriendlyName>26c11c78-33d2-4c8d-9485-6d4075281cae</FriendlyName>
+          <WorkflowActivityGroupName>MvcTeam.Utilities.Note (2.0.0.0)</WorkflowActivityGroupName>
+        </PluginType>
+        <PluginType AssemblyQualifiedName="Note_DeleteAttachment, MvcTeam.Utilities.Note, Version=2.0.0.0, Culture=neutral, PublicKeyToken=2c7a81b919ff924c" PluginTypeId="7e884b53-9c43-4d61-a7bb-e561b878472d" Name="Note_DeleteAttachment">
+          <FriendlyName>a226d03e-fdb5-40fd-a65a-a8f3d6c91a28</FriendlyName>
+          <WorkflowActivityGroupName>MvcTeam.Utilities.Note (2.0.0.0)</WorkflowActivityGroupName>
+        </PluginType>
+        <PluginType AssemblyQualifiedName="Note_DeleteAttachmentByName, MvcTeam.Utilities.Note, Version=2.0.0.0, Culture=neutral, PublicKeyToken=2c7a81b919ff924c" PluginTypeId="a6040388-31fa-440d-817c-02231bfeeec5" Name="Note_DeleteAttachmentByName">
+          <FriendlyName>8ecd18d6-a88a-4b9a-a87c-03c6647cb700</FriendlyName>
+          <WorkflowActivityGroupName>MvcTeam.Utilities.Note (2.0.0.0)</WorkflowActivityGroupName>
+        </PluginType>
+        <PluginType AssemblyQualifiedName="Note_DeleteNote, MvcTeam.Utilities.Note, Version=2.0.0.0, Culture=neutral, PublicKeyToken=2c7a81b919ff924c" PluginTypeId="5ba2f714-bb50-414a-93cc-a88bd742fcca" Name="Note_DeleteNote">
+          <FriendlyName>5b115abc-bca1-4341-9dcb-224b0f7489e8</FriendlyName>
+          <WorkflowActivityGroupName>MvcTeam.Utilities.Note (2.0.0.0)</WorkflowActivityGroupName>
+        </PluginType>
+        <PluginType AssemblyQualifiedName="Note_GetLatestNote, MvcTeam.Utilities.Note, Version=2.0.0.0, Culture=neutral, PublicKeyToken=2c7a81b919ff924c" PluginTypeId="1f4cbf73-6b92-4275-ab6d-f9f120da1c15" Name="Note_GetLatestNote">
+          <FriendlyName>cd51fbe0-be59-4e29-b17c-d2fc12c8786c</FriendlyName>
+          <WorkflowActivityGroupName>MvcTeam.Utilities.Note (2.0.0.0)</WorkflowActivityGroupName>
+        </PluginType>
+        <PluginType AssemblyQualifiedName="Note_GetLatestNoteByFilename, MvcTeam.Utilities.Note, Version=2.0.0.0, Culture=neutral, PublicKeyToken=2c7a81b919ff924c" PluginTypeId="2e4a2f59-91a2-40d6-bd51-fcd816807e3d" Name="Note_GetLatestNoteByFilename">
+          <FriendlyName>fee12a82-a79e-449d-b6e4-a0e04609f5b1</FriendlyName>
+          <WorkflowActivityGroupName>MvcTeam.Utilities.Note (2.0.0.0)</WorkflowActivityGroupName>
+        </PluginType>
+        <PluginType AssemblyQualifiedName="Note_MoveNote, MvcTeam.Utilities.Note, Version=2.0.0.0, Culture=neutral, PublicKeyToken=2c7a81b919ff924c" PluginTypeId="e2dedc16-fc5f-427c-8b6a-b8bc597646ec" Name="Note_MoveNote">
+          <FriendlyName>7d3f6e67-0aac-4da4-a3d2-7b334694ae06</FriendlyName>
+          <WorkflowActivityGroupName>MvcTeam.Utilities.Note (2.0.0.0)</WorkflowActivityGroupName>
+        </PluginType>
+        <PluginType AssemblyQualifiedName="Note_UpdateNoteText, MvcTeam.Utilities.Note, Version=2.0.0.0, Culture=neutral, PublicKeyToken=2c7a81b919ff924c" PluginTypeId="284731f9-8893-47fd-acd7-402b6daf0e51" Name="Note_UpdateNoteText">
+          <FriendlyName>f0c30749-08d4-4e8a-919e-93ff3bb34914</FriendlyName>
+          <WorkflowActivityGroupName>MvcTeam.Utilities.Note (2.0.0.0)</WorkflowActivityGroupName>
+        </PluginType>
+        <PluginType AssemblyQualifiedName="Note_UpdateNoteTitle, MvcTeam.Utilities.Note, Version=2.0.0.0, Culture=neutral, PublicKeyToken=2c7a81b919ff924c" PluginTypeId="459aa8ca-40d2-4e68-a97e-f5b332a4cbb0" Name="Note_UpdateNoteTitle">
+          <FriendlyName>dc89ec47-dd04-4a27-ad0d-2436b1d3b23c</FriendlyName>
+          <WorkflowActivityGroupName>MvcTeam.Utilities.Note (2.0.0.0)</WorkflowActivityGroupName>
+        </PluginType>
+      </PluginTypes>
+    </PluginAssembly>
+    <PluginAssembly FullName="MvcTeam.Utilities.Numeric, Version=2.0.0.0, Culture=neutral, PublicKeyToken=2c7a81b919ff924c" PluginAssemblyId="ee794949-e130-4e69-b7cd-9bb48842056c" CustomizationLevel="1">
+      <IsolationMode>2</IsolationMode>
+      <SourceType>0</SourceType>
+      <IntroducedVersion>1.0</IntroducedVersion>
+      <FileName>/PluginAssemblies/MvcTeamUtilitiesNumeric-EE794949-E130-4E69-B7CD-9BB48842056C/MvcTeamUtilitiesNumeric.dll</FileName>
+      <PluginTypes>
+        <PluginType AssemblyQualifiedName="Numeric_AbsValue, MvcTeam.Utilities.Numeric, Version=2.0.0.0, Culture=neutral, PublicKeyToken=2c7a81b919ff924c" PluginTypeId="19103d14-f3a1-4728-a699-9d96a6cd76c9" Name="Numeric_AbsValue">
+          <FriendlyName>2db57cdb-583f-4521-a040-9392f54ec772</FriendlyName>
+          <WorkflowActivityGroupName>MvcTeam.Utilities.Numeric (2.0.0.0)</WorkflowActivityGroupName>
+        </PluginType>
+        <PluginType AssemblyQualifiedName="Numeric_Add, MvcTeam.Utilities.Numeric, Version=2.0.0.0, Culture=neutral, PublicKeyToken=2c7a81b919ff924c" PluginTypeId="c91e8690-a904-4357-810d-64f01167f33a" Name="Numeric_Add">
+          <FriendlyName>100ec3c9-fc1f-41cd-8bd2-49b416ab37f9</FriendlyName>
+          <WorkflowActivityGroupName>MvcTeam.Utilities.Numeric (2.0.0.0)</WorkflowActivityGroupName>
+        </PluginType>
+        <PluginType AssemblyQualifiedName="Numeric_Average, MvcTeam.Utilities.Numeric, Version=2.0.0.0, Culture=neutral, PublicKeyToken=2c7a81b919ff924c" PluginTypeId="18534839-9821-475e-89db-62de75b35202" Name="Numeric_Average">
+          <FriendlyName>7dbcb465-6f53-4a0e-b14d-dc8d274469d1</FriendlyName>
+          <WorkflowActivityGroupName>MvcTeam.Utilities.Numeric (2.0.0.0)</WorkflowActivityGroupName>
+        </PluginType>
+        <PluginType AssemblyQualifiedName="Numeric_Divide, MvcTeam.Utilities.Numeric, Version=2.0.0.0, Culture=neutral, PublicKeyToken=2c7a81b919ff924c" PluginTypeId="a4726deb-9d27-4b61-8b41-e0188b5b15f1" Name="Numeric_Divide">
+          <FriendlyName>31ce093b-d9a3-41df-96d5-ce64b663533a</FriendlyName>
+          <WorkflowActivityGroupName>MvcTeam.Utilities.Numeric (2.0.0.0)</WorkflowActivityGroupName>
+        </PluginType>
+        <PluginType AssemblyQualifiedName="Numeric_IntegerToWords, MvcTeam.Utilities.Numeric, Version=2.0.0.0, Culture=neutral, PublicKeyToken=2c7a81b919ff924c" PluginTypeId="643d0780-b37e-4555-9890-22eb36ce44fb" Name="Numeric_IntegerToWords">
+          <FriendlyName>a3a01c67-9e76-48d4-b848-0f6979127545</FriendlyName>
+          <WorkflowActivityGroupName>MvcTeam.Utilities.Numeric (2.0.0.0)</WorkflowActivityGroupName>
+        </PluginType>
+        <PluginType AssemblyQualifiedName="Numeric_IsStringNumeric, MvcTeam.Utilities.Numeric, Version=2.0.0.0, Culture=neutral, PublicKeyToken=2c7a81b919ff924c" PluginTypeId="2b320820-c4b7-47a5-8546-4468f0064c7e" Name="Numeric_IsStringNumeric">
+          <FriendlyName>20a31533-5349-42c6-8e6e-19538586cab0</FriendlyName>
+          <WorkflowActivityGroupName>MvcTeam.Utilities.Numeric (2.0.0.0)</WorkflowActivityGroupName>
+        </PluginType>
+        <PluginType AssemblyQualifiedName="Numeric_Max, MvcTeam.Utilities.Numeric, Version=2.0.0.0, Culture=neutral, PublicKeyToken=2c7a81b919ff924c" PluginTypeId="b57983b4-6aad-4cc5-a574-745ee263aa1c" Name="Numeric_Max">
+          <FriendlyName>40a64843-e204-4bf4-94fa-b2a38f796461</FriendlyName>
+          <WorkflowActivityGroupName>MvcTeam.Utilities.Numeric (2.0.0.0)</WorkflowActivityGroupName>
+        </PluginType>
+        <PluginType AssemblyQualifiedName="Numeric_Min, MvcTeam.Utilities.Numeric, Version=2.0.0.0, Culture=neutral, PublicKeyToken=2c7a81b919ff924c" PluginTypeId="4de9b31a-5322-42c1-8d82-83eb5f86cff6" Name="Numeric_Min">
+          <FriendlyName>ce1a58c8-13e2-43b0-bdc0-a81ef67de0c0</FriendlyName>
+          <WorkflowActivityGroupName>MvcTeam.Utilities.Numeric (2.0.0.0)</WorkflowActivityGroupName>
+        </PluginType>
+        <PluginType AssemblyQualifiedName="Numeric_Multiply, MvcTeam.Utilities.Numeric, Version=2.0.0.0, Culture=neutral, PublicKeyToken=2c7a81b919ff924c" PluginTypeId="3cd337a0-75d9-49c1-96ed-549c2e1594a9" Name="Numeric_Multiply">
+          <FriendlyName>72749fa4-a5de-4ec1-98e8-4c7568218152</FriendlyName>
+          <WorkflowActivityGroupName>MvcTeam.Utilities.Numeric (2.0.0.0)</WorkflowActivityGroupName>
+        </PluginType>
+        <PluginType AssemblyQualifiedName="Numeric_NthRoot, MvcTeam.Utilities.Numeric, Version=2.0.0.0, Culture=neutral, PublicKeyToken=2c7a81b919ff924c" PluginTypeId="e2038213-bd2a-4790-bc05-ca809df96dad" Name="Numeric_NthRoot">
+          <FriendlyName>a97de111-11e2-4bb3-8922-e2ceb8daa198</FriendlyName>
+          <WorkflowActivityGroupName>MvcTeam.Utilities.Numeric (2.0.0.0)</WorkflowActivityGroupName>
+        </PluginType>
+        <PluginType AssemblyQualifiedName="Numeric_RaiseToThePower, MvcTeam.Utilities.Numeric, Version=2.0.0.0, Culture=neutral, PublicKeyToken=2c7a81b919ff924c" PluginTypeId="a2e83cb7-6d8b-41cb-a44b-cac49cf08fe4" Name="Numeric_RaiseToThePower">
+          <FriendlyName>7dc4ce24-a4b5-4b6d-a852-0411d02d7e50</FriendlyName>
+          <WorkflowActivityGroupName>MvcTeam.Utilities.Numeric (2.0.0.0)</WorkflowActivityGroupName>
+        </PluginType>
+        <PluginType AssemblyQualifiedName="Numeric_RandomNumber, MvcTeam.Utilities.Numeric, Version=2.0.0.0, Culture=neutral, PublicKeyToken=2c7a81b919ff924c" PluginTypeId="e15a91aa-f456-4074-bbbf-37e4c12885fc" Name="Numeric_RandomNumber">
+          <FriendlyName>ce72bfbb-b6b1-4c6f-967b-3b0c821a6c14</FriendlyName>
+          <WorkflowActivityGroupName>MvcTeam.Utilities.Numeric (2.0.0.0)</WorkflowActivityGroupName>
+        </PluginType>
+        <PluginType AssemblyQualifiedName="Numeric_RandomNumberBetween, MvcTeam.Utilities.Numeric, Version=2.0.0.0, Culture=neutral, PublicKeyToken=2c7a81b919ff924c" PluginTypeId="29e03bc9-81be-4e1c-8c0f-08f0edfd71b6" Name="Numeric_RandomNumberBetween">
+          <FriendlyName>c1c1f095-1486-47c5-8dac-f044a1e5fc51</FriendlyName>
+          <WorkflowActivityGroupName>MvcTeam.Utilities.Numeric (2.0.0.0)</WorkflowActivityGroupName>
+        </PluginType>
+        <PluginType AssemblyQualifiedName="Numeric_Round, MvcTeam.Utilities.Numeric, Version=2.0.0.0, Culture=neutral, PublicKeyToken=2c7a81b919ff924c" PluginTypeId="8c101a2d-6eed-4098-a5ad-3d764ab663cb" Name="Numeric_Round">
+          <FriendlyName>873970c5-2329-4433-9fbf-4e4e4e7e0238</FriendlyName>
+          <WorkflowActivityGroupName>MvcTeam.Utilities.Numeric (2.0.0.0)</WorkflowActivityGroupName>
+        </PluginType>
+        <PluginType AssemblyQualifiedName="Numeric_Subtract, MvcTeam.Utilities.Numeric, Version=2.0.0.0, Culture=neutral, PublicKeyToken=2c7a81b919ff924c" PluginTypeId="10abf489-1f21-4d4d-9a1f-23c72432ad59" Name="Numeric_Subtract">
+          <FriendlyName>517628e3-f702-43cf-a9ce-3d5057e154ef</FriendlyName>
+          <WorkflowActivityGroupName>MvcTeam.Utilities.Numeric (2.0.0.0)</WorkflowActivityGroupName>
+        </PluginType>
+        <PluginType AssemblyQualifiedName="Numeric_ToDecimal, MvcTeam.Utilities.Numeric, Version=2.0.0.0, Culture=neutral, PublicKeyToken=2c7a81b919ff924c" PluginTypeId="8e808e79-448b-4162-bc6e-a3764ca2b79b" Name="Numeric_ToDecimal">
+          <FriendlyName>2746fa52-6f81-4ce9-8110-de1beb31cea9</FriendlyName>
+          <WorkflowActivityGroupName>MvcTeam.Utilities.Numeric (2.0.0.0)</WorkflowActivityGroupName>
+        </PluginType>
+        <PluginType AssemblyQualifiedName="Numeric_ToInteger, MvcTeam.Utilities.Numeric, Version=2.0.0.0, Culture=neutral, PublicKeyToken=2c7a81b919ff924c" PluginTypeId="6ddc490b-a07c-4d93-b7e7-6805ff55ad2c" Name="Numeric_ToInteger">
+          <FriendlyName>94402ab8-3b7b-4972-af8c-df7978c23cca</FriendlyName>
+          <WorkflowActivityGroupName>MvcTeam.Utilities.Numeric (2.0.0.0)</WorkflowActivityGroupName>
+        </PluginType>
+        <PluginType AssemblyQualifiedName="Numeric_Truncate, MvcTeam.Utilities.Numeric, Version=2.0.0.0, Culture=neutral, PublicKeyToken=2c7a81b919ff924c" PluginTypeId="056b22be-b78e-4491-a52f-67474bb53cce" Name="Numeric_Truncate">
+          <FriendlyName>4a95ca7b-33ba-40d9-938b-2c318acce2a0</FriendlyName>
+          <WorkflowActivityGroupName>MvcTeam.Utilities.Numeric (2.0.0.0)</WorkflowActivityGroupName>
+        </PluginType>
+      </PluginTypes>
+    </PluginAssembly>
+    <PluginAssembly FullName="MvcTeam.Utilities.Other, Version=2.0.0.0, Culture=neutral, PublicKeyToken=2c7a81b919ff924c" PluginAssemblyId="1a9cb7c9-25b6-4f70-b435-b11f41eefc95" CustomizationLevel="1">
+      <IsolationMode>2</IsolationMode>
+      <SourceType>0</SourceType>
+      <IntroducedVersion>1.0</IntroducedVersion>
+      <FileName>/PluginAssemblies/MvcTeamUtilitiesOther-1A9CB7C9-25B6-4F70-B435-B11F41EEFC95/MvcTeamUtilitiesOther.dll</FileName>
+      <PluginTypes>
+        <PluginType AssemblyQualifiedName="Utilities_AddPriceListItem, MvcTeam.Utilities.Other, Version=2.0.0.0, Culture=neutral, PublicKeyToken=2c7a81b919ff924c" PluginTypeId="a253adb0-4dbe-4cc3-b269-b7bdcda2ec47" Name="Utilities_AddPriceListItem">
+          <FriendlyName>c2fb6d7a-d54c-474c-8d8c-47d6e2aee655</FriendlyName>
+          <WorkflowActivityGroupName>MvcTeam.Utilities.Other (2.0.0.0)</WorkflowActivityGroupName>
+        </PluginType>
+        <PluginType AssemblyQualifiedName="Utilities_CloneChildren, MvcTeam.Utilities.Other, Version=2.0.0.0, Culture=neutral, PublicKeyToken=2c7a81b919ff924c" PluginTypeId="fe532b51-ea6e-4077-8c07-9bdac6334a6e" Name="Utilities_CloneChildren">
+          <FriendlyName>99d48ada-8fbe-4396-b1ff-1d6d73dabccb</FriendlyName>
+          <WorkflowActivityGroupName>MvcTeam.Utilities.Other (2.0.0.0)</WorkflowActivityGroupName>
+        </PluginType>
+        <PluginType AssemblyQualifiedName="Utilities_CloneRecord, MvcTeam.Utilities.Other, Version=2.0.0.0, Culture=neutral, PublicKeyToken=2c7a81b919ff924c" PluginTypeId="59706963-2958-431d-84f9-579b88aa138d" Name="Utilities_CloneRecord">
+          <FriendlyName>4b2e6915-b5f3-4c7c-b0f0-f57852f87695</FriendlyName>
+          <WorkflowActivityGroupName>MvcTeam.Utilities.Other (2.0.0.0)</WorkflowActivityGroupName>
+        </PluginType>
+        <PluginType AssemblyQualifiedName="Utilities_CurrencyConvert, MvcTeam.Utilities.Other, Version=2.0.0.0, Culture=neutral, PublicKeyToken=2c7a81b919ff924c" PluginTypeId="9e1a21e1-d265-4b0b-a55c-e5b22de372ae" Name="Utilities_CurrencyConvert">
+          <FriendlyName>e24b2ebf-594b-4bf5-9afb-7de162f8acf0</FriendlyName>
+          <WorkflowActivityGroupName>MvcTeam.Utilities.Other (2.0.0.0)</WorkflowActivityGroupName>
+        </PluginType>
+        <PluginType AssemblyQualifiedName="Utilities_DeleteRecord, MvcTeam.Utilities.Other, Version=2.0.0.0, Culture=neutral, PublicKeyToken=2c7a81b919ff924c" PluginTypeId="97f0eff5-224f-442b-b098-9f6c4163dd83" Name="Utilities_DeleteRecord">
+          <FriendlyName>f0152a28-373a-4ac9-99bb-0a811c35d31e</FriendlyName>
+          <WorkflowActivityGroupName>MvcTeam.Utilities.Other (2.0.0.0)</WorkflowActivityGroupName>
+        </PluginType>
+        <PluginType AssemblyQualifiedName="Utilities_GetRecordId, MvcTeam.Utilities.Other, Version=2.0.0.0, Culture=neutral, PublicKeyToken=2c7a81b919ff924c" PluginTypeId="fdea4a96-446d-4887-969a-c985aff99539" Name="Utilities_GetRecordId">
+          <FriendlyName>8d0da021-575d-41eb-b261-1118507843c4</FriendlyName>
+          <WorkflowActivityGroupName>MvcTeam.Utilities.Other (2.0.0.0)</WorkflowActivityGroupName>
+        </PluginType>
+        <PluginType AssemblyQualifiedName="Utilities_JsonParser, MvcTeam.Utilities.Other, Version=2.0.0.0, Culture=neutral, PublicKeyToken=2c7a81b919ff924c" PluginTypeId="88a63f5e-1f7d-436e-9ae3-905c7e33cce9" Name="Utilities_JsonParser">
+          <FriendlyName>f025af01-9879-4644-8bc1-1d5667e3e392</FriendlyName>
+          <WorkflowActivityGroupName>MvcTeam.Utilities.Other (2.0.0.0)</WorkflowActivityGroupName>
+        </PluginType>
+        <PluginType AssemblyQualifiedName="Utilities_QueryGetResults, MvcTeam.Utilities.Other, Version=2.0.0.0, Culture=neutral, PublicKeyToken=2c7a81b919ff924c" PluginTypeId="53e4fc7d-0a84-42e2-8733-5088ba2a5033" Name="Utilities_QueryGetResults">
+          <FriendlyName>ec643551-9165-4ddb-870e-03eefaaf5535</FriendlyName>
+          <WorkflowActivityGroupName>MvcTeam.Utilities.Other (2.0.0.0)</WorkflowActivityGroupName>
+        </PluginType>
+        <PluginType AssemblyQualifiedName="Utilities_QueryRunWorkflowOnResults, MvcTeam.Utilities.Other, Version=2.0.0.0, Culture=neutral, PublicKeyToken=2c7a81b919ff924c" PluginTypeId="9998ca72-1801-4c37-83e3-567f94eeb668" Name="Utilities_QueryRunWorkflowOnResults">
+          <FriendlyName>7a44d00c-0e07-4833-a2f9-ffb5c8f49c8d</FriendlyName>
+          <WorkflowActivityGroupName>MvcTeam.Utilities.Other (2.0.0.0)</WorkflowActivityGroupName>
+        </PluginType>
+        <PluginType AssemblyQualifiedName="Utilities_QueryValues, MvcTeam.Utilities.Other, Version=2.0.0.0, Culture=neutral, PublicKeyToken=2c7a81b919ff924c" PluginTypeId="d2f69c27-dda8-4d8b-95e4-e7fa5ed091c8" Name="Utilities_QueryValues">
+          <FriendlyName>b977fa12-bd90-48c4-86f8-92d20197d57c</FriendlyName>
+          <WorkflowActivityGroupName>MvcTeam.Utilities.Other (2.0.0.0)</WorkflowActivityGroupName>
+        </PluginType>
+        <PluginType AssemblyQualifiedName="Utilities_RecalculateAllRollups, MvcTeam.Utilities.Other, Version=2.0.0.0, Culture=neutral, PublicKeyToken=2c7a81b919ff924c" PluginTypeId="c9d23547-3ea5-4b5e-8669-7a69d302e170" Name="Utilities_RecalculateAllRollups">
+          <FriendlyName>7663a60f-aa69-4b53-aebf-f8a66c31dce2</FriendlyName>
+          <WorkflowActivityGroupName>MvcTeam.Utilities.Other (2.0.0.0)</WorkflowActivityGroupName>
+        </PluginType>
+        <PluginType AssemblyQualifiedName="Utilities_ResizeAnnotationImage, MvcTeam.Utilities.Other, Version=2.0.0.0, Culture=neutral, PublicKeyToken=2c7a81b919ff924c" PluginTypeId="95e77cec-1e8d-4930-b05e-4c4b811a0eb3" Name="Utilities_ResizeAnnotationImage">
+          <FriendlyName>8d4376e4-16da-4565-ad3b-b18fdea43e9d</FriendlyName>
+          <WorkflowActivityGroupName>MvcTeam.Utilities.Other (2.0.0.0)</WorkflowActivityGroupName>
+        </PluginType>
+        <PluginType AssemblyQualifiedName="Utilities_RunWorkflowWithForLoop, MvcTeam.Utilities.Other, Version=2.0.0.0, Culture=neutral, PublicKeyToken=2c7a81b919ff924c" PluginTypeId="88ec2c0f-46c2-4f24-8f85-544c57116636" Name="Utilities_RunWorkflowWithForLoop">
+          <FriendlyName>7f76f402-1aad-47e0-822b-72272d19772d</FriendlyName>
+          <WorkflowActivityGroupName>MvcTeam.Utilities.Other (2.0.0.0)</WorkflowActivityGroupName>
+        </PluginType>
+        <PluginType AssemblyQualifiedName="Utilities_UpdateFieldDynamically, MvcTeam.Utilities.Other, Version=2.0.0.0, Culture=neutral, PublicKeyToken=2c7a81b919ff924c" PluginTypeId="030d98c1-3cf1-4d3a-944a-c56a4b57bd0d" Name="Utilities_UpdateFieldDynamically">
+          <FriendlyName>fcf5f877-36bd-48c4-b278-e7b7a516a7a1</FriendlyName>
+          <WorkflowActivityGroupName>MvcTeam.Utilities.Other (2.0.0.0)</WorkflowActivityGroupName>
+        </PluginType>
+      </PluginTypes>
+    </PluginAssembly>
+    <PluginAssembly FullName="MvcTeam.Utilities.Persian, Version=2.0.0.0, Culture=neutral, PublicKeyToken=2c7a81b919ff924c" PluginAssemblyId="8c77370b-03b1-4f0e-a7af-9ecf3b121e8f" CustomizationLevel="1">
+      <IsolationMode>2</IsolationMode>
+      <SourceType>0</SourceType>
+      <IntroducedVersion>1.0</IntroducedVersion>
+      <FileName>/PluginAssemblies/MvcTeamUtilitiesPersian-8C77370B-03B1-4F0E-A7AF-9ECF3B121E8F/MvcTeamUtilitiesPersian.dll</FileName>
+      <PluginTypes>
+        <PluginType AssemblyQualifiedName="Persian_ConvertNumberToPersianString, MvcTeam.Utilities.Persian, Version=2.0.0.0, Culture=neutral, PublicKeyToken=2c7a81b919ff924c" PluginTypeId="635374f2-3d0c-44fe-bb34-c8224aab778d" Name="Persian_ConvertNumberToPersianString">
+          <FriendlyName>23f0e423-f9ac-42b0-a95b-08d535a31ac1</FriendlyName>
+          <WorkflowActivityGroupName>MvcTeam.Utilities.Persian (2.0.0.0)</WorkflowActivityGroupName>
+        </PluginType>
+        <PluginType AssemblyQualifiedName="Persian_FormatPersianDateTime, MvcTeam.Utilities.Persian, Version=2.0.0.0, Culture=neutral, PublicKeyToken=2c7a81b919ff924c" PluginTypeId="e270dcd8-f2a0-44d2-af17-00f024da47fc" Name="Persian_FormatPersianDateTime">
+          <FriendlyName>35933f74-d680-4f64-b2eb-04dc84feac3b</FriendlyName>
+          <WorkflowActivityGroupName>MvcTeam.Utilities.Persian (2.0.0.0)</WorkflowActivityGroupName>
+        </PluginType>
+        <PluginType AssemblyQualifiedName="Persian_GetDatePersianParts, MvcTeam.Utilities.Persian, Version=2.0.0.0, Culture=neutral, PublicKeyToken=2c7a81b919ff924c" PluginTypeId="5c9c26b3-aa68-456a-a8cb-96408e1cbf8b" Name="Persian_GetDatePersianParts">
+          <FriendlyName>76a72121-fbb7-4617-b57c-f38b49e68681</FriendlyName>
+          <WorkflowActivityGroupName>MvcTeam.Utilities.Persian (2.0.0.0)</WorkflowActivityGroupName>
+        </PluginType>
+        <PluginType AssemblyQualifiedName="Persian_ValidateNationalCode, MvcTeam.Utilities.Persian, Version=2.0.0.0, Culture=neutral, PublicKeyToken=2c7a81b919ff924c" PluginTypeId="0032b525-d209-4dba-b78f-1f658826759e" Name="Persian_ValidateNationalCode">
+          <FriendlyName>193d20b8-f3a5-4e2e-8aeb-14ff0912473d</FriendlyName>
+          <WorkflowActivityGroupName>MvcTeam.Utilities.Persian (2.0.0.0)</WorkflowActivityGroupName>
+        </PluginType>
+      </PluginTypes>
+    </PluginAssembly>
+    <PluginAssembly FullName="MvcTeam.Utilities.Security, Version=2.0.0.0, Culture=neutral, PublicKeyToken=2c7a81b919ff924c" PluginAssemblyId="f63d2100-a492-4f57-827f-978f2727e5fd" CustomizationLevel="1">
+      <IsolationMode>2</IsolationMode>
+      <SourceType>0</SourceType>
+      <IntroducedVersion>1.0</IntroducedVersion>
+      <FileName>/PluginAssemblies/MvcTeamUtilitiesSecurity-F63D2100-A492-4F57-827F-978F2727E5FD/MvcTeamUtilitiesSecurity.dll</FileName>
+      <PluginTypes>
+        <PluginType AssemblyQualifiedName="Security_GetInitiatingUser, MvcTeam.Utilities.Security, Version=2.0.0.0, Culture=neutral, PublicKeyToken=2c7a81b919ff924c" PluginTypeId="174f26ec-89e9-4a4e-aad5-e8988df737ac" Name="Security_GetInitiatingUser">
+          <FriendlyName>cd6efa71-ac10-4319-955b-4301eba65913</FriendlyName>
+          <WorkflowActivityGroupName>MvcTeam.Utilities.Security (2.0.0.0)</WorkflowActivityGroupName>
+        </PluginType>
+        <PluginType AssemblyQualifiedName="Security_IsUserHasRole, MvcTeam.Utilities.Security, Version=2.0.0.0, Culture=neutral, PublicKeyToken=2c7a81b919ff924c" PluginTypeId="d9557176-704d-48ad-bda8-f7e72c566175" Name="Security_IsUserHasRole">
+          <FriendlyName>4910fb02-fa24-4172-90f5-94aff6cbfb41</FriendlyName>
+          <WorkflowActivityGroupName>MvcTeam.Utilities.Security (2.0.0.0)</WorkflowActivityGroupName>
+        </PluginType>
+        <PluginType AssemblyQualifiedName="Security_IsUserMemberOfTeam, MvcTeam.Utilities.Security, Version=2.0.0.0, Culture=neutral, PublicKeyToken=2c7a81b919ff924c" PluginTypeId="1933fff6-ed49-4cca-b770-2418d62547ce" Name="Security_IsUserMemberOfTeam">
+          <FriendlyName>a7d14267-d659-4cee-8c5c-9de9d6ce5bd0</FriendlyName>
+          <WorkflowActivityGroupName>MvcTeam.Utilities.Security (2.0.0.0)</WorkflowActivityGroupName>
+        </PluginType>
+        <PluginType AssemblyQualifiedName="Security_IsUserTeamsHaveRole, MvcTeam.Utilities.Security, Version=2.0.0.0, Culture=neutral, PublicKeyToken=2c7a81b919ff924c" PluginTypeId="7c7c81e4-05e6-40cc-a012-3800130818d3" Name="Security_IsUserTeamsHaveRole">
+          <FriendlyName>ae6a8654-ac1c-4551-ace6-846f272607f2</FriendlyName>
+          <WorkflowActivityGroupName>MvcTeam.Utilities.Security (2.0.0.0)</WorkflowActivityGroupName>
+        </PluginType>
+        <PluginType AssemblyQualifiedName="Security_SetUserSettings, MvcTeam.Utilities.Security, Version=2.0.0.0, Culture=neutral, PublicKeyToken=2c7a81b919ff924c" PluginTypeId="52de1316-ab7a-45d9-b508-da0ae9dfbaaa" Name="Security_SetUserSettings">
+          <FriendlyName>158c164a-95ca-4785-94e5-63d7dc46086d</FriendlyName>
+          <WorkflowActivityGroupName>MvcTeam.Utilities.Security (2.0.0.0)</WorkflowActivityGroupName>
+        </PluginType>
+      </PluginTypes>
+    </PluginAssembly>
+    <PluginAssembly FullName="MvcTeam.Utilities.Strings, Version=2.0.0.0, Culture=neutral, PublicKeyToken=2c7a81b919ff924c" PluginAssemblyId="2d012dac-d2d2-430e-9041-68236a7f38fe" CustomizationLevel="1">
+      <IsolationMode>2</IsolationMode>
+      <SourceType>0</SourceType>
+      <IntroducedVersion>1.0</IntroducedVersion>
+      <FileName>/PluginAssemblies/MvcTeamUtilitiesStrings-2D012DAC-D2D2-430E-9041-68236A7F38FE/MvcTeamUtilitiesStrings.dll</FileName>
+      <PluginTypes>
+        <PluginType AssemblyQualifiedName="String_B64Decode, MvcTeam.Utilities.Strings, Version=2.0.0.0, Culture=neutral, PublicKeyToken=2c7a81b919ff924c" PluginTypeId="ce97d596-35e7-4e5f-a10b-d9368f17f54c" Name="String_B64Decode">
+          <FriendlyName>f5333b57-318f-48ac-b32b-97017b46da08</FriendlyName>
+          <WorkflowActivityGroupName>MvcTeam.Utilities.Strings (2.0.0.0)</WorkflowActivityGroupName>
+        </PluginType>
+        <PluginType AssemblyQualifiedName="String_B64Encode, MvcTeam.Utilities.Strings, Version=2.0.0.0, Culture=neutral, PublicKeyToken=2c7a81b919ff924c" PluginTypeId="2e010f26-4b8b-427e-93fc-91f22a776b47" Name="String_B64Encode">
+          <FriendlyName>98e06238-d194-419a-83eb-19923fe2ad9c</FriendlyName>
+          <WorkflowActivityGroupName>MvcTeam.Utilities.Strings (2.0.0.0)</WorkflowActivityGroupName>
+        </PluginType>
+        <PluginType AssemblyQualifiedName="String_CapitalizeFirst, MvcTeam.Utilities.Strings, Version=2.0.0.0, Culture=neutral, PublicKeyToken=2c7a81b919ff924c" PluginTypeId="da7f2ca3-11a0-4b4f-9eb3-9e159aec2647" Name="String_CapitalizeFirst">
+          <FriendlyName>6892cd8d-f5cb-48a7-bb62-25f9d31d2d83</FriendlyName>
+          <WorkflowActivityGroupName>MvcTeam.Utilities.Strings (2.0.0.0)</WorkflowActivityGroupName>
+        </PluginType>
+        <PluginType AssemblyQualifiedName="String_Contains, MvcTeam.Utilities.Strings, Version=2.0.0.0, Culture=neutral, PublicKeyToken=2c7a81b919ff924c" PluginTypeId="b33fd483-3eb2-4bfa-a113-b167589ebc7a" Name="String_Contains">
+          <FriendlyName>58b273ac-e152-4bd1-91a5-18b9e12a1fcc</FriendlyName>
+          <WorkflowActivityGroupName>MvcTeam.Utilities.Strings (2.0.0.0)</WorkflowActivityGroupName>
+        </PluginType>
+        <PluginType AssemblyQualifiedName="String_CreateEmptySpaces, MvcTeam.Utilities.Strings, Version=2.0.0.0, Culture=neutral, PublicKeyToken=2c7a81b919ff924c" PluginTypeId="3f90e25d-487a-4730-95f4-ef0e410ee295" Name="String_CreateEmptySpaces">
+          <FriendlyName>0ad4850b-5357-40cf-a6fe-d45ae7928bb3</FriendlyName>
+          <WorkflowActivityGroupName>MvcTeam.Utilities.Strings (2.0.0.0)</WorkflowActivityGroupName>
+        </PluginType>
+        <PluginType AssemblyQualifiedName="String_DecodeHtml, MvcTeam.Utilities.Strings, Version=2.0.0.0, Culture=neutral, PublicKeyToken=2c7a81b919ff924c" PluginTypeId="04ffd78c-e6a5-42a4-afdf-d301081eefca" Name="String_DecodeHtml">
+          <FriendlyName>2db7cbd1-74b1-4a65-b799-8ee1d9e21319</FriendlyName>
+          <WorkflowActivityGroupName>MvcTeam.Utilities.Strings (2.0.0.0)</WorkflowActivityGroupName>
+        </PluginType>
+        <PluginType AssemblyQualifiedName="String_EncodeHtml, MvcTeam.Utilities.Strings, Version=2.0.0.0, Culture=neutral, PublicKeyToken=2c7a81b919ff924c" PluginTypeId="4beaab33-7eeb-4b6a-a968-bc3e16ae157f" Name="String_EncodeHtml">
+          <FriendlyName>979054cd-323f-433f-8705-e75bc0ed4e9b</FriendlyName>
+          <WorkflowActivityGroupName>MvcTeam.Utilities.Strings (2.0.0.0)</WorkflowActivityGroupName>
+        </PluginType>
+        <PluginType AssemblyQualifiedName="String_EndsWith, MvcTeam.Utilities.Strings, Version=2.0.0.0, Culture=neutral, PublicKeyToken=2c7a81b919ff924c" PluginTypeId="5e3a7ae4-447a-4283-bd07-216e39bda99b" Name="String_EndsWith">
+          <FriendlyName>4d304017-f552-4827-9a6c-75881cc77592</FriendlyName>
+          <WorkflowActivityGroupName>MvcTeam.Utilities.Strings (2.0.0.0)</WorkflowActivityGroupName>
+        </PluginType>
+        <PluginType AssemblyQualifiedName="String_Join, MvcTeam.Utilities.Strings, Version=2.0.0.0, Culture=neutral, PublicKeyToken=2c7a81b919ff924c" PluginTypeId="f748b595-ef33-401c-a842-73dfe9ad893d" Name="String_Join">
+          <FriendlyName>f29bffba-4ea2-4835-a4da-6b99e9595437</FriendlyName>
+          <WorkflowActivityGroupName>MvcTeam.Utilities.Strings (2.0.0.0)</WorkflowActivityGroupName>
+        </PluginType>
+        <PluginType AssemblyQualifiedName="String_Length, MvcTeam.Utilities.Strings, Version=2.0.0.0, Culture=neutral, PublicKeyToken=2c7a81b919ff924c" PluginTypeId="5f6f6efc-528b-4967-93ca-e0bd563d751c" Name="String_Length">
+          <FriendlyName>38e16166-ff86-4020-918b-692f2f9c602b</FriendlyName>
+          <WorkflowActivityGroupName>MvcTeam.Utilities.Strings (2.0.0.0)</WorkflowActivityGroupName>
+        </PluginType>
+        <PluginType AssemblyQualifiedName="String_PadLeft, MvcTeam.Utilities.Strings, Version=2.0.0.0, Culture=neutral, PublicKeyToken=2c7a81b919ff924c" PluginTypeId="ef4900bf-314b-43b2-9e40-7736c1ac6716" Name="String_PadLeft">
+          <FriendlyName>04ec2d5a-26f8-4f07-a7ce-c105f7f5fed8</FriendlyName>
+          <WorkflowActivityGroupName>MvcTeam.Utilities.Strings (2.0.0.0)</WorkflowActivityGroupName>
+        </PluginType>
+        <PluginType AssemblyQualifiedName="String_PadLeftDynamic, MvcTeam.Utilities.Strings, Version=2.0.0.0, Culture=neutral, PublicKeyToken=2c7a81b919ff924c" PluginTypeId="ad542454-a812-430c-95e5-3658c4c8f288" Name="String_PadLeftDynamic">
+          <FriendlyName>5e9e80da-3aea-49ca-82f7-d0a2bea34c65</FriendlyName>
+          <WorkflowActivityGroupName>MvcTeam.Utilities.Strings (2.0.0.0)</WorkflowActivityGroupName>
+        </PluginType>
+        <PluginType AssemblyQualifiedName="String_PadRight, MvcTeam.Utilities.Strings, Version=2.0.0.0, Culture=neutral, PublicKeyToken=2c7a81b919ff924c" PluginTypeId="4b38b445-6544-4b6f-8db8-71aa89f9ae44" Name="String_PadRight">
+          <FriendlyName>95f978b3-3321-4fcc-af12-cec2137fa87a</FriendlyName>
+          <WorkflowActivityGroupName>MvcTeam.Utilities.Strings (2.0.0.0)</WorkflowActivityGroupName>
+        </PluginType>
+        <PluginType AssemblyQualifiedName="String_PadRightDynamic, MvcTeam.Utilities.Strings, Version=2.0.0.0, Culture=neutral, PublicKeyToken=2c7a81b919ff924c" PluginTypeId="aa36f981-da47-4cff-b32b-0225a93f3a3f" Name="String_PadRightDynamic">
+          <FriendlyName>ca02f3d0-7b68-42b2-816b-d7839e4e5342</FriendlyName>
+          <WorkflowActivityGroupName>MvcTeam.Utilities.Strings (2.0.0.0)</WorkflowActivityGroupName>
+        </PluginType>
+        <PluginType AssemblyQualifiedName="String_Random, MvcTeam.Utilities.Strings, Version=2.0.0.0, Culture=neutral, PublicKeyToken=2c7a81b919ff924c" PluginTypeId="fcab0c81-05cc-418f-88c0-5de270e55db2" Name="String_Random">
+          <FriendlyName>2159b9ef-0509-4013-9c17-f4a2f51de48f</FriendlyName>
+          <WorkflowActivityGroupName>MvcTeam.Utilities.Strings (2.0.0.0)</WorkflowActivityGroupName>
+        </PluginType>
+        <PluginType AssemblyQualifiedName="String_RegexExtract, MvcTeam.Utilities.Strings, Version=2.0.0.0, Culture=neutral, PublicKeyToken=2c7a81b919ff924c" PluginTypeId="c1a8a494-0c47-4446-ae28-b2b29c5e8f09" Name="String_RegexExtract">
+          <FriendlyName>d47fefaf-0c87-4ebf-a04e-7e72d73cefbd</FriendlyName>
+          <WorkflowActivityGroupName>MvcTeam.Utilities.Strings (2.0.0.0)</WorkflowActivityGroupName>
+        </PluginType>
+        <PluginType AssemblyQualifiedName="String_RegexMatch, MvcTeam.Utilities.Strings, Version=2.0.0.0, Culture=neutral, PublicKeyToken=2c7a81b919ff924c" PluginTypeId="fbdd89e1-fffd-4e57-851b-f3d529f10817" Name="String_RegexMatch">
+          <FriendlyName>f5dfe8f5-3b67-444b-9bb8-d370a47cc7d4</FriendlyName>
+          <WorkflowActivityGroupName>MvcTeam.Utilities.Strings (2.0.0.0)</WorkflowActivityGroupName>
+        </PluginType>
+        <PluginType AssemblyQualifiedName="String_RegexReplace, MvcTeam.Utilities.Strings, Version=2.0.0.0, Culture=neutral, PublicKeyToken=2c7a81b919ff924c" PluginTypeId="58bb73f5-336f-4bd6-b168-d0969e6f6a71" Name="String_RegexReplace">
+          <FriendlyName>e64f7046-fb99-4ed7-9225-2bd1ce0ab9d2</FriendlyName>
+          <WorkflowActivityGroupName>MvcTeam.Utilities.Strings (2.0.0.0)</WorkflowActivityGroupName>
+        </PluginType>
+        <PluginType AssemblyQualifiedName="String_RegexReplaceWithSpace, MvcTeam.Utilities.Strings, Version=2.0.0.0, Culture=neutral, PublicKeyToken=2c7a81b919ff924c" PluginTypeId="a9f32f1a-cd9a-4e2e-bc4e-6aa83854745e" Name="String_RegexReplaceWithSpace">
+          <FriendlyName>49fb85d2-e1fe-47c7-9a1a-1cf4785fb198</FriendlyName>
+          <WorkflowActivityGroupName>MvcTeam.Utilities.Strings (2.0.0.0)</WorkflowActivityGroupName>
+        </PluginType>
+        <PluginType AssemblyQualifiedName="String_RemoveHtml, MvcTeam.Utilities.Strings, Version=2.0.0.0, Culture=neutral, PublicKeyToken=2c7a81b919ff924c" PluginTypeId="5ffa6fab-b013-4bfb-b4d1-25458e29c244" Name="String_RemoveHtml">
+          <FriendlyName>8ff755b3-1b11-460a-9a03-6962d94359e6</FriendlyName>
+          <WorkflowActivityGroupName>MvcTeam.Utilities.Strings (2.0.0.0)</WorkflowActivityGroupName>
+        </PluginType>
+        <PluginType AssemblyQualifiedName="String_Replace, MvcTeam.Utilities.Strings, Version=2.0.0.0, Culture=neutral, PublicKeyToken=2c7a81b919ff924c" PluginTypeId="58b95ca0-3084-4ee1-be25-413a8876fa70" Name="String_Replace">
+          <FriendlyName>c75a9a9b-c244-4ccc-bee5-254a54e944d1</FriendlyName>
+          <WorkflowActivityGroupName>MvcTeam.Utilities.Strings (2.0.0.0)</WorkflowActivityGroupName>
+        </PluginType>
+        <PluginType AssemblyQualifiedName="String_ReplaceWithSpace, MvcTeam.Utilities.Strings, Version=2.0.0.0, Culture=neutral, PublicKeyToken=2c7a81b919ff924c" PluginTypeId="533ac35f-e5f5-4bf2-a95e-312a67d36cb2" Name="String_ReplaceWithSpace">
+          <FriendlyName>49ea26a9-171b-4889-8019-b93b6f29edea</FriendlyName>
+          <WorkflowActivityGroupName>MvcTeam.Utilities.Strings (2.0.0.0)</WorkflowActivityGroupName>
+        </PluginType>
+        <PluginType AssemblyQualifiedName="String_Reverse, MvcTeam.Utilities.Strings, Version=2.0.0.0, Culture=neutral, PublicKeyToken=2c7a81b919ff924c" PluginTypeId="4bbb3a5b-9327-4517-84f2-ac6863fa2712" Name="String_Reverse">
+          <FriendlyName>3d80124f-7191-4f48-96d3-32f3df91290a</FriendlyName>
+          <WorkflowActivityGroupName>MvcTeam.Utilities.Strings (2.0.0.0)</WorkflowActivityGroupName>
+        </PluginType>
+        <PluginType AssemblyQualifiedName="String_StartsWith, MvcTeam.Utilities.Strings, Version=2.0.0.0, Culture=neutral, PublicKeyToken=2c7a81b919ff924c" PluginTypeId="bb638338-5e23-46bd-a134-a2eb335c93c1" Name="String_StartsWith">
+          <FriendlyName>2561b698-366d-44b0-bdf8-5eaec1119b86</FriendlyName>
+          <WorkflowActivityGroupName>MvcTeam.Utilities.Strings (2.0.0.0)</WorkflowActivityGroupName>
+        </PluginType>
+        <PluginType AssemblyQualifiedName="String_Substring, MvcTeam.Utilities.Strings, Version=2.0.0.0, Culture=neutral, PublicKeyToken=2c7a81b919ff924c" PluginTypeId="76ee96c3-4224-47b3-9d97-03d1cbd1dc35" Name="String_Substring">
+          <FriendlyName>fc8c7cf2-6769-4f39-895d-16b7692e6ee3</FriendlyName>
+          <WorkflowActivityGroupName>MvcTeam.Utilities.Strings (2.0.0.0)</WorkflowActivityGroupName>
+        </PluginType>
+        <PluginType AssemblyQualifiedName="String_ToLower, MvcTeam.Utilities.Strings, Version=2.0.0.0, Culture=neutral, PublicKeyToken=2c7a81b919ff924c" PluginTypeId="070db65e-ce80-4679-be22-1a7bcef8dc37" Name="String_ToLower">
+          <FriendlyName>badcf528-aef9-49e1-bb3b-53932cb22d06</FriendlyName>
+          <WorkflowActivityGroupName>MvcTeam.Utilities.Strings (2.0.0.0)</WorkflowActivityGroupName>
+        </PluginType>
+        <PluginType AssemblyQualifiedName="String_ToTitleCase, MvcTeam.Utilities.Strings, Version=2.0.0.0, Culture=neutral, PublicKeyToken=2c7a81b919ff924c" PluginTypeId="c28914f6-8bbd-43db-b0a9-10c25e9374e0" Name="String_ToTitleCase">
+          <FriendlyName>c3d9e922-ce2b-434e-9079-58fd6b241b6b</FriendlyName>
+          <WorkflowActivityGroupName>MvcTeam.Utilities.Strings (2.0.0.0)</WorkflowActivityGroupName>
+        </PluginType>
+        <PluginType AssemblyQualifiedName="String_ToUpper, MvcTeam.Utilities.Strings, Version=2.0.0.0, Culture=neutral, PublicKeyToken=2c7a81b919ff924c" PluginTypeId="09b3d0e0-aba9-4f24-8f58-b20f2ccb722e" Name="String_ToUpper">
+          <FriendlyName>13196d28-7aac-44c1-82e3-f1d570d0b3d2</FriendlyName>
+          <WorkflowActivityGroupName>MvcTeam.Utilities.Strings (2.0.0.0)</WorkflowActivityGroupName>
+        </PluginType>
+        <PluginType AssemblyQualifiedName="String_Trim, MvcTeam.Utilities.Strings, Version=2.0.0.0, Culture=neutral, PublicKeyToken=2c7a81b919ff924c" PluginTypeId="ebfbffe2-08b6-426a-b94c-b946e8002f92" Name="String_Trim">
+          <FriendlyName>de3388dd-1a62-420f-ba22-eb6c6cf2aa58</FriendlyName>
+          <WorkflowActivityGroupName>MvcTeam.Utilities.Strings (2.0.0.0)</WorkflowActivityGroupName>
+        </PluginType>
+        <PluginType AssemblyQualifiedName="String_UrlDecode, MvcTeam.Utilities.Strings, Version=2.0.0.0, Culture=neutral, PublicKeyToken=2c7a81b919ff924c" PluginTypeId="3713d496-2e08-4f27-b7bf-ab7beb233fa2" Name="String_UrlDecode">
+          <FriendlyName>e5af4487-261b-4cc4-b998-55ad41df6d96</FriendlyName>
+          <WorkflowActivityGroupName>MvcTeam.Utilities.Strings (2.0.0.0)</WorkflowActivityGroupName>
+        </PluginType>
+        <PluginType AssemblyQualifiedName="String_UrlEncode, MvcTeam.Utilities.Strings, Version=2.0.0.0, Culture=neutral, PublicKeyToken=2c7a81b919ff924c" PluginTypeId="dee125eb-f285-4978-8f10-c9c72558358b" Name="String_UrlEncode">
+          <FriendlyName>d06172f0-6f1a-4cb1-a579-8f108fe3cdc6</FriendlyName>
+          <WorkflowActivityGroupName>MvcTeam.Utilities.Strings (2.0.0.0)</WorkflowActivityGroupName>
+        </PluginType>
+        <PluginType AssemblyQualifiedName="String_WordCount, MvcTeam.Utilities.Strings, Version=2.0.0.0, Culture=neutral, PublicKeyToken=2c7a81b919ff924c" PluginTypeId="705aca68-9545-498f-87ed-ef6c41264983" Name="String_WordCount">
+          <FriendlyName>7f6ee30d-0b3e-4679-8891-b147ade92fe3</FriendlyName>
+          <WorkflowActivityGroupName>MvcTeam.Utilities.Strings (2.0.0.0)</WorkflowActivityGroupName>
+        </PluginType>
+      </PluginTypes>
+    </PluginAssembly>
+  </SolutionPluginAssemblies>
+  <EntityDataProviders />
+  <Languages>
+    <Language>1033</Language>
+    <Language>1065</Language>
+  </Languages>
+</ImportExportXml>
