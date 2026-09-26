@@ -368,18 +368,14 @@ Workflow در Dynamics CRM ابزار قدرتمندی برای خودکارسا
 
 ## ساختار پوشه‌ها
 
-```
-MvcXrmTools/
-├── README.md                      ← همین صفحه
-├── docs/                          ← مستندات فارسی، یک صفحه برای هر استپ
-│   ├── persian/  datetime/  string/  numeric/
-│   ├── email/    note/      security/ utilities/
-│   └── <دسته>/images/             ← تصاویر مستندات
-├── MvcTeam.Utilities/             ← پروژه‌ی اصلی (استپ‌ها در Workflows/<دسته>)
-│   └── Deploy/Set-WorkflowGroups.ps1
-├── MvcTeam.Utilities.Core/        ← کدهای مشترک (Shared Project)
-└── MvcTeam.Utilities.sln
-```
+* `README.md` — همین صفحه
+* `docs/` — مستندات فارسی، یک صفحه برای هر استپ
+  * `persian/`، `datetime/`، `string/`، `numeric/`، `email/`، `note/`، `security/`، `utilities/` — یک پوشه برای هر دسته
+  * `<دسته>/images/` — تصاویر مستندات
+* `MvcTeam.Utilities/` — پروژه‌ی اصلی (استپ‌ها در `Workflows/<دسته>`)
+  * `Deploy/Set-WorkflowGroups.ps1`
+* `MvcTeam.Utilities.Core/` — کدهای مشترک (Shared Project)
+* `MvcTeam.Utilities.sln`
 
 <a id="credits"></a>
 
