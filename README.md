@@ -6,7 +6,7 @@
 
 > **رایگان، متن‌باز (MIT) و ساخته‌شده برای کاربران ایرانی Dynamics CRM.** اگر Workflow می‌سازید و می‌خواهید **تاریخ شمسی (جلالی)**، **مبلغ به حروف فارسی**، **اعتبارسنجی کد ملی** و **روز کاری با آخر هفته‌ی ایران** را بدون نوشتن کد در **Microsoft Dynamics CRM** داشته باشید، جای درستی آمده‌اید.
 
-**MvcTeam Utilities** مجموعه‌ای از Custom Workflow Activityها برای **Microsoft Dynamics CRM نسخه‌ی On-Premise** است. بعد از Import کردن Solution، همه‌ی 146 استپ در طراحی Workflow (بخش **Add Step**) در دسترس‌اند و بدون برنامه‌نویسی می‌توانید با آن‌ها متن، عدد، تاریخ، ایمیل، یادداشت و دسترسی‌ها را مدیریت کنید. هر استپ یک صفحه‌ی مستند فارسی با پارامترها، مثال‌های واقعی و نکته‌های مهم دارد.
+**MvcTeam Utilities** مجموعه‌ای از فعالیت‌های گردش کار سفارشی برای **Microsoft Dynamics CRM نسخه‌ی درون‌سایت** است. بعد از وارد کردن راه‌حل، همه‌ی 146 استپ در طراحی گردش کار (بخش **افزودن استپ**) در دسترس‌اند و بدون برنامه‌نویسی می‌توانید با آن‌ها متن، عدد، تاریخ، ایمیل، یادداشت و دسترسی‌ها را مدیریت کنید. هر استپ یک صفحه‌ی مستند فارسی با پارامترها، مثال‌های واقعی و نکته‌های مهم دارد.
 
 ### چرا این پروژه ساخته شد؟
 
@@ -20,7 +20,6 @@
 * [استفاده در Workflow](#usage)
 * [نکات مهم پیش از شروع](#notes)
 * [فهرست همه‌ی استپ‌ها](#steps)
-* [ساختار پوشه‌ها](#layout)
 * [منابع و قدردانی](#credits)
 * [مجوز](#license)
 
@@ -28,7 +27,7 @@
 
 ## معرفی
 
-Workflow در Dynamics CRM ابزار قدرتمندی برای خودکارسازی کارهاست، ولی استپ‌های پیش‌فرض آن برای کارهای روزمره کافی نیستند: نمی‌شود مبلغ را به حروف نوشت، تاریخ شمسی ساخت، متن را برش داد، رکورد را کلون کرد یا گیرنده‌های ایمیل را از یک تیم اضافه کرد. MvcTeam Utilities این خلأها را با **146 استپ آماده** پر می‌کند. هر استپ یک صفحه‌ی مستند فارسی دارد که پارامترها، نحوه‌ی کار، مثال‌های واقعی و نکته‌های مهم آن را توضیح می‌دهد.
+گردش کار در Dynamics CRM ابزار قدرتمندی برای خودکارسازی کارهاست، ولی استپ‌های پیش‌فرض آن برای کارهای روزمره کافی نیستند: نمی‌شود مبلغ را به حروف نوشت، تاریخ شمسی ساخت، متن را برش داد، رکورد را کلون کرد یا گیرنده‌های ایمیل را از یک تیم اضافه کرد. این مجموعه این خلأها را با **146 استپ آماده** پر می‌کند. هر استپ یک صفحه‌ی مستند فارسی دارد که پارامترها، نحوه‌ی کار، مثال‌های واقعی و نکته‌های مهم آن را توضیح می‌دهد.
 
 **چه چیزی به شما می‌دهد؟**
 
@@ -45,17 +44,13 @@ Workflow در Dynamics CRM ابزار قدرتمندی برای خودکارسا
 * **این استپ‌ها برای Microsoft Dynamics CRM On-Premise ساخته شده‌اند.** به‌صورت Custom Workflow Activity روی سرور CRM ثبت می‌شوند و نیازی به سرویس ابری یا افزونه‌ی خارجی ندارند.
 * پروژه برای **Dynamics CRM 2016** ساخته شده است (با Dynamics CRM SDK نسخه‌ی 8.2 و .NET Framework 4.6.1).
 * برای نصب فقط به فایل **Managed Solution** و یک کاربر با نقش **System Administrator** (یا دسترسی معادل برای Import کردن Solution) نیاز دارید. نیازی به Visual Studio، کامپایل کد یا Plugin Registration Tool نیست.
-* برای تنظیم گروه و نام استپ‌ها (اختیاری): Windows PowerShell 5.1 و ماژول `Microsoft.Xrm.Tooling.CrmConnector.PowerShell`.
 
 <a id="install"></a>
 
 ## نصب و راه‌اندازی
 
-1. **Import کردن Solution:** در CRM به **Settings > Solutions** بروید، **Import** را بزنید، فایل Managed Solution (فایل `.zip`) را انتخاب کنید و مراحل را با **Next** تا **Import** ادامه دهید. بعد از پایان کار، پیام موفقیت را ببینید و **Close** را بزنید.
-2. **بررسی نصب:** در **Settings > Processes** یک Workflow بسازید یا باز کنید و **Add Step** را بزنید؛ استپ‌های این مجموعه باید در فهرست دیده شوند (بخش [استفاده در Workflow](#usage)). برای به‌روزرسانی به نسخه‌ی جدید، Solution نسخه‌ی جدید را به همین روش Import کنید.
-3. **(اختیاری) گروه‌بندی استپ‌ها:** فایل `.env.example` را در ریشه‌ی پروژه به `.env` کپی کنید و رشته‌ی اتصال CRM را در `CRM_CONNECTION_STRING` بنویسید. سپس از پوشه‌ی `MvcTeam.Utilities\Deploy` اسکریپت `Set-WorkflowGroups.ps1` را اجرا کنید (با `-WhatIf` می‌توانید ابتدا فقط پیش‌نمایش ببینید). این اسکریپت گروه و نام نمایشی استپ‌ها را در منوی Add Step تنظیم می‌کند.
-
-> **نکته:** `.env` حاوی اطلاعات اتصال است و نباید در Git نگه داشته شود. رمز عبور و کلیدها را هرگز در کد ننویسید.
+* **اول - Import کردن Solution:** در CRM به **Settings > Solutions** بروید، **Import** را بزنید، فایل Managed Solution (فایل `.zip`) را انتخاب کنید و مراحل را با **Next** تا **Import** ادامه دهید. بعد از پایان کار، پیام موفقیت را ببینید و **Close** را بزنید.
+* **دوم - بررسی نصب:** در **Settings > Processes** یک Workflow بسازید یا باز کنید و **Add Step** را بزنید؛ استپ‌های این مجموعه باید در فهرست دیده شوند (بخش [استفاده در Workflow](#usage)). برای به‌روزرسانی به نسخه‌ی جدید، Solution نسخه‌ی جدید را به همین روش Import کنید.
 
 <a id="usage"></a>
 
@@ -364,37 +359,19 @@ Workflow در Dynamics CRM ابزار قدرتمندی برای خودکارسا
 | [Update Field Dynamically](docs/utilities/update-field-dynamically.md) | یک فیلد مشخص از یک رکورد را با مقدار جدید به‌روز می‌کند؛ در حالی که هم رکورد و هم نام فیلد را به‌صورت داینامیک (به‌شکل متن) به آن می‌دهید. |
 | [Workflow Add Signature To Email](docs/utilities/workflow-add-signature-to-email.md) | امضای مالک ایمیل را به انتهای متن ایمیل اضافه می‌کند. مخصوص یک سازمان مشخص است و به فیلد سفارشی `new_signature` نیاز دارد. |
 
-<a id="layout"></a>
-
-## ساختار پوشه‌ها
-
-* `README.md` — همین صفحه
-* `docs/` — مستندات فارسی، یک صفحه برای هر استپ
-  * `persian/`، `datetime/`، `string/`، `numeric/`، `email/`، `note/`، `security/`، `utilities/` — یک پوشه برای هر دسته
-  * `<دسته>/images/` — تصاویر مستندات
-* `MvcTeam.Utilities/` — پروژه‌ی اصلی (استپ‌ها در `Workflows/<دسته>`)
-  * `Deploy/Set-WorkflowGroups.ps1`
-* `MvcTeam.Utilities.Core/` — کدهای مشترک (Shared Project)
-* `MvcTeam.Utilities.sln`
-
 <a id="credits"></a>
 
 ## منابع و قدردانی
 
-بخشی از کد این مجموعه از پروژه‌های متن‌باز زیر گرفته شده و برای Dynamics CRM 2016 سازگار و اصلاح شده است. از نویسندگان آن‌ها سپاسگزاریم. ستون‌های خالی هنوز تکمیل نشده‌اند.
+بخشی از کد این مجموعه از پروژه‌های متن‌باز زیر گرفته شده و برای Dynamics CRM 2016 سازگار و اصلاح شده است. از نویسندگان آن‌ها سپاسگزاریم.
 
-| پروژه‌ی مبدأ | نویسنده | مجوز | مخزن | استپ‌های مرتبط در این مجموعه |
-|---|---|---|---|---|
-| Dynamics-365-Workflow-Tools | Demian Rasko | Ms-PL | https://github.com/demianrasko/Dynamics-365-Workflow-Tools | Clone Record، Clone Children، Currency Convert (بازنویسی‌شده)، Delete Record، Get Initiating User، JSON Parser، Query Values، Set User Settings، String Functions |
-| CRM-Email-Workflow-Utilities | Jason Lattimer | MIT | https://github.com/jlattimer/CRM-Email-Workflow-Utilities | دسته‌ی [ایمیل](#email) |
-| WorkflowElements | Aiden Kaskela | MIT | https://github.com/akaskela/WorkflowElements | Query Get Results، Query Run Workflow On Results |
-| LAT Workflow Utilities (Numeric) | | | | دسته‌ی [اعداد](#numeric) |
-| | | | | دسته‌ی [متن](#string) |
-| | | | | دسته‌ی [یادداشت و پیوست](#note) |
-| | | | | دسته‌ی [تاریخ و زمان](#datetime) (به‌جز دو استپ روز کاری ایران) |
-| Ultimate Workflow Toolkit | Andrii Butenko | MIT | https://github.com/AndrewButenko/UltimateWorkflowToolkit | |
-
-استپ‌های دسته‌ی [ابزارهای فارسی](#persian) و دو استپ [Add Business Days](docs/datetime/add-business-days.md) و [Business Days Between](docs/datetime/business-days-between.md) برای همین پروژه نوشته شده‌اند.
+| پروژه‌ی مبدأ | نویسنده | مجوز | مخزن |
+|---|---|---|---|
+| Dynamics-365-Workflow-Tools | Demian Rasko | Ms-PL | https://github.com/demianrasko/Dynamics-365-Workflow-Tools |
+| CRM-Email-Workflow-Utilities | Jason Lattimer | MIT | https://github.com/jlattimer/CRM-Email-Workflow-Utilities |
+| WorkflowElements | Aiden Kaskela | MIT | https://github.com/akaskela/WorkflowElements |
+| LAT Workflow Utilities | | | |
+| Ultimate Workflow Toolkit | Andrii Butenko | MIT | https://github.com/AndrewButenko/UltimateWorkflowToolkit |
 
 <a id="license"></a>
 
